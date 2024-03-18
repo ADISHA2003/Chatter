@@ -2,6 +2,10 @@ function sendMessage() {
         var userInput = document.getElementById("user-input").value.trim();
         if (userInput === "") return;
 
+        // Add class to indicate chatting has started
+    document.getElementById("chat-container").classList.add("chatting");
+
+
         addUserMessage(userInput);
         document.getElementById("user-input").value = "";
 
