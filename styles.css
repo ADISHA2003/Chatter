@@ -100,10 +100,15 @@ body {
     }
 
     .logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 50px; /* Adjust width as needed */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 10%; /* Rounded corners */
-        }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:10%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease; /* Add transition for smooth appearance/disappearance */
+}
+
+.chat-container.chatting #logo {
+    opacity: 0; /* Hide the logo when chatting */
+}
