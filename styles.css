@@ -29,11 +29,11 @@ body {
         border: 1px solid #ccc;
         border-radius: 0px;
         overflow: hidden;
-        height: 600px;
+        height: 550px;
     }
 
     .chat-box {
-        height: 508px;
+        height: 458px;
         overflow-y: scroll;
         padding: 10px;
         background-color: #fff;
