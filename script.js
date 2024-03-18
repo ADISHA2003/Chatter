@@ -162,13 +162,13 @@ function sendMessage() {
 
     function isCalculationRequest(input) {
         // Check if input contains mathematical operators
-        return /[+\-*/]/.test(input);
+        return /[+\*-/]/.test(input);
     }
 
     function performCalculation(input) {
         // Parse input to extract numbers and operator
         var numbers = input.match(/-?\d+(?:\.\d+)?/g).map(Number);
-        var operator = input.match(/[+\-*/]/)[0];
+        var operator = input.match(/[+\*-/]/)[0];
 
         // Perform calculation based on operator
         switch (operator) {
