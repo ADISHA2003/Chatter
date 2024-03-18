@@ -24,13 +24,14 @@ body {
         }
         
         .chat-container {
-        max-width: 100%;
-        margin: 5px auto;
-        border: 1px solid #ccc;
-        border-radius: 0px;
-        overflow: hidden;
-        height: 500px;
-    }
+    position: relative;
+    max-width: 90%;
+    margin: 5px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 400px;
+}
 
     .chat-box {
         height: 408px;
@@ -103,12 +104,34 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width:25%;
-    height: auto;
     transform: translate(-50%, -50%);
     transition: opacity 0.5s ease; /* Add transition for smooth appearance/disappearance */
 }
 
 .chat-container.chatting #logo {
     opacity: 0; /* Hide the logo when chatting */
+}
+
+@media screen and (max-width: 600px) {
+    .chat-container {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .chat-container {
+        height: 200px; /* Adjust height for even smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 30%; /* Adjust logo size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .logo {
+        width: 40%; /* Adjust logo size for even smaller screens */
+    }
 }
