@@ -92,5 +92,5 @@ button:hover {
     left: 10px;
     width: 50px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Rounded corners */
+    border-radius: 10%; /* Rounded corners */
 }
