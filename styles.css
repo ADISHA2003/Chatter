@@ -5,16 +5,9 @@ body {
     background-color: #f7f7f7;
 }
 
-header {
-    background-color: #f8f8ff; /* Header background color */
-    color: #3b3c36; /* Header text color */
-    padding: 0px;
-    text-align: center;
-}
-
 .chat-container {
-    max-width: 70%;
-    margin: 5px auto;
+    max-width: 90%;
+    margin: 15px auto;
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
@@ -90,7 +83,7 @@ button:hover {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 50px; /* Adjust width as needed */
+    width: 50%; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
     border-radius: 20%; /* Rounded corners */
 }
