@@ -7,13 +7,13 @@ body {
 
 header {
     background-color: #f8f8ff; /* Header background color */
-    color: #0000ff; /* Header text color */
+    color: #00b7eb; /* Header text color */
     padding: 0px;
     text-align: center;
 }
 
 .chat-container {
-    max-width: 50%;
+    max-width: 70%;
     margin: 5px auto;
     border: 1px solid #ccc;
     border-radius: 10px;
