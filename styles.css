@@ -87,10 +87,10 @@ button:hover {
 }
 
 .logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 50px; /* Adjust width as needed */
+    position: fixed; /* Fixed position */
+    top: 40px; /* Adjust top position as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Move back 50% of its own width to center */
+    width: 100px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 10%; /* Rounded corners */
 }
