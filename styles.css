@@ -7,7 +7,7 @@ body {
 
 header {
     background-color: #f8f8ff; /* Header background color */
-    color: #77dd77; /* Header text color */
+    color: #3b3c36; /* Header text color */
     padding: 0px;
     text-align: center;
 }
@@ -66,7 +66,7 @@ button {
     width: 100%;
     padding: 10px;
     border: none;
-    background-color: #00b7eb;
+    background-color: #3b3c36;
     color: #ffffff ;
     border-radius: 0 0px 0px 0;
     cursor: pointer;
@@ -75,7 +75,7 @@ button {
 }
 
 button:hover {
-    background-color: #0070ff;
+    background-color: #1a1110;
 }
 
 .footer {
