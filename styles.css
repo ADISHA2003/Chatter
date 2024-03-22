@@ -59,6 +59,7 @@ header {
 }
 
 .bot-message {
+    font-family: monospace;
     background-color: #000000;
     color: #ffffff;
     float: left;
