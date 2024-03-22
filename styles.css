@@ -118,7 +118,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width:25%;
+    width:15%;
     height: auto;
     transform: translate(-50%, -50%);
     transition: opacity 0.5s ease; /* Add transition for smooth appearance/disappearance */
