@@ -25,7 +25,7 @@ header {
 }
 
 .chat-container {
-    max-width: 80%; /* Adjust maximum width */
+    max-width: 90%; /* Adjust maximum width */
     margin: 5px auto;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -34,7 +34,7 @@ header {
 }
 
 .chat-box {
-    height: 468px; /* Adjust height */
+    height: 438px; /* Adjust height */
     overflow-y: scroll;
     padding: 10px;
     background-color: #000000;
