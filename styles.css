@@ -80,8 +80,8 @@ button {
     width: 100%;
     padding: 10px;
     border: none;
-    background-color: #dddddd;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
     border-radius: 0 0px 0px 0;
     cursor: pointer;
     float: left;
@@ -89,7 +89,7 @@ button {
 }
 
 button:hover {
-    background-color: #000000;
+    background-color: #1a1110;
     color: #ffffff;
 }
 
