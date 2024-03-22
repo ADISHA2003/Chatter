@@ -31,6 +31,7 @@ header {
     border-radius: 10px;
     overflow: hidden;
     height: 550px;
+    position: relative;
 }
 
 .chat-box {
@@ -104,7 +105,7 @@ button:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 15%; /* Adjust logo width */
+    width: 100px; /* Adjust logo width */
     height: auto;
     transform: translate(-50%, -50%);
     transition: opacity 0.5s ease;
