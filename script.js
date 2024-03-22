@@ -144,6 +144,7 @@ function sendMessage() {
   "how do I overcome social anxiety": "To overcome social anxiety, practice exposure therapy, challenge negative thoughts, use relaxation techniques, and seek support from a therapist or support group.",
   "what's the best way to start a journaling habit": "To start a journaling habit, set aside dedicated time each day, write freely without judgment, experiment with different journaling prompts or exercises, and be consistent.",
   "can you recommend a good podcast for mindfulness": "There are many podcasts for mindfulness covering topics such as meditation, stress reduction, and personal growth. Let me know your interests, and I can suggest some options for you.",
+  "can you code": "I'm sorry, but I cannot code. My abilities are limited to processing and generating text based on the information I've been trained on.",
              "default": "I'm sorry, I didn't understand that. Could you please rephrase your question?"
         };
 
