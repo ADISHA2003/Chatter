@@ -30,12 +30,12 @@ header {
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
-    height: 550px;
+    height: 600px;
     position: relative;
 }
 
 .chat-box {
-    height: 458px; /* Adjust height */
+    height: 498px; /* Adjust height */
     overflow-y: scroll;
     padding: 10px;
     background-color: #000000;
