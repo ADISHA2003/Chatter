@@ -30,23 +30,11 @@ header {
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
-    height: 600px;
-}
-
-@media screen and (max-width: 768px) {
-    .chat-container {
-        height: 400px; /* Adjust height for smaller screens */
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .chat-container {
-        height: 300px; /* Adjust height for even smaller screens */
-    }
+    height: 550px;
 }
 
 .chat-box {
-    height: calc(100% - 92px); /* Adjust height */
+    height: 468px; /* Adjust height */
     overflow-y: scroll;
     padding: 10px;
     background-color: #000000;
@@ -116,7 +104,7 @@ button:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 10%; /* Adjust logo width */
+    width: 15%; /* Adjust logo width */
     height: auto;
     transform: translate(-50%, -50%);
     transition: opacity 0.5s ease;
