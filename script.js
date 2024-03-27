@@ -18,7 +18,7 @@ function sendMessage() {
         var botResponses = {
             "hello": "Hello! How can I assist you today?",
             "hi": "Hi there!",
-            "ok": "yes",
+            "okay": "yes",
             "how are you": "I'm doing well, thank you for asking. How about you?",
             "what's your name": "You can call me Chatbot.",
             "who created you": "I am created by ADITYA.",
