@@ -9,6 +9,10 @@ function sendMessage() {
         addUserMessage(userInput);
         document.getElementById("user-input").value = "";
 
+        window.onload = function() {
+            document.getElementById("userInput").focus();
+        };
+
         // Process user input and generate bot response
         var botResponse = generateBotResponse(userInput);
         addBotMessage(botResponse);
@@ -193,10 +197,6 @@ function sendMessage() {
                 return "Invalid operation";
         }
     }
-
-    window.onload = function() {
-            document.getElementById("userInput").focus();
-        }
 
     function addUserMessage(message) {
         var chatBox = document.getElementById("chat-box");
