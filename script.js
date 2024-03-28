@@ -9,6 +9,14 @@ function sendMessage() {
         addUserMessage(userInput);
         document.getElementById("user-input").value = "";
 
+        // Process user input and generate bot response after a delay
+            setTimeout(function() {
+                var botResponse = generateBotResponse(userInput);
+                addBotMessage(botResponse);
+                // Focus on input field after bot response
+                document.getElementById("user-input").focus();
+            }, 2000);
+
         // Process user input and generate bot response
         var botResponse = generateBotResponse(userInput);
         addBotMessage(botResponse);
