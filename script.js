@@ -9,13 +9,12 @@ function sendMessage() {
         addUserMessage(userInput);
         document.getElementById("user-input").value = "";
 
-        window.onload = function() {
-            document.getElementById("userInput").focus();
-        };
-
         // Process user input and generate bot response
         var botResponse = generateBotResponse(userInput);
         addBotMessage(botResponse);
+
+        // Focus on input field after sending message
+        document.getElementById("user-input").focus();
     }
 
     function generateBotResponse(userInput) {
