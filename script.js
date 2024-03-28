@@ -157,13 +157,6 @@ function sendMessage() {
             }
         }
 
-        // Check if userInput matches any key in botResponses or has similar words
-            for (var key in botResponses) {
-                if (userInput.includes(key)) {
-                    return botResponses[key];
-                }
-            }
-
         // If no match found, check if it's a calculation request
         if (isCalculationRequest(userInput)) {
             var calculationResult = performCalculation(userInput);
@@ -216,7 +209,6 @@ function sendMessage() {
         var chatBox = document.getElementById("chat-box");
         var botDiv = document.createElement("div");
         botDiv.className = "bot-message";
-        botDiv.textContent = message;
         chatBox.appendChild(botDiv);
         chatBox.scrollTop = chatBox.scrollHeight;
 
