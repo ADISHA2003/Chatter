@@ -227,6 +227,11 @@ function sendMessage() {
     }, typingSpeed);
 }
 
+    // Focus on input field when the page loads
+        window.onload = function() {
+            document.getElementById("user-input").focus();
+        }
+
     document.getElementById("user-input").addEventListener("keyup", function(event) {
         if (event.key === "Enter") {
             sendMessage();
