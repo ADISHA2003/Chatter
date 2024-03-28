@@ -194,6 +194,10 @@ function sendMessage() {
         }
     }
 
+    window.onload = function() {
+            document.getElementById("userInput").focus();
+        }
+
     function addUserMessage(message) {
         var chatBox = document.getElementById("chat-box");
         var userDiv = document.createElement("div");
