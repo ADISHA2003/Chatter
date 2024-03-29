@@ -229,12 +229,6 @@ function sendMessage() {
     }, typingSpeed);
 }
 
-    function simulateTyping() {
-    // Simulate typing by adding a delay
-    const delay = Math.floor(Math.random() * 2000) + 1000; // Random delay between 1 to 3 seconds
-    return new Promise(resolve => setTimeout(resolve, delay));
-}
-
     // Focus on input field when the page loads
         window.onload = function() {
             document.getElementById("user-input").focus();
