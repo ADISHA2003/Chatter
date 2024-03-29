@@ -12,10 +12,10 @@ header {
 }
 
 .chat-container {
-    max-width: 90%; /* Adjust maximum width */
+    max-width: 100%; /* Adjust maximum width */
     margin: 5px auto;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border: 0px solid #ccc;
+    border-radius: 0px;
     overflow: hidden;
     height: 575px;
 }
@@ -42,6 +42,7 @@ header {
     color: #ffffff;
     float: right;
     clear: both;
+    margin: 5px;
 }
 
 .bot-message {
@@ -51,6 +52,7 @@ header {
     color: #ffffff;
     float: left;
     clear: both;
+    margin: 5px;
 }
 
 input[type="text"] {
