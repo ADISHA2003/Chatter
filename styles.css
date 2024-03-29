@@ -13,6 +13,8 @@ header {
 
 .chat-container {
     max-width: 100%; /* Adjust maximum width */
+    display: flex;
+    align-items: center;
     margin: 5px auto;
     position: relative;
     border: 0px solid #ccc;
@@ -57,15 +59,21 @@ header {
 }
 
 input[type="text"] {
-    width: calc(90% - 20px);
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-top: 1px solid #ccc;
-    border-radius: 5px; 
-    float: left;
-    margin: 0;
-}
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
 button {
     width: 100%;
