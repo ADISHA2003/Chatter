@@ -57,24 +57,22 @@ header {
 }
 
 input[type="text"] {
-            max-width: 90%;
+            max-width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 50px;
-            margin-right: 0px;
-            float: both;
+            margin: 0px;
         }
 
 button {
-    width: 50%;
+    width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     background-color: #000000;
     color: #ffffff;
     border-radius: 50px;
     cursor: pointer;
-    float: both;
-    margin: 0;
+    margin: 1px;
 }
 
 button:hover {
