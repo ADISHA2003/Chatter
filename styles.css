@@ -39,8 +39,8 @@ header {
 }
 
 .user-message {
-    background-color: #ccc;
-    color: #ffffff;
+    background-color: #F2F3F4;
+    color: #000000;
     float: right;
     clear: both;
     margin: 5px;
@@ -49,8 +49,8 @@ header {
 .bot-message {
     font-family: monospace;
     font-size: 14px;
-    background-color: #ccc;
-    color: #ffffff;
+    background-color: #F2F3F4;
+    color: #000000;
     float: left;
     clear: both;
     margin: 5px;
