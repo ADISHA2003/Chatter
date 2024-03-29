@@ -18,7 +18,7 @@ header {
     border-radius: 10px;
     overflow: hidden;
     height: 575px;
-    position: relative;
+    position: static;
 }
 
 .chat-box {
@@ -63,6 +63,7 @@ input[type="text"] {
     float: left;
     margin: 0;
     border-radius: 0px 0 0 0px;
+    position: relative;
 }
 
 button {
