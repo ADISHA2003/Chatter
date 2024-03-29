@@ -57,7 +57,7 @@ header {
 }
 
 input[type="text"] {
-            max-width: 100%;
+            width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 0px;
@@ -68,7 +68,7 @@ input[type="text"] {
 button {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ffffff;
+    border: 0px solid #ffffff;
     background-color: #000000;
     color: #ffffff;
     border-radius: 0px;
