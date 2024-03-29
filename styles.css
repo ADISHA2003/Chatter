@@ -11,19 +11,6 @@ header {
     text-align: center;
 }
 
-.logout-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.logout-button a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
 .chat-container {
     max-width: 90%; /* Adjust maximum width */
     margin: 5px auto;
