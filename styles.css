@@ -57,14 +57,14 @@ header {
 }
 
 input[type="text"] {
-    width: calc(100% - 20px);
+    width: calc(90% - 20px);
     padding: 10px;
     border: none;
     border-top: 1px solid #ccc;
     border-radius: 0;
     float: left;
     margin: 0;
-    border-radius: 0px 0 0 0px;
+    border-radius: 5px 5 5 5px;
 }
 
 button {
