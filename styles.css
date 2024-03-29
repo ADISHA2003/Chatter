@@ -58,13 +58,13 @@ header {
 
 input[type="text"] {
     width: calc(90% - 20px);
+    flex: 1;
     padding: 10px;
     border: none;
     border-top: 1px solid #ccc;
-    border-radius: 0;
+    border-radius: 5px; 
     float: left;
     margin: 0;
-    border-radius: 5px 5 5 5px;
 }
 
 button {
