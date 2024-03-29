@@ -39,7 +39,7 @@ header {
 }
 
 .user-message {
-    background-color: #FDFEFE;
+    background-color: #FFFAFA;
     color: #000000;
     float: right;
     clear: both;
@@ -49,7 +49,7 @@ header {
 .bot-message {
     font-family: monospace;
     font-size: 14px;
-    background-color: #FDFEFE;
+    background-color: #FFFAFA;
     color: #000000;
     float: left;
     clear: both;
