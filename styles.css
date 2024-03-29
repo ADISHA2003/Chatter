@@ -13,8 +13,6 @@ header {
 
 .chat-container {
     max-width: 100%; /* Adjust maximum width */
-    display: flex;
-    align-items: center;
     margin: 5px auto;
     position: relative;
     border: 0px solid #ccc;
@@ -59,20 +57,11 @@ header {
 }
 
 input[type="text"] {
-            flex: 1;
             padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-
-input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            border-radius: 50px;
+            margin-right: 0px;
+            float: left;
         }
 
 button {
