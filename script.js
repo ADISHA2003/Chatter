@@ -243,6 +243,6 @@ function closeKeyboard() {
 }
 
 // Call closeKeyboard() when the send button is clicked
-document.getElementById("sendMessage()").addEventListener("Enter", function() {
+document.getElementById("Enter").addEventListener("click", function() {
     closeKeyboard();
 });
