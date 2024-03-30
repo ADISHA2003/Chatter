@@ -237,12 +237,17 @@ function sendMessage() {
         }
     })
 
+// Function to close the keyboard
 function closeKeyboard() {
-    // Blur the input field to close the keyboard
+    // Blur the active element to close the keyboard
     document.activeElement.blur();
 }
 
-// Call closeKeyboard() when the send button is clicked
-document.getElementById("Enter").addEventListener("click", function() {
-    closeKeyboard();
+// Listen for keypress events on the input field
+document.getElementById("sendMessage()").addEventListener("keypress", function(event) {
+    // Check if the Enter key was pressed (key code 13)
+    if (event.keyCode === 13) {
+        // Close the keyboard
+        closeKeyboard();
+    }
 });
