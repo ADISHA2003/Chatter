@@ -244,7 +244,7 @@ function closeKeyboard() {
 }
 
 // Listen for keypress events on the input field
-document.getElementById("sendMessage()").addEventListener("keypress", function(event) {
+document.getElementById("user-input").addEventListener("keypress", function(event) {
     // Check if the Enter key was pressed (key code 13)
     if (event.keyCode === 13) {
         // Close the keyboard
