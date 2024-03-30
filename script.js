@@ -235,4 +235,14 @@ function sendMessage() {
         if (event.key === "Enter") {
             sendMessage();
         }
-    });
+    })
+
+function closeKeyboard() {
+    // Blur the input field to close the keyboard
+    document.activeElement.blur();
+}
+
+// Call closeKeyboard() when the send button is clicked
+document.getElementById("sendMessage ()").addEventListener("click", function() {
+    closeKeyboard();
+});
