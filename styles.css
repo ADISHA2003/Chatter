@@ -12,7 +12,7 @@ header {
 }
 
 .chat-container {
-    max-width: 100%; /* Adjust maximum width */
+    max-width: 90%; /* Adjust maximum width */
     margin: 5px auto;
     position: relative;
     border: 0px solid #ccc;
