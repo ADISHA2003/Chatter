@@ -231,11 +231,12 @@ function sendMessage() {
             document.getElementById("user-input").focus();
         }
 
-    document.getElementById("user-input").addEventListener("keyup", function(event) {
-        if (event.key === "Enter") {
-            sendMessage();
-        }
-    })
+    
+// Function to send the message
+function sendMessage() {
+    // Your logic to send the message goes here
+    console.log("Message sent!");
+}
 
 // Function to close the keyboard
 function closeKeyboard() {
@@ -247,6 +248,9 @@ function closeKeyboard() {
 document.getElementById("user-input").addEventListener("keypress", function(event) {
     // Check if the Enter key was pressed (key code 13)
     if (event.keyCode === 13) {
+        // Send the message
+        sendMessage();
+        
         // Close the keyboard
         closeKeyboard();
     }
