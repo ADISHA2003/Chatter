@@ -233,9 +233,12 @@ function sendMessage() {
 
     
 // Function to send the message
-function sendMessage() {
-    // Your logic to send the message goes here
-    console.log("Message sent!");
+function sendMessage(message, callback) {
+    // Simulate message sending process (replace with actual sending logic)
+    setTimeout(function() {
+        console.log("Message sent: " + message);
+        callback(); // Call the callback function once message is sent
+    }, 1000); // Simulated delay of 1 second
 }
 
 // Function to close the keyboard
@@ -248,10 +251,18 @@ function closeKeyboard() {
 document.getElementById("user-input").addEventListener("keypress", function(event) {
     // Check if the Enter key was pressed (key code 13)
     if (event.keyCode === 13) {
-        // Send the message
-        sendMessage();
+        // Get the message from the input field
+        var message = this.value.trim();
         
-        // Close the keyboard
-        closeKeyboard();
+        if (message !== "") {
+            // Send the message
+            sendMessage(message, function() {
+                // After sending the message, close the keyboard
+                closeKeyboard();
+            });
+            
+            // Clear the input field
+            this.value = "";
+        }
     }
 });
