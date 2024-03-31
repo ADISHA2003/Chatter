@@ -15,10 +15,10 @@ header {
     max-width: 100%; /* Adjust maximum width */
     margin: 0px auto;
     position: relative;
-    border: 1px solid #ccc;
+    border: 0px solid #ccc;
     border-radius: 0px;
     overflow: hidden;
-    height: 550px;
+    height: 545px;
 }
 
 .chat-box {
