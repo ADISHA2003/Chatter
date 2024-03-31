@@ -236,4 +236,31 @@ document.getElementById("user-input").addEventListener("keyup", function(event) 
         if (event.key === "Enter") {
             sendMessage();
         }
-    });
+    })
+
+function performSearch() {
+            var query = document.getElementById("searchQuery").value;
+            var apiKey = "AIzaSyAtQtO2RDaXU1dr3OB8xAFK1uXOmgmfPes";
+            var cx = "73ecbbd20d97b4289";
+            var url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => displayResults(data))
+                .catch(error => console.log('Error:', error));
+        }
+
+        function displayResults(data) {
+            var resultsContainer = document.getElementById("searchResults");
+            resultsContainer.innerHTML = ""; // Clear previous results
+
+            if (data && data.items) {
+                data.items.forEach(function(item, index) {
+                    var resultDiv = document.createElement("div");
+                    resultDiv.innerHTML = `<h3>${index + 1}. <a href="${item.link}" target="_blank">${item.title}</a></h3><p>${item.snippet}</p>`;
+                    resultsContainer.appendChild(resultDiv);
+                });
+            } else {
+                resultsContainer.innerHTML = "<p>No search results found.</p>";
+            }
+        };
