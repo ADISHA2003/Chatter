@@ -73,7 +73,7 @@ function generateBotResponse(userInput) {
         "who are you": "I am a chatbot programmed to assist you.",
         "do you have any siblings": "No, I'm an only child...or rather, an only program!",
         "what is the capital of france": "The capital of France is Paris.",
-        "what is the capital of india ": "The capital of India is Delhi.",
+        "what is the capital of india": "The capital of India is Delhi.",
         "what can you do": "I can answer your questions, tell jokes, provide information on various topics, and even perform simple calculations. Feel free to ask me anything!",
         "what are your limitations": "While I strive to be helpful, I may not always understand complex questions or provide accurate information. Additionally, I cannot access real-time data.",
         "who are you": "I am a chatbot designed to assist you with various tasks and provide information.",
