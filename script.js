@@ -213,7 +213,7 @@ function sendMessage() {
         chatBox.scrollTop = chatBox.scrollHeight;
 
         // Simulate typing effect
-    var typingSpeed = 15; // Adjust typing speed as needed
+    var typingSpeed = 10; // Adjust typing speed as needed
     var index = 0;
     var typingInterval = setInterval(function() {
         if (index < message.length) {
