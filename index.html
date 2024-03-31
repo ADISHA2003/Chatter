@@ -8,20 +8,20 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<header>
-    <h1></h1>
-</header>
-<div class="chat-container" id="chat-container">
-    <img class="logo" src="Chatter.png" alt="Logo" id="logo">
-    <div class="chat-box" id="chat-box"></div>
-            <input type="text" id="user-input" placeholder="Type your message...">
-    <button id="search-button">Search</button>
-    <button onclick="sendMessage()">Send</button>
-</div>
-
-<div class="footer">Chatter can make mistakes.</div>
-
-<script src="script.js"></script>
-
+    <header>
+        <h1></h1>
+    </header>
+    <div class="chat-container" id="chat-container">
+        <img class="logo" src="Chatter.png" alt="Logo" id="logo">
+        <div class="chat-box" id="chat-box">
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+    </div>
+    <div class="button-container">
+    <button id="send-btn" onclick="sendMessage()">Send</button>
+    <button id="search-btn" onclick="search()">Search</button>
+    </div>
+    <footer class="footer">Chatter can make mistakes</footer>
+    <script src="script.js"></script>
 </body>
 </html>
