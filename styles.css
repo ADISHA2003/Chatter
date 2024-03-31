@@ -43,7 +43,7 @@ body {
 }
 
 .bot-message {
-    font-family: Arial, sans-serif;
+    font-family: monospace;
     font-size: 14px;
     background-color: #FFFAFA;
     color: #000000;
