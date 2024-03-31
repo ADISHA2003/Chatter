@@ -75,7 +75,7 @@ input[type="text"] {
 
 .button-container {
     text-align: center;
-    margin-top: 1px; /* Adjust margin as needed */
+    margin-top: 0px; /* Adjust margin as needed */
 }
 
 
@@ -113,7 +113,7 @@ button#search-btn:hover {
 
 .footer {
     padding: 5px;
-    margin: 10px;
+    margin: 5px;
     background-color: #000000;
     text-align: center;
     font-size: 14px;
