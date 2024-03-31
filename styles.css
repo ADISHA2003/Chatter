@@ -1,3 +1,5 @@
+/* Updated CSS styles for search functionality */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -56,24 +58,31 @@ header {
     margin: 7px;
 }
 
+.input-container {
+    width: calc(100% - 80px); /* Adjust width to accommodate the search button */
+    float: left;
+    position: relative;
+}
+
 input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 0px;
-            margin: 0px;
-            float: left;
-        }
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin: 0px;
+    float: left;
+}
 
 button {
-    width: 100%;
+    width: 80px; /* Adjust width of the search button */
     padding: 10px;
     border: 0px solid #ffffff;
     background-color: #000000;
     color: #ffffff;
     border-radius: 0px;
     cursor: pointer;
-    margin: 1px;
+    margin: 0;
+    float: right;
 }
 
 button:hover {
