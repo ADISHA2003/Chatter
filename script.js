@@ -232,8 +232,8 @@ function sendMessage() {
 }
 
 function searchGoogle(query) {
-            var apiKey = "YOUR_API_KEY";
-            var cx = "YOUR_CSE_ID";
+            var apiKey = "AIzaSyAtQtO2RDaXU1dr3OB8xAFK1uXOmgmfPes";
+            var cx = "73ecbbd20d97b4289";
             var url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
 
             // Perform Google Custom Search API request
