@@ -15,7 +15,7 @@ header {
     max-width: 100%; /* Adjust maximum width */
     margin: 5px auto;
     position: relative;
-    border: 0px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 0px;
     overflow: hidden;
     height: 575px;
