@@ -27,7 +27,7 @@ body {
 .bot-message {
     margin-bottom: 10px;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     max-width: 70%;
     word-wrap: break-word;
 }
