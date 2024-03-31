@@ -76,7 +76,7 @@ input[type="text"] {
 button {
     width: 80px; /* Adjust width of the search button */
     padding: 10px;
-    border: 0px solid #ffffff;
+    border: 1px solid #ffffff;
     background-color: #000000;
     color: #ffffff;
     border-radius: 0px;
