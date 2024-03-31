@@ -85,8 +85,9 @@ button#send-btn {
 }
 
 button#send-btn:hover {
-    background-color: #242124;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
 }
 
 button#search-btn {
@@ -101,8 +102,9 @@ button#search-btn {
 }
 
 button#search-btn:hover {
-    background-color: #242124;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
 }
 
 .footer {
