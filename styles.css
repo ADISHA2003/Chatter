@@ -5,12 +5,6 @@ body {
     background-color: #000000;
 }
 
-header {
-    background-color: #f8f8ff;
-    color: #3b3c36;
-    text-align: center;
-}
-
 .chat-container {
     max-width: 100%; /* Adjust maximum width */
     margin: 0px auto;
