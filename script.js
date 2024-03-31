@@ -201,15 +201,6 @@ function sendMessage() {
         }
     }
 
-    function addUserMessage(message) {
-        var chatBox = document.getElementById("chat-box");
-        var userDiv = document.createElement("div");
-        userDiv.className = "user-message";
-        userDiv.textContent = message;
-        chatBox.appendChild(userDiv);
-        chatBox.scrollTop = chatBox.scrollHeight;
-    }
-
     function addBotMessage(message) {
         var chatBox = document.getElementById("chat-box");
         var botDiv = document.createElement("div");
