@@ -14,6 +14,9 @@ function sendMessage() {
     // Process user input and generate bot response
     var botResponse = generateBotResponse(userInput);
     addBotMessage(botResponse);
+    
+    // Start typing animation for bot response
+    startTypingAnimation();
 }
 
 function search() {
@@ -245,6 +248,25 @@ function addBotMessage(message) {
     chatBox.appendChild(botDiv);
     chatBox.scrollTop = chatBox.scrollHeight;
 
+}
+
+function startTypingAnimation() {
+    var botMessages = document.querySelectorAll(".bot-message");
+
+    var lastBotMessage = botMessages[botMessages.length - 1]; // Get the last bot message
+
+    var message = lastBotMessage.textContent.trim(); // Get the text content of the last bot message
+    lastBotMessage.textContent = ""; // Clear the content of the last bot message
+
+    // Create typing animation effect
+    var typingInterval = setInterval(function() {
+        if (message.length > 0) {
+            lastBotMessage.textContent += message.charAt(0); // Add one character at a time
+            message = message.substring(1); // Remove the first character
+        } else {
+            clearInterval(typingInterval); // Stop the typing animation when message is complete
+        }
+    }, 5); // Adjust typing speed as needed
 }
 
     // Focus on input field when the page loads
