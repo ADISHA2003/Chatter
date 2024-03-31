@@ -13,12 +13,12 @@ header {
 
 .chat-container {
     max-width: 100%; /* Adjust maximum width */
-    margin: 5px auto;
+    margin: 0px auto;
     position: relative;
     border: 1px solid #ccc;
     border-radius: 0px;
     overflow: hidden;
-    height: 575px;
+    height: 568px;
 }
 
 .chat-box {
