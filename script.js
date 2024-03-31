@@ -208,41 +208,6 @@ function sendMessage() {
         chatBox.appendChild(botDiv);
         chatBox.scrollTop = chatBox.scrollHeight;
 
-        // If the message is a search result
-    if (message && message.results && message.results.length > 0) {
-        var resultsContainer = document.createElement("div");
-
-        // Loop through each search result
-        message.results.forEach(function(result) {
-            var resultElement = document.createElement("div");
-            resultElement.className = "search-result";
-
-            // Check if the result is a link
-            if (result.link) {
-                var linkElement = document.createElement("a");
-                linkElement.href = result.link;
-                linkElement.textContent = result.title;
-                linkElement.target = "_blank"; // Open link in a new tab
-                resultElement.appendChild(linkElement);
-            }
-
-            // Add additional information related to the search result
-            if (result.snippet) {
-                var snippetElement = document.createElement("p");
-                snippetElement.textContent = result.snippet;
-                resultElement.appendChild(snippetElement);
-            }
-
-            resultsContainer.appendChild(resultElement);
-        });
-
-        botDiv.appendChild(resultsContainer);
-    } else {
-        // If the message is not a search result, display the message as usual
-        botDiv.textContent = message;
-    }
-}   
-
         // Simulate typing effect
     var typingSpeed = 10; // Adjust typing speed as needed
     var index = 0;
