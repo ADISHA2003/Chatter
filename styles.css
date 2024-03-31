@@ -61,7 +61,9 @@ body {
 input[type="text"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
     border-radius: 0px;
     margin: 0px;
     float: left;
