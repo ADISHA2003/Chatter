@@ -23,6 +23,7 @@ function search() {
 function performSearch(query) {
     var apiKey = "AIzaSyAtQtO2RDaXU1dr3OB8xAFK1uXOmgmfPes";
     var cx = "73ecbbd20d97b4289";
+    var numResults = 5;
     var url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
 
     fetch(url)
