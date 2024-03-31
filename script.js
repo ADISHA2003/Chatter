@@ -237,14 +237,25 @@ function addUserMessage(message) {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-function addBotMessage(message) {
+function addBotMessage(message, simulateTyping) {
     var chatBox = document.getElementById("chat-box");
     var botDiv = document.createElement("div");
     botDiv.className = "bot-message";
-    botDiv.innerHTML = message;
     chatBox.appendChild(botDiv);
-    chatBox.scrollTop = chatBox.scrollHeight;
 
+    // Check if typing simulation is requested
+    if (simulateTyping) {
+        simulateTypingEffect(botDiv, message);
+    } else {
+        botDiv.textContent = message;
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // Hide logo if it's visible
+    var logo = document.getElementById("logo");
+    if (logo.style.opacity !== "0") {
+        logo.style.opacity = "0";
+    }
 }
 
     // Focus on input field when the page loads
