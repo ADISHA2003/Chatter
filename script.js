@@ -14,11 +14,6 @@ function sendMessage() {
     }
 
     function generateBotResponse(userInput) {
-            // Check if user input is a search query
-            if (userInput.toLowerCase().startsWith("search")) {
-                var query = userInput.substring(7).trim(); // Remove "search" keyword
-                return searchGoogle(query);
-            }
         var botResponses = {
             "hello": "Hello! How can I assist you today?",
             "hi": "Hi there!",
@@ -201,6 +196,15 @@ function sendMessage() {
         }
     }
 
+    function addUserMessage(message) {
+        var chatBox = document.getElementById("chat-box");
+        var userDiv = document.createElement("div");
+        userDiv.className = "user-message";
+        userDiv.textContent = message;
+        chatBox.appendChild(userDiv);
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
     function addBotMessage(message) {
         var chatBox = document.getElementById("chat-box");
         var botDiv = document.createElement("div");
@@ -222,30 +226,6 @@ function sendMessage() {
     }, typingSpeed);
 }
 
-function searchGoogle(query) {
-            var apiKey = "AIzaSyAtQtO2RDaXU1dr3OB8xAFK1uXOmgmfPes";
-            var cx = "73ecbbd20d97b4289";
-            var url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
-
-            // Perform Google Custom Search API request
-            return fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    if (data && data.items) {
-                        var searchResults = data.items.map(item => {
-                            return `<h3><a href="${item.link}" target="_blank">${item.title}</a></h3><p>${item.snippet}</p>`;
-                        }).join('');
-                        return searchResults;
-                    } else {
-                        return "<p>No search results found.</p>";
-                    }
-                })
-                .catch(error => {
-                    console.log('Error:', error);
-                    return "An error occurred while processing your search query.";
-                });
-        }
-
     // Focus on input field when the page loads
         window.onload = function() {
             document.getElementById("user-input").focus();
@@ -257,11 +237,3 @@ document.getElementById("user-input").addEventListener("keyup", function(event) 
             sendMessage();
         }
     });
-
-document.getElementById("search-button").addEventListener("click", function() {
-            var query = document.getElementById("user-input").value.trim();
-            if (query === "") return;
-            searchGoogle("search " + query).then(function(response) {
-                addBotMessage(response);
-            });
-});
