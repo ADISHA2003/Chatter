@@ -7,10 +7,10 @@ body {
 
 .chat-container {
     max-width: 100%; /* Adjust maximum width */
-    margin: 0px auto;
+    margin: 0 auto;
     position: relative;
-    border: 0px solid #ccc;
-    border-radius: 0px;
+    border: 0;
+    border-radius: 0;
     overflow: hidden;
     height: 560px;
 }
@@ -53,17 +53,17 @@ body {
 }
 
 .input-container {
-    width: calc(100% - 80px); /* Adjust width to accommodate the search button */
+    width: calc(100% - 160px); /* Adjust width to accommodate the buttons */
     float: left;
     position: relative;
 }
 
 input[type="text"] {
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 0px;
-    margin: 0px;
+    border-radius: 0;
+    margin: 0;
     float: left;
 }
 
@@ -72,36 +72,18 @@ input[type="text"] {
     margin-top: 5px; /* Adjust margin as needed */
 }
 
-
-button#send-btn {
-    width: 80px; /* Adjust width of the search button */
+button {
+    width: 70px; /* Adjust width of the buttons */
     padding: 8px;
     border: 1px solid #ffffff;
     background-color: #000000;
     color: #ffffff;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px;
     cursor: pointer;
     margin: 0;
 }
 
-button#send-btn:hover {
-    background-color: #ffffff;
-    color: #000000;
-    border: 1px solid #000000;
-}
-
-button#search-btn {
-    width: 80px; /* Adjust width of the search button */
-    padding: 8px;
-    border: 1px solid #ffffff;
-    background-color: #000000;
-    color: #ffffff;
-    border-radius: 0px 10px 10px 0px ;
-    cursor: pointer;
-    margin: 0;
-}
-
-button#search-btn:hover {
+button:hover {
     background-color: #ffffff;
     color: #000000;
     border: 1px solid #000000;
@@ -130,20 +112,28 @@ button#search-btn:hover {
     opacity: 0;
 }
 
-/* Media query for smaller devices (e.g., phones) */
+/* Media queries for responsiveness */
+
 @media only screen and (max-width: 768px) {
-    /* Styles for smaller devices */
-    /* Adjust styles to fit smaller screens */
+    .input-container {
+        width: calc(100% - 140px); /* Adjust width to accommodate the buttons */
+    }
+
+    button {
+        width: 60px; /* Adjust width of the buttons */
+    }
 }
 
-/* Media query for medium-sized devices (e.g., tablets) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    /* Styles for medium-sized devices */
-    /* Adjust styles to fit medium-sized screens */
-}
+@media only screen and (max-width: 480px) {
+    .input-container {
+        width: calc(100% - 100px); /* Adjust width to accommodate the buttons */
+    }
 
-/* Media query for larger devices (e.g., desktops) */
-@media only screen and (min-width: 1024px) {
-    /* Styles for larger devices */
-    /* Adjust styles to fit larger screens */
+    input[type="text"] {
+        width: calc(100% - 60px);
+    }
+
+    button {
+        width: 50px; /* Adjust width of the buttons */
+    }
 }
