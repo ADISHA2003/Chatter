@@ -133,3 +133,7 @@ button#search-btn:hover {
 .chat-container.chatting #logo {
     opacity: 0;
 }
+
+.chat-container.search #logo {
+    opacity: 0;
+}
