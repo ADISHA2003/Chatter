@@ -129,3 +129,21 @@ button#search-btn:hover {
 .chat-container.chatting #logo {
     opacity: 0;
 }
+
+/* Media query for smaller devices (e.g., phones) */
+@media only screen and (max-width: 768px) {
+    /* Styles for smaller devices */
+    /* Adjust styles to fit smaller screens */
+}
+
+/* Media query for medium-sized devices (e.g., tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Styles for medium-sized devices */
+    /* Adjust styles to fit medium-sized screens */
+}
+
+/* Media query for larger devices (e.g., desktops) */
+@media only screen and (min-width: 1024px) {
+    /* Styles for larger devices */
+    /* Adjust styles to fit larger screens */
+}
