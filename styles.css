@@ -1,5 +1,3 @@
-/* Updated CSS styles for search functionality */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -41,6 +39,8 @@ header {
 }
 
 .user-message {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
     background-color: #FFFAFA;
     color: #000000;
     float: right;
@@ -49,7 +49,7 @@ header {
 }
 
 .bot-message {
-    font-family: monospace;
+    font-family: Arial, sans-serif;
     font-size: 14px;
     background-color: #FFFAFA;
     color: #000000;
@@ -73,27 +73,47 @@ input[type="text"] {
     float: left;
 }
 
-button {
+.button-container {
+    text-align: center;
+    margin-top: 1px; /* Adjust margin as needed */
+}
+
+
+button#send-btn {
     width: 80px; /* Adjust width of the search button */
     padding: 8px;
-    align-button: center;
     border: 1px solid #ffffff;
     background-color: #000000;
     color: #ffffff;
     border-radius: 0px;
     cursor: pointer;
     margin: 0;
-    float: right;
 }
 
-button:hover {
+button#send-btn:hover {
+    background-color: #242124;
+    color: #ffffff;
+}
+
+button#search-btn {
+    width: 80px; /* Adjust width of the search button */
+    padding: 8px;
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 0px;
+    cursor: pointer;
+    margin: 0;
+}
+
+button#search-btn:hover {
     background-color: #242124;
     color: #ffffff;
 }
 
 .footer {
     padding: 5px;
-    margin: 2px;
+    margin: 10px;
     background-color: #000000;
     text-align: center;
     font-size: 14px;
