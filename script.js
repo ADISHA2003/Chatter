@@ -274,6 +274,11 @@ function startTypingAnimation() {
             document.getElementById("user-input").focus();
         }
 
+// For mobile phones, add touch event listener
+document.getElementById('send-btn').addEventListener('touchstart', function() {
+    document.querySelector('.chat-container').focus();
+})
+
 document.getElementById("user-input").addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
         sendMessage();
