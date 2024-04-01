@@ -283,4 +283,16 @@ document.getElementById("user-input").addEventListener("keyup", function(event) 
     if (event.key === "Enter") {
         sendMessage();
     }
-});
+})
+
+// Function to open/close the sidebar
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const isOpen = sidebar.style.left === '0px';
+    sidebar.style.left = isOpen ? '-250px' : '0';
+}
+
+// Event listener for opening/closing sidebar when the button is clicked
+const sidebarOpenBtn = document.getElementById('sidebar-open-btn');
+sidebarOpenBtn.addEventListener('click', toggleSidebar);
+
