@@ -269,6 +269,16 @@ function startTypingAnimation() {
     }, 8); // Adjust typing speed as needed
 }
 
+function displayBotResponseWithDelay(delay) {
+  setTimeout(function() {
+    var botResponse = document.querySelector('.bot-response');
+    botResponse.classList.remove('delayed');
+  }, delay);
+}
+
+// Example usage
+displayBotResponseWithDelay(2000);
+
     // Focus on input field when the page loads
         window.onload = function() {
             document.getElementById("user-input").focus();
