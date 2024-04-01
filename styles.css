@@ -17,12 +17,14 @@ body {
 
 .chat-container {
     max-width: 100%; /* Adjust maximum width */
+    display: flex;
     margin: 0px auto;
     position: relative;
     border: 0px solid #ccc;
     border-radius: 0px;
     overflow: hidden;
-    height: 560px;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .chat-box {
