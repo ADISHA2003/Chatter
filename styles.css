@@ -1,26 +1,71 @@
+
+/* Updated CSS styles for search functionality */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    padding-bottom: 0px;
     background-color: #000000;
 }
 
-.chat-container {
-    max-width: 100%;
+.header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
     display: flex;
-    margin: 0px auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden off the screen */
+    width: 250px;
+    height: 100%;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    border-right: 0px solid #ffffff;
+    padding-top: 100px;
+    z-index: 999; /* Ensure it's above other elements */
+    transition: left 0.3s ease;
+  }
+
+  .sidebar img {
+    max-width: 100%; /* Ensure the image does not exceed the width of the sidebar */
+    border-radius: 50%;
+    display: block; /* Ensure the image is displayed as a block element */
+    margin-bottom: 20px; /* Add some spacing below the image */
+  }
+
+  .sidebar-open-btn {
+    background: #ffffff;
+    border: 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    margin-right: 10px; /* Adjust margin as needed */
+    position: relative; /* Ensure z-index works */
+    z-index: 1000;
+  }
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    max-width:100%; /* Adjust maximum width */
+    margin: 5px auto;
     position: relative;
-    border: 0px solid #ccc;
+    border-top: 2px solid #ccc;
     border-radius: 0px;
     overflow: hidden;
-    flex-direction: column;
-    height: 81vh;
-    flex-grow: 1;
+    height: 72vh;
+    z-index: 1;
 }
 
 .chat-box {
-    height: 80vh; /* Adjust height */
+    height: 71vh; /* Adjust height */
     overflow-y: scroll;
     padding: 10px;
     background-color: #000000;
@@ -37,13 +82,11 @@ body {
 }
 
 .user-message {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
     background-color: #FFFAFA;
     color: #000000;
     float: right;
     clear: both;
-    margin: 6px;
+    margin: 7px;
 }
 
 .bot-message {
@@ -53,21 +96,20 @@ body {
     color: #000000;
     float: left;
     clear: both;
-    margin: 6px;
+    margin: 7px;
 }
 
 .input-container {
     width: calc(100% - 80px); /* Adjust width to accommodate the search button */
     float: left;
     position: relative;
+    align-content: center;
 }
 
 input[type="text"] {
     width: 100%;
     padding: 10px;
-    background-color: #000000;
-    color: #ffffff;
-    border: 1px solid #ffffff;
+    border: 1px solid #ccc;
     border-radius: 0px;
     margin: 0px;
     float: left;
@@ -75,47 +117,53 @@ input[type="text"] {
 
 .button-container {
     text-align: center;
-    margin-top: 7px; /* Adjust margin as needed */
+    margin-top: 5px; /* Adjust margin as needed */
 }
 
-
 button#send-btn {
-    width: 80px; /* Adjust width of the search button */
-    padding: 8px;
-    border: 1px solid #ffffff;
     background-color: #000000;
-    color: #ffffff;
-    border-radius: 10px 0px 0px 10px;
+    border: 1px solid #ffffff;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
     cursor: pointer;
-    margin: 0;
+    border-radius: 10px 0px 0px 10px;
 }
 
 button#send-btn:hover {
     background-color: #ffffff;
     color: #000000;
-    border: 1px solid #000000;
 }
 
 button#search-btn {
-    width: 80px; /* Adjust width of the search button */
-    padding: 8px;
-    border: 1px solid #ffffff;
     background-color: #000000;
-    color: #ffffff;
-    border-radius: 0px 10px 10px 0px ;
+    border: 1px solid #ffffff;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
     cursor: pointer;
-    margin: 0;
+    border-radius: 0px 10px 10px 0px;
 }
 
 button#search-btn:hover {
     background-color: #ffffff;
     color: #000000;
-    border: 1px solid #000000;
 }
+
 
 .footer {
     padding: 5px;
-    margin: 5px;
+    margin: 2px;
     background-color: #000000;
     text-align: center;
     font-size: 14px;
@@ -134,28 +182,4 @@ button#search-btn:hover {
 
 .chat-container.chatting #logo {
     opacity: 0;
-}
-
-@media only screen and (max-width: 768px) {
-    .input-container {
-        width: 100%; /* Adjust width to accommodate the buttons */
-    }
-
-    button {
-        width: 80px; /* Adjust width of the buttons */
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .input-container {
-        width: 100%; /* Adjust width to accommodate the buttons */
-    }
-
-    input[type="text"] {
-        width: 100%;
-    }
-
-    button {
-        width: 80px; /* Adjust width of the buttons */
-    }
 }
