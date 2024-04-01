@@ -25,6 +25,7 @@ body {
     overflow: hidden;
     flex-direction: column;
     height: 81vh;
+    flex-grow: 1;
 }
 
 .chat-box {
