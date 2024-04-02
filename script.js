@@ -6,7 +6,7 @@ function sendMessage() {
     document.getElementById("chat-container").classList.add("chatting");
 
     // Add class to indicate searching has started
-    document.getElementById("chat-container").classList.add("searching");
+    document.getElementById("chat-container").classList.add("search");
 
     addUserMessage(userInput);
     document.getElementById("user-input").value = "";
