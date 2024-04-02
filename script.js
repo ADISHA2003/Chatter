@@ -245,7 +245,7 @@ function startTypingAnimation() {
         } else {
             clearInterval(typingInterval); // Stop the typing animation when message is complete
         }
-    }, 5); // Adjust typing speed as needed
+    }, 10); // Adjust typing speed as needed
 }
 
     // Focus on input field when the page loads
