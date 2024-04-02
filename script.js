@@ -20,6 +20,13 @@ function sendMessage() {
 }
 
 function search() {
+    var logo = document.getElementById("logo");
+    if (logo) {
+        logo.style.opacity = 0;
+    }
+}
+
+function search() {
     var query = document.getElementById("user-input").value.trim();
     if (query === "") return;
 
