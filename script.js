@@ -300,3 +300,14 @@ function toggleSidebar() {
 const sidebarOpenBtn = document.getElementById('sidebar-open-btn');
 sidebarOpenBtn.addEventListener('click', toggleSidebar);
 
+// Function to hide the logo when the search button is clicked
+function hideLogoOnSearch() {
+    var logo = document.getElementById("logo");
+    if (logo) {
+        logo.style.opacity = 0;
+    }
+}
+
+// Add event listener to the search button
+document.getElementById("search-btn").addEventListener("click", hideLogoOnSearch);
+
