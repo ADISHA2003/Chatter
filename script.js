@@ -66,7 +66,7 @@ function generateBotResponse(userInput) {
         "thank you": "You're welcome!",
         "i'm good": "That's great, How can i help you today?",
         "i am good": "That's great, How can i help you today?",
-        "how old are you": "I don't have an age like humans.",
+        "old": "I don't have an age like humans.",
         "joke": "I told my computer I needed a break, and now it won't stop sending me vacation ads!",
         "life": "Life is a deeply personal and subjective concept that individuals grapple with throughout their existence. While existentialism suggests that life lacks inherent meaning, it also empowers individuals to find purpose through their actions, relationships, and self-discovery. Ultimately, the quest for meaning is an ongoing journey of exploration and introspection, shaped by each person's unique experiences, beliefs, and aspirations.",
         "time": new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
@@ -245,7 +245,7 @@ function startTypingAnimation() {
         } else {
             clearInterval(typingInterval); // Stop the typing animation when message is complete
         }
-    }, 4); // Adjust typing speed as needed
+    }, 20); // Adjust typing speed as needed
 }
 
     // Focus on input field when the page loads
