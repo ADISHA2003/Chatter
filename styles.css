@@ -197,6 +197,10 @@ button#search-btn:hover {
     transition: opacity 0.5s ease;
 }
 
-.chat-container.chatting,.search #logo {
+.chat-container.chatting#logo {
+    opacity: 0;
+}
+
+.chat-container.search#logo {
     opacity: 0;
 }
