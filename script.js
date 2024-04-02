@@ -67,7 +67,7 @@ function generateBotResponse(userInput) {
         "i am good": "That's great, How can i help you today?",
         "how old are you": "I don't have an age like humans.",
         "tell me a joke": "I told my computer I needed a break, and now it won't stop sending me vacation ads!",
-        "what is the meaning of life": "The meaning of life is a deeply personal and subjective concept that individuals grapple with throughout their existence. While existentialism suggests that life lacks inherent meaning, it also empowers individuals to find purpose through their actions, relationships, and self-discovery. Ultimately, the quest for meaning is an ongoing journey of exploration and introspection, shaped by each person's unique experiences, beliefs, and aspirations.",
+        "meaning of life": "The meaning of life is a deeply personal and subjective concept that individuals grapple with throughout their existence. While existentialism suggests that life lacks inherent meaning, it also empowers individuals to find purpose through their actions, relationships, and self-discovery. Ultimately, the quest for meaning is an ongoing journey of exploration and introspection, shaped by each person's unique experiences, beliefs, and aspirations.",
         "what time is it": new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
         "what is the date today": new Date().toLocaleDateString(),
         "how's the weather": "The weather is unpredictable, just like life!",
