@@ -197,8 +197,7 @@ button#search-btn:hover {
     transition: opacity 0.5s ease;
 }
 
-.chat-container.chatting.searching
-#logo {
+.chat-container.chatting #logo {
     opacity: 0;
 }
 
