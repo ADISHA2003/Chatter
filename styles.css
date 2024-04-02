@@ -201,6 +201,6 @@ button#search-btn:hover {
     opacity: 0;
 }
 
-.chat-container.searching #logo {
+.chat-container.search #logo {
     opacity: 0;
 }
