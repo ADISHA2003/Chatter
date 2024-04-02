@@ -109,7 +109,7 @@ body {
 .bot-message {
     font-family: monospace;
     font-size: 14px;
-    background-color: #FFFAFA opacity: 1;
+    background-color: #FFFAFA;
     color: #000000;
     float: left;
     clear: both;
