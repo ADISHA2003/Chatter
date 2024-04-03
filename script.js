@@ -164,6 +164,14 @@ function generateBotResponse(userInput) {
 "default": "I'm sorry, I didn't understand that. Could you please rephrase your question?"
     };
 
+    // Function to generate a delayed response
+    function delayedResponse(response) {
+        setTimeout(function() {
+            // Output the response after a delay
+            console.log(response);
+        }, 2000); // Adjust the delay time (in milliseconds) as needed
+    }
+
     // Check if userInput matches any key in botResponses
     for (var key in botResponses) {
         if (userInput.toLowerCase().includes(key)) {
