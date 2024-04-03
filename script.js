@@ -169,15 +169,21 @@ function generateBotResponse(userInput) {
         setTimeout(function() {
             // Output the response after a delay
             console.log(response);
-        }, 2000); // Adjust the delay time (in milliseconds) as needed
+        }, 5000); // Adjust the delay time (in milliseconds) as needed
     }
 
     // Check if userInput matches any key in botResponses
     for (var key in botResponses) {
         if (userInput.toLowerCase().includes(key)) {
-            return botResponses[key];
+            // Generate a delayed response for the matched key
+            delayedResponse(botResponses[key]);
+            return; // Exit the function after generating the response
         }
     }
+
+    // If userInput doesn't match any key, provide a default response
+    delayedResponse("I'm sorry, I didn't understand that. Can you please rephrase?");
+}
 
     // If no match found, check if it's a calculation request
     if (isCalculationRequest(userInput)) {
