@@ -5,11 +5,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: #ffffff;
 }
 
 .header {
-    background-color: #000000;
+    background-color: #ffffff;
     color: #ffffff;
     padding: 10px;
     display: flex;
@@ -24,8 +24,8 @@ body {
     width: 250px;
     height: 100%;
     text-align: center;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     border-right: 0px solid #ffffff;
     padding-top: 100px;
     z-index: 999; /* Ensure it's above other elements */
@@ -57,7 +57,7 @@ body {
   
 
   .sidebar-open-btn {
-    background: #ffffff;
+    background: #000000;
     border: 1px solid;
     border-radius: 50%;
     cursor: pointer;
@@ -74,7 +74,7 @@ body {
     max-width:100%; /* Adjust maximum width */
     margin: 5px auto;
     position: relative;
-    border-top: 2px solid #ccc;
+    border-top: 2px solid #000000;
     border-radius: 0px;
     overflow: hidden;
     height: 72vh;
@@ -85,7 +85,7 @@ body {
     height: 71vh; /* Adjust height */
     overflow-y: scroll;
     padding: 10px;
-    background-color: #000000;
+    background-color: #ffffff;
     border-bottom: 1px solid #ccc;
 }
 
@@ -99,7 +99,7 @@ body {
 }
 
 .user-message {
-    background-color: #FFFAFA;
+    background-color: #ffffff;
     color: #000000;
     float: right;
     clear: both;
@@ -109,7 +109,7 @@ body {
 .bot-message {
     font-family: monospace;
     font-size: 14px;
-    background-color: #FFFAFA;
+    background-color: #ffffff;
     color: #000000;
     float: left;
     clear: both;
@@ -126,7 +126,7 @@ body {
 input[type="text"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 0px;
     margin: 0px;
     float: left;
@@ -138,9 +138,9 @@ input[type="text"] {
 }
 
 button#send-btn {
-    background-color: #000000;
-    border: 1px solid #ffffff;
-    color: white;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    color: black;
     padding: 10px 24px;
     text-align: center;
     text-decoration: none;
@@ -153,14 +153,14 @@ button#send-btn {
 }
 
 button#send-btn:hover {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 button#search-btn {
-    background-color: #000000;
-    border: 1px solid #ffffff;
-    color: white;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    color: black;
     padding: 10px 24px;
     text-align: center;
     text-decoration: none;
@@ -173,18 +173,18 @@ button#search-btn {
 }
 
 button#search-btn:hover {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 
 .footer {
     padding: 5px;
     margin: 2px;
-    background-color: #000000;
+    background-color: #ffffff;
     text-align: center;
     font-size: 14px;
-    color: #ffffff;
+    color: #000000;
 }
 
 .logo {
