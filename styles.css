@@ -50,6 +50,7 @@ body {
   }
   
 .icon {
+    background color: #000000;
     align-items: center;
     width: 30px; /* Set the width of the image */
     height: auto; /* Maintain aspect ratio */
@@ -107,8 +108,6 @@ body {
 }
 
 .bot-message {
-    font-family: monospace;
-    font-size: 14px;
     background-color: #ffffff;
     color: #000000;
     float: left;
