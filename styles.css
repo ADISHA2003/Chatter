@@ -101,7 +101,7 @@ body {
 
 .user-message {
     background-color: #ffffff;
-    color: #000000;
+    color: blue;
     float: right;
     clear: both;
     margin: 7px;
@@ -109,7 +109,7 @@ body {
 
 .bot-message {
     background-color: #ffffff;
-    color: #000000;
+    color: green;
     float: left;
     clear: both;
     margin: 7px;
