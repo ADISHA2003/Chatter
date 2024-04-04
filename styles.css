@@ -11,7 +11,7 @@ body {
 .header {
     background-color: #ffffff;
     color: #ffffff;
-    padding: 15px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -205,14 +205,12 @@ button#search-btn:hover {
     left: 10px;
     background-color: #000000;
     color: #fff;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 1000;
 }
 
 .about-btn:hover {
