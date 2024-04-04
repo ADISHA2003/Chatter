@@ -271,9 +271,11 @@ function toggleSidebar() {
     sidebar.style.left = isOpen ? '-250px' : '0';
 }
 
-// Event listener for opening/closing sidebar when the button is clicked
-const sidebarOpenBtn = document.getElementById('sidebar-open-btn');
-sidebarOpenBtn.addEventListener('click', toggleSidebar);
+// Add event listener to the about button
+document.getElementById("about-btn").addEventListener("click", function() {
+    // Navigate to the about page
+    window.location.href = "about.html";
+})
 
 // Function to hide the logo when the search button is clicked
 function hideLogoOnSearch() {
