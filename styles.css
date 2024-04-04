@@ -201,7 +201,6 @@ button#search-btn:hover {
 }
 
 .about-btn {
-    position: fixed;
     top: 10px;
     left: 10px;
     background-color: #000000;
@@ -212,6 +211,8 @@ button#search-btn:hover {
     border: none;
     cursor: pointer;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1000;
 }
 
 .about-btn:hover {
