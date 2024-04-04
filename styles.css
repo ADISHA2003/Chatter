@@ -78,7 +78,7 @@ body {
     border-top: 2px solid #000000;
     border-radius: 0px;
     overflow: hidden;
-    height: 100vh;
+    height: 100em;
     z-index: 1;
 }
 
