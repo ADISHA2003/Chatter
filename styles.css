@@ -37,7 +37,7 @@ body {
 
   .sidebar img {
     max-width: 100%; /* Ensure the image does not exceed the width of the sidebar */
-    border-radius: 50%;
+    border-radius: 20%;
     display: block; /* Ensure the image is displayed as a block element */
     margin-bottom: 20px; /* Add some spacing below the image */
   }
