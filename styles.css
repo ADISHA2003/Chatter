@@ -38,9 +38,9 @@ body {
 .user-message,
 .bot-message {
     margin-bottom: 5px;
-    padding: 5px;
+    padding: 2px;
     border-radius: 20px;
-    max-width: 90%;
+    max-width: 100%;
     word-wrap: break-word;
 }
 
