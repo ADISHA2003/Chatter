@@ -54,6 +54,7 @@ body {
 }
 
 .bot-message {
+    font-style: monospace;
     background-color: f4f4f4;
     color: black;
     float: left;
