@@ -50,7 +50,7 @@ body {
     font-weight: bold;
     float: left;
     clear: both;
-    margin: 7px;
+    margin: 5px;
 }
 
 .bot-message {
@@ -58,7 +58,7 @@ body {
     color: black;
     float: left;
     clear: both;
-    margin: 7px;
+    margin: 5px;
 }
 
 .input-container {
