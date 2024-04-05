@@ -285,13 +285,6 @@ document.getElementById("user-input").addEventListener("keyup", function(event) 
     }
 })
 
-// Function to open/close the sidebar
-function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const isOpen = sidebar.style.left === '0px';
-    sidebar.style.left = isOpen ? '-250px' : '0';
-}
-
 // Add event listener to the about button
 document.getElementById("about-btn").addEventListener("click", function() {
     // Navigate to the about page
