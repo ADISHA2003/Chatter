@@ -123,6 +123,7 @@ body {
 }
 
 input[type="text"] {
+    background-color: #f4f4f4;
     width: 100%;
     padding: 10px;
     border: 1px solid #000000;
@@ -137,7 +138,7 @@ input[type="text"] {
 }
 
 button#send-btn {
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     border: 1px solid #000000;
     color: black;
     padding: 10px 24px;
@@ -157,7 +158,7 @@ button#send-btn:hover {
 }
 
 button#search-btn {
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     border: 1px solid #000000;
     color: black;
     padding: 10px 24px;
