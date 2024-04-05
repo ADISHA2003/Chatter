@@ -100,16 +100,16 @@ body {
 }
 
 .user-message {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     float: right;
     clear: both;
     margin: 7px;
 }
 
 .bot-message {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     float: left;
     clear: both;
     margin: 7px;
