@@ -58,8 +58,9 @@ body {
     color: black;
     float: left;
     clear: both;
-    margin: 7px;
-    margin-left: 5px;
+    margin-top: 2px;
+    margin-left: 7px;
+    margin-bottom: 6px;
 }
 
 .input-container {
