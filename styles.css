@@ -47,7 +47,7 @@ body {
 .user-message {
     background-color: #f4f4f4;
     color: black;
-    font-weight: bold;
+    font-weight: bolder;
     float: left;
     clear: both;
     margin: 5px;
@@ -61,7 +61,7 @@ body {
     clear: both;
     margin-top: 2px;
     margin-left: 5px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .input-container {
