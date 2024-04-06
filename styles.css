@@ -51,6 +51,7 @@ body {
     float: left;
     clear: both;
     margin: 5px;
+    margin-bottom: 0px;
 }
 
 .bot-message {
@@ -59,7 +60,7 @@ body {
     float: left;
     clear: both;
     margin-top: 2px;
-    margin-left: 7px;
+    margin-left: 5px;
     margin-bottom: 6px;
 }
 
