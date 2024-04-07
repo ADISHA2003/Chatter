@@ -41,7 +41,7 @@ body {
     margin-bottom: 5px;
     padding: 2px;
     border-radius: 5px;
-    max-width: 100%;
+    max-width: 90%;
     word-wrap: break-word;
 }
 
@@ -50,7 +50,7 @@ body {
     color: white;
     padding: 3px;
     font-weight: bolder;
-    float: left;
+    float: right;
     clear: both;
     margin: 5px;
     margin-bottom: 0px;
