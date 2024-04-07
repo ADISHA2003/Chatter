@@ -40,14 +40,14 @@ body {
 .bot-message {
     margin-bottom: 5px;
     padding: 2px;
-    border-radius: 10px;
+    border-radius: 5px;
     max-width: 100%;
     word-wrap: break-word;
 }
 
 .user-message {
-    background-color: #ffffff;
-    color: black;
+    background-color: #000000;
+    color: white;
     padding: 3px;
     font-weight: bolder;
     float: left;
@@ -57,8 +57,8 @@ body {
 }
 
 .bot-message {
-    background-color: #ffffff;
-    color: black;
+    background-color: #000000;
+    color: white;
     padding: 3px;
     float: left;
     clear: both;
