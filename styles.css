@@ -46,7 +46,7 @@ body {
 }
 
 .user-message {
-    background-color: #000000;
+    background-color: #454545;
     color: white;
     padding: 3px;
     font-weight: bolder;
@@ -57,7 +57,7 @@ body {
 }
 
 .bot-message {
-    background-color: #000000;
+    background-color: #454545;
     color: white;
     padding: 3px;
     float: left;
