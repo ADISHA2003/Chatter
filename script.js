@@ -62,7 +62,7 @@ function generateBotResponse(userInput) {
         "call you": "You can call me Chatter.",
         "created": "I am created by ADITYA.",
         "creator": "I am created by ADITYA.",
-        "bye": "Goodbye! Have a great day! ☺️",
+        "bye": "Goodbye! Have a great day!",
         "thank you": "You're welcome!",
         "i'm good": "That's great, How can i help you today?",
         "i am good": "That's great, How can i help you today?",
