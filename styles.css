@@ -40,7 +40,7 @@ body {
 .bot-message {
     margin-bottom: 5px;
     padding: 2px;
-    border-radius: 20px;
+    border-radius: 10px;
     max-width: 100%;
     word-wrap: break-word;
 }
@@ -49,7 +49,6 @@ body {
     background-color: #ffffff;
     color: black;
     padding: 3px;
-    border-radius: 20px;
     font-weight: bolder;
     float: left;
     clear: both;
@@ -61,7 +60,6 @@ body {
     background-color: #ffffff;
     color: black;
     padding: 3px;
-    border-radius: 20px;
     float: left;
     clear: both;
     margin-top: 2px;
