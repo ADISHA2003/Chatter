@@ -87,46 +87,27 @@ input[type="text"] {
     margin-top: 5px;
 }
 
-button#send-btn {
-    background-color: #f4f4f4;
-    border: 2px solid #000000;
-    color: black;
-    padding: 10px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 10px 0px 0px 10px;
+#send-btn {
+    border: none;
+    background: none;
+    padding: 0;
+}
+  
+#send-btn img {
+    width: 32px;
+    height: 32px;
 }
 
-button#send-btn:hover {
-    background-color: #000000;
-    color: #ffffff;
+#search-btn {
+    border: none;
+    background: none;
+    padding: 0;
 }
-
-button#search-btn {
-    background-color: #f4f4f4;
-    border: 2px solid #000000;
-    color: black;
-    padding: 10px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 0px 10px 10px 0px;
+  
+#search-btn img {
+    width: 33px;
+    height: 33px;
 }
-
-button#search-btn:hover {
-    background-color: #000000;
-    color: #ffffff;
-}
-
 
 .footer {
     padding: 5px;
