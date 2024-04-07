@@ -48,6 +48,7 @@ body {
 .user-message {
     background-color: #ffffff;
     color: black;
+    padding: 3px; 
     font-weight: bolder;
     float: left;
     clear: both;
@@ -56,8 +57,9 @@ body {
 }
 
 .bot-message {
-    background-color: ffffff;
+    background-color: #ffffff;
     color: black;
+    padding: 3px;
     float: left;
     clear: both;
     margin-top: 2px;
