@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -9,11 +8,10 @@ body {
 .header {
     background-color: #f4f4f4;
     color: #000000;
-    padding: 5px;
+    padding: 0px;
     display: flex;
     border-top: 2px solid #000000;
     align-items: center;
-    justify-content: space-between;
 }
 
 .chat-container {
