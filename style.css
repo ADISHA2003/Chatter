@@ -37,6 +37,7 @@ header {
 .back-button {
     max-width: 37px;
     display: block;
+    padding: 4px 10px;
     margin: 20px auto;
     text-decoration: none;
     background-color: black;
