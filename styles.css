@@ -39,7 +39,6 @@ body {
 
 .user-message,
 .bot-message {
-    margin-bottom: 5px;
     padding: 2px;
     border-radius: 5px;
     max-width: 100%;
@@ -64,7 +63,7 @@ body {
     clear: both;
     margin-top: 0px;
     margin: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 7px;
 }
 
 .input-container {
