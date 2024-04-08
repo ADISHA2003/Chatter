@@ -33,7 +33,7 @@ function search() {
 function performSearch(query) {
     var apiKey = "AIzaSyBn-1DwSjXpqV5nteGRxbiW-LvxS7pDz-Q";
     var cx = "73ecbbd20d97b4289";
-    var url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
+    var url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}&fields=items(title,link,snippet)`;
 
     fetch(url)
         .then(response => response.json())
