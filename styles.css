@@ -52,7 +52,6 @@ body {
     font-weight: bolder;
     float: left;
     clear: both;
-    margin-top: 5px;
     margin-bottom: 3px;
 }
 
@@ -63,8 +62,7 @@ body {
     float: left;
     clear: both;
     margin-top: 0px;
-    margin: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
 
 .input-container {
