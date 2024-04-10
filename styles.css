@@ -1,5 +1,4 @@
 body {
-    height: 50%;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -26,12 +25,12 @@ body {
     border-top: 2px solid #000000;
     border-radius: 0px;
     overflow: hidden;
-    height: auto;
+    height: 78vh;
     z-index: 1;
 }
 
 .chat-box {
-    height: auto;
+    height: 78vh;
     overflow-y: scroll;
     padding: 10px;
     background-color: #f4f4f4;
