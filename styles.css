@@ -45,6 +45,7 @@ body {
     margin-bottom: 3px;
     display: flex;
     white-space: nowrap;
+    margin-right: 10px;
 }
   
 .keyword {
