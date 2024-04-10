@@ -293,7 +293,7 @@ document.getElementById("search-btn").addEventListener("click", hideLogoOnSearch
 
 const questions = [
     "Hello",
-    "What time is it?",
+    "What is Blockchain?",
     "Can you code?",
     "What is your purpose?",
     "what are your limitations?",
