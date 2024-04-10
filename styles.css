@@ -37,18 +37,10 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
-.keyword-box-container {
-    position: relative;
-    width: 100%;
-    overflow-x: scroll;
-    white-space: nowrap;
-    padding: 3px;
-    margin-bottom: 0px;
-  }
-
 .keyword-box {
     display: inline-block;
     position: relative;
+    overflow-x: scroll;
     margin-top: 0px;
     margin-bottom: 0px;
     display: flex;
