@@ -46,15 +46,12 @@ body {
     display: flex;
     white-space: nowrap;
 }
-  
-.keyword-box + .keyword-box {
-    margin-left: 10px;
-}
 
 .keyword {
     padding: 1vh 3vh;
-    background-color: #ffffff;
-    border: 1px solid hsl(0, 1%, 57%);
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #f4f4f4;
     border-radius: 50px;
     cursor: pointer;
     margin-right: none;
