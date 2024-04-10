@@ -72,7 +72,6 @@ body {
     border-radius: 5px;
     max-width: 100%;
     word-wrap: break-word;
-    filter:drop-shadow(1000px 700px 1000px Black);
 }
 
 .user-message {
