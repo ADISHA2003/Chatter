@@ -49,7 +49,6 @@ body {
     margin-top: 1px;
     margin-bottom: 1px;
     display: flex;
-    animation: scroll 15s linear infinite;
     white-space: nowrap;
 }
   
