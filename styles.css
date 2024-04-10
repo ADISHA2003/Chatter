@@ -37,6 +37,33 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
+.keyword-box {
+    position: relative;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    display: flex;
+    animation: scroll 15s linear infinite;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+  
+.keyword {
+    padding: 1vh 5vh;
+    background-color: #f0f0f0;
+    border: 1px solid hsl(0, 1%, 57%);
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: none;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
 .user-message,
 .bot-message {
     padding: 2px;
