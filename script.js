@@ -2,17 +2,14 @@ function sendMessage() {
     var userInput = document.getElementById("user-input").value.trim();
     if (userInput === "") return;
 
-    // Add class to indicate chatting has started
     document.getElementById("chat-container").classList.add("chatting");
 
     addUserMessage(userInput);
     document.getElementById("user-input").value = "";
 
-    // Process user input and generate bot response
     var botResponse = generateBotResponse(userInput);
     addBotMessage(botResponse);
     
-    // Start typing animation for bot response
     startTypingAnimation();
 }
 
@@ -185,34 +182,28 @@ function generateBotResponse(userInput) {
 "default": "I'm sorry, I didn't understand that. Could you please rephrase your question?"
     };
 
-    // Check if userInput matches any key in botResponses
     for (var key in botResponses) {
         if (userInput.toLowerCase().includes(key)) {
             return botResponses[key];
         }
     }
 
-    // If no match found, check if it's a calculation request
     if (isCalculationRequest(userInput)) {
         var calculationResult = performCalculation(userInput);
         return "Result: " + calculationResult;
     }
 
-    // If still no match found, return default response
     return botResponses["default"];
 }
 
 function isCalculationRequest(input) {
-    // Check if input contains mathematical operators
     return /[+\*-/]/.test(input);
 }
 
 function performCalculation(input) {
-    // Parse input to extract numbers and operator
     var numbers = input.match(/-?\d+(?:\.\d+)?/g).map(Number);
     var operator = input.match(/[+\*-/]/)[0];
 
-    // Perform calculation based on operator
     switch (operator) {
         case '+':
             return numbers[0] + numbers[1];
@@ -253,28 +244,24 @@ function addBotMessage(message) {
 function startTypingAnimation() {
     var botMessages = document.querySelectorAll(".bot-message");
 
-    var lastBotMessage = botMessages[botMessages.length - 1]; // Get the last bot message
+    var lastBotMessage = botMessages[botMessages.length - 1];
 
-    var message = lastBotMessage.textContent.trim(); // Get the text content of the last bot message
-    lastBotMessage.textContent = ""; // Clear the content of the last bot message
-
-    // Create typing animation effect
+    var message = lastBotMessage.textContent.trim();
+    lastBotMessage.textContent = "";
     var typingInterval = setInterval(function() {
         if (message.length > 0) {
-            lastBotMessage.textContent += message.charAt(0); // Add one character at a time
-            message = message.substring(1); // Remove the first character
+            lastBotMessage.textContent += message.charAt(0);
+            message = message.substring(1);
         } else {
-            clearInterval(typingInterval); // Stop the typing animation when message is complete
+            clearInterval(typingInterval);
         }
-    }, 15); // Adjust typing speed as needed
+    }, 15);
 }
 
-    // Focus on input field when the page loads
-        window.onload = function() {
+     window.onload = function() {
             document.getElementById("user-input").focus();
         }
 
-// For mobile phones, add touch event listener
 document.getElementById('send-btn').addEventListener('touchstart', function() {
     document.querySelector('.chat-container').focus();
 })
@@ -285,13 +272,10 @@ document.getElementById("user-input").addEventListener("keyup", function(event) 
     }
 })
 
-// Add event listener to the about button
 document.getElementById("about-btn").addEventListener("click", function() {
-    // Navigate to the about page
     window.location.href = "about.html";
 })
 
-// Function to hide the logo when the search button is clicked
 function hideLogoOnSearch() {
     var logo = document.getElementById("logo");
     if (logo) {
@@ -299,6 +283,51 @@ function hideLogoOnSearch() {
     }
 }
 
-// Add event listener to the search button
 document.getElementById("search-btn").addEventListener("click", hideLogoOnSearch);
 
+const questions = [
+    "Hi Chatter",
+    "What time is it?",
+    "Can you code?",
+    "What is your purpose",
+    "what are your limitations?",
+    "who created you?",
+    "what's your name?",
+    "What is Machine Learning",
+    "Thank you",
+    "What is AI?",
+    "What time is it",
+    "What is the date today",
+    "How old are you?",
+    "Tell me a joke.",
+    "Bye",
+    "What is NLP?",
+    "What is Cloud Computing?",
+  ];
+
+  function displayKeywords() {
+    const keywordBox = document.getElementById('keyword-box');
+    keywordBox.innerHTML = '';
+  
+    const shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+  
+    for (let i = 0; i < shuffledQuestions.length; i++) {
+      const keyword = shuffledQuestions[i];
+      const keywordElement = document.createElement('div');
+      keywordElement.classList.add('keyword');
+      keywordElement.textContent = keyword;
+      keywordElement.addEventListener('click', () => {
+        document.getElementById('user-input').value = keyword;
+      });
+      keywordBox.appendChild(keywordElement);
+    }
+  }
+  
+  function addToChat(message) {
+    const chatBox = document.getElementById('chat-box');
+    const messageElement = document.createElement('div');
+    messageElement.textContent = message;
+    chatBox.appendChild(messageElement);
+  }
+  
+  displayKeywords();
