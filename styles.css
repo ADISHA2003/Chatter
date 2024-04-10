@@ -54,7 +54,7 @@ body {
 }
   
 .keyword {
-    padding: 3px 3vh;
+    padding: 1.5vh 3vh;
     background-color: #ffffff;
     border: 1px solid hsl(0, 1%, 57%);
     border-radius: 50px;
