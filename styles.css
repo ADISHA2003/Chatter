@@ -47,6 +47,7 @@ body {
   }
 
 .keyword-box {
+    display: inline-block;
     position: relative;
     margin-top: 0px;
     margin-bottom: 0px;
