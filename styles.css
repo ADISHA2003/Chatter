@@ -42,7 +42,7 @@ body {
     position: relative;
     overflow-x: scroll;
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 2px;
     display: flex;
     white-space: nowrap;
 }
