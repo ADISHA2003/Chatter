@@ -38,7 +38,7 @@ body {
 }
 
 .keyword-box-container {
-    position: absolute;
+    position: relative;
     width: 100%;
     overflow-x: scroll;
     white-space: nowrap;
