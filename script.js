@@ -278,6 +278,10 @@ document.getElementById("about-btn").addEventListener("click", function() {
     window.location.href = "about.html";
 })
 
+document.getElementById("aboutbot-btn").addEventListener("click", function() {
+    window.location.href = "aboutbot.html";
+})
+
 function hideLogoOnSearch() {
     var logo = document.getElementById("logo");
     if (logo) {
