@@ -43,7 +43,6 @@ body {
     margin-bottom: 1px;
     display: flex;
     animation: scroll 15s linear infinite;
-    transform: translate(-50%, -50%);
     white-space: nowrap;
 }
   
