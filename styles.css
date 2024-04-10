@@ -94,7 +94,7 @@ body {
     clear: both;
     margin-top: 0px;
     margin-bottom: 7px;
-    filter:drop-shadow(100px 50px 25px #f4f4f4);
+    filter:drop-shadow(1000px 500px 1000px #f4f4f4);
 }
 
 .input-container {
