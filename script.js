@@ -311,7 +311,7 @@ const questions = [
     const keywordBox = document.getElementById('keyword-box');
     keywordBox.innerHTML = '';
   
-    const shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    const shuffledQuestions = questions.sort(() => Math.random() - 0.3);
   
     for (let i = 0; i < shuffledQuestions.length; i++) {
       const keyword = shuffledQuestions[i];
