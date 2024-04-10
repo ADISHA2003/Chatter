@@ -84,6 +84,7 @@ body {
 }
 
 .bot-message {
+    font-family: monospace;
     background-color: ;
     color: black;
     padding: 3px;
