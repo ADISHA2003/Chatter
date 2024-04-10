@@ -49,7 +49,7 @@ body {
   
 .keyword {
     padding: 1vh 5vh;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     border: 1px solid hsl(0, 1%, 57%);
     border-radius: 50px;
     cursor: pointer;
