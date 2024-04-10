@@ -288,23 +288,24 @@ function hideLogoOnSearch() {
 document.getElementById("search-btn").addEventListener("click", hideLogoOnSearch);
 
 const questions = [
-    "Hi Chatter",
+    "Hi Chatter!",
     "What time is it?",
     "Can you code?",
-    "What is your purpose",
+    "What is your purpose?",
     "what are your limitations?",
     "who created you?",
     "what's your name?",
-    "What is ML",
-    "Thank you",
+    "What is ML?",
+    "Thank you!",
     "What is AI?",
-    "What time is it",
-    "What is the date today",
+    "What time is it?",
+    "What is the date today?",
     "How old are you?",
     "Tell me a joke.",
     "Bye",
     "What is NLP?",
-    "What is Cloud Computing?"
+    "What is Cloud Computing?",
+    "Write a poem."
   ];
 
   function displayKeywords() {
