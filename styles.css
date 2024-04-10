@@ -45,9 +45,12 @@ body {
     margin-bottom: 3px;
     display: flex;
     white-space: nowrap;
-    margin-right: 10px;
 }
   
+.keyword-box + .keyword-box {
+    margin-left: 10px;
+}
+
 .keyword {
     padding: 1vh 3vh;
     background-color: #ffffff;
