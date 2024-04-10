@@ -288,46 +288,46 @@ function hideLogoOnSearch() {
 document.getElementById("search-btn").addEventListener("click", hideLogoOnSearch);
 
 const questions = [
-    "Hi Chatter",
-    "What time is it?",
-    "Can you code?",
-    "What is your purpose",
-    "what are your limitations?",
-    "who created you?",
-    "what's your name?",
-    "What is ML",
-    "Thank you",
-    "What is AI?",
-    "What time is it",
-    "What is the date today",
-    "How old are you?",
-    "Tell me a joke.",
-    "Bye",
-    "What is NLP?",
-    "What is Cloud Computing?"
-  ];
+  "Hi Chatter",
+  "What time is it?",
+  "Can you code?",
+  "What is your purpose",
+  "what are your limitations?",
+  "who created you?",
+  "what's your name?",
+  "What is ML",
+  "Thank you",
+  "What is AI?",
+  "What time is it",
+  "What is the date today",
+  "How old are you?",
+  "Tell me a joke.",
+  "Bye",
+  "What is NLP?",
+  "What is Cloud Computing?"
+];
 
-  function displayKeywords() {
-    const keywordBox = document.getElementById('keyword-box');
-    keywordBox.innerHTML = '';
-  
-    for (let i = 0; i < shuffledQuestions.length; i++) {
-      const keyword = shuffledQuestions[i];
-      const keywordElement = document.createElement('div');
-      keywordElement.classList.add('keyword');
-      keywordElement.textContent = keyword;
-      keywordElement.addEventListener('click', () => {
-        document.getElementById('user-input').value = keyword;
-      });
-      keywordBox.appendChild(keywordElement);
-    }
+function displayKeywords() {
+  const keywordBox = document.getElementById('keyword-box');
+  keywordBox.innerHTML = '';
+
+  for (let i = 0; i < questions.length; i++) {
+    const keyword = questions[i];
+    const keywordElement = document.createElement('div');
+    keywordElement.classList.add('keyword');
+    keywordElement.textContent = keyword;
+    keywordElement.addEventListener('click', () => {
+      document.getElementById('user-input').value = keyword;
+    });
+    keywordBox.appendChild(keywordElement);
   }
-  
-  function addToChat(message) {
-    const chatBox = document.getElementById('chat-box');
-    const messageElement = document.createElement('div');
-    messageElement.textContent = message;
-    chatBox.appendChild(messageElement);
-  }
-  
-  displayKeywords();
+}
+
+function addToChat(message) {
+  const chatBox = document.getElementById('chat-box');
+  const messageElement = document.createElement('div');
+  messageElement.textContent = message;
+  chatBox.appendChild(messageElement);
+}
+
+displayKeywords();
