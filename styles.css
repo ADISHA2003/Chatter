@@ -42,7 +42,7 @@ body {
     overflow-x: scroll;
     white-space: nowrap;
     padding: 3px;
-    margin-bottom: 1px;
+    margin-bottom: 0px;
   }
 
 .keyword-box {
