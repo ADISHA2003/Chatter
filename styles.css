@@ -37,6 +37,13 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
+.keyword-container {
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding: 10px;
+  }
+
 .keyword-box {
     position: relative;
     margin-top: 1px;
