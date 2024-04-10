@@ -159,6 +159,7 @@ function generateBotResponse(userInput) {
 "anxiety": "To overcome anxiety, practice exposure therapy, challenge negative thoughts, use relaxation techniques, and seek support from a therapist or support group.",
 "can you code": "I'm sorry, but I cannot code. My abilities are limited to processing and generating text based on the information I've been trained on.",
 "machine learning": "Machine learning is a branch of artificial intelligence (AI) that enables computers to learn from data and improve their performance on a specific task without being explicitly programmed. It involves the development of algorithms that allow computers to identify patterns, make predictions, and adapt to new data.",
+"ml": "Machine learning (ML) is a branch of artificial intelligence (AI) that enables computers to learn from data and improve their performance on a specific task without being explicitly programmed. It involves the development of algorithms that allow computers to identify patterns, make predictions, and adapt to new data.",        
 "blockchain": "Blockchain is a decentralized digital ledger technology that records transactions across multiple computers in a way that is secure, transparent, and tamper-proof. Each block in the blockchain contains a cryptographic hash of the previous block, creating a chain of blocks that are linked together. This distributed ledger system eliminates the need for intermediaries and provides a high level of security and trust.",
 "renewable energy sources": "Renewable energy sources are energy resources that are naturally replenished on a human timescale, such as sunlight, wind, rain, tides, waves, and geothermal heat. Unlike fossil fuels, which are finite and contribute to environmental pollution and climate change, renewable energy sources are sustainable and have minimal environmental impact.",    
 "virtual reality": "Virtual reality (VR) is a computer-generated simulation of an immersive and interactive environment that can be experienced through specialized electronic devices, such as headsets or goggles. VR technology enables users to explore and interact with virtual worlds in a three-dimensional space, often with a sense of presence and realism.",
@@ -293,7 +294,7 @@ const questions = [
     "what are your limitations?",
     "who created you?",
     "what's your name?",
-    "What is Machine Learning",
+    "What is ML",
     "Thank you",
     "What is AI?",
     "What time is it",
@@ -302,7 +303,7 @@ const questions = [
     "Tell me a joke.",
     "Bye",
     "What is NLP?",
-    "What is Cloud Computing?",
+    "What is Cloud Computing?"
   ];
 
   function displayKeywords() {
