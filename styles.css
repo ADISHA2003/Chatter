@@ -89,9 +89,9 @@ body {
     font-size: 16px;
     background-color: #f0f0f0; /* Light gray background */
     border: 1px solid #ccc; /* Slight border for definition */
-    border-radius: 50px; /* Rounded corners */
+    border-radius: 5px; /* Rounded corners */
     padding: 10px;
-    margin-top: 30px;
+    margin-top: 60px;
     margin-bottom: 10px;
     animation: fadeIn 0.5s ease; /* Subtle animation when message appears */
 }
