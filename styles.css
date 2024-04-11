@@ -71,23 +71,20 @@ body {
     padding: 2px;
     border-radius: 5px;
     word-wrap: break-word;
-    max-width: 100%; /* Set max-width to 100% by default */
-    margin: 0 auto; /* Center the container horizontally */
+    max-width: 100%;
+    justify-content: center;
 }
 
-/* Media query for screens smaller than 768px (typical mobile screens) */
 @media (max-width: 768px) {
     .user-message,
     .bot-message {
-        max-width: 100%; /* Set max-width to 100% for mobile screens */
-    }
+        max-width: 100%;    }
 }
 
-/* Media query for screens larger than 768px (typical desktop screens) */
 @media (min-width: 769px) {
     .user-message,
     .bot-message {
-        max-width: 80%; /* Set max-width to 80% for desktop screens */
+        max-width: 80%;
     }
 }
 
