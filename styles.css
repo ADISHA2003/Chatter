@@ -83,7 +83,7 @@ body {
 @media (min-width: 769px) {
     .user-message,
     .bot-message {
-        max-width: 80%;
+        max-width: 100%;
     }
 }
 
