@@ -33,15 +33,26 @@ body {
 .chat-box {
     height: 78vh;
     overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     padding: 10px;
     background-color: #f4f4f4;
     border-bottom: 1px solid #ccc;
+}
+
+@media (min-width: 700px) {
+    .chat-box {
+        margin-left: 20%;
+        max-width: 60%;
+    }
 }
 
 .keyword-box {
     display: inline-block;
     position: relative;
     overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     margin-top: 3px;
     margin-bottom: 3px;
     display: flex;
@@ -70,25 +81,11 @@ body {
 .bot-message {
     padding: 2px;
     border-radius: 5px;
-    word-wrap: break-word;
     max-width: 100%;
-}
-
-@media (max-width: 768px) {
-    .user-message,
-    .bot-message {
-        max-width: 100%;    }
-}
-
-@media (min-width: 769px) {
-    .user-message,
-    .bot-message {
-        max-width: 100%;
-    }
+    word-wrap: break-word;
 }
 
 .user-message {
-    background-color: ;
     color: black;
     padding: 3px;
     font-weight: bolder;
@@ -96,6 +93,7 @@ body {
     clear: both;
     margin-top: 5px;
     margin-bottom: 3px;
+    margin-left: 0px;
 }
 
 .bot-message {
@@ -107,7 +105,6 @@ body {
     clear: both;
     margin: 7px;
     margin-left: 0px;
-    filter: drop-shadow(100px 70px 100px #f4f4f4);
 }
 
 .input-container {
