@@ -85,16 +85,44 @@ body {
 }
 
 .bot-message {
-    font-family: monospace;
-    font-size: 15px;
-    background-color: ;
-    color: black;
-    padding: 3px;
-    float: left;
-    clear: both;
-    margin-top: 0px;
-    margin-bottom: 7px;
-    filter:drop-shadow(1000px 900px 800px #f4f4f4);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #f0f0f0; /* Light gray background */
+    border: 1px solid #ccc; /* Slight border for definition */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease; /* Subtle animation when message appears */
+}
+
+/* Gradient effect for background */
+.bot-message {
+    background: #f0f0f0; /* Fallback color */
+    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0); /* Gradient effect */
+}
+
+/* Subtle animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Variation in font style */
+.bot-message {
+    font-weight: 400; /* Normal font weight */
+    font-style: italic; /* Italic font style */
+}
+
+/* Different background textures or patterns */
+.bot-message {
+    background-image: url('path/to/texture.jpg'); /* Background texture */
+    background-size: cover; /* Cover the entire element */
 }
 
 .input-container {
