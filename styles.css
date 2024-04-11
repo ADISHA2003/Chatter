@@ -86,12 +86,14 @@ body {
 
 .bot-message {
     font-family: monospace;
+    font-size: 15px;
     background-color: #f4f4f4;
     color: #000;
     float: left;
     clear: both;
     margin: 7px;
     margin-left: 0px;
+    filter: drop-shadow(100px 70px 100px black);
 }
 
 .input-container {
