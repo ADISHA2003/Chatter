@@ -85,14 +85,14 @@ body {
 }
 
 .bot-message {
-    fontstyle:monospace;
+    font-family: monospace;
     background-color: #f4f4f4;
     color: #000;
     float: left;
     clear: both;
     margin: 7px;
+    margin-left: 0px;
 }
-
 
 .input-container {
     width: calc(100% - 80px);
