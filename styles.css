@@ -91,7 +91,7 @@ body {
     border: 1px solid #ccc; /* Slight border for definition */
     border-radius: 50px; /* Rounded corners */
     padding: 10px;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
     animation: fadeIn 0.5s ease; /* Subtle animation when message appears */
 }
