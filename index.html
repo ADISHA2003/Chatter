@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,22 +16,22 @@
     </header>
 
     <div class="chat-container" id="chat-container">
-        <img class="logo" src="Chatter.png" alt="Logo" id="logo">
+        <img class="logo" src="https://botchatter.vercel.app/Chatter.png" alt="Logo" id="logo">
         <div class="chat-box" id="chat-box"></div>
         <div class="keyword-box-container">
             <div class="keyword-box" id="keyword-box"></div>
         </div>
-        <input type="text" id="user-input" placeholder="Type your message...">
+        <div class="input-container">
+            <button id="search-btn" onclick="search()">
+                <img src="https://www.freeiconspng.com/uploads/search-icon-png-27.png" alt="Search Icon">
+            </button>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn" onclick="sendMessage()">
+                <img src="https://icon-library.com/images/white-arrow-icon-png/white-arrow-icon-png-2.jpg" alt="Send Icon">
+            </button>
+        </div>
     </div>
 
-    <div class="button-container">
-        <button id="send-btn" onclick="sendMessage()">
-            <img src="https://cdn1.iconfinder.com/data/icons/materia-arrows-symbols-vol-6/24/018_272_arrow_up_upload-512.png" alt="Send Icon">
-        </button>
-        <button id="search-btn" onclick="search()">
-            <img src="https://www.svgrepo.com/show/507852/search-circle.svg" alt="Search Icon">
-        </button>
-    </div>
 
     <script src="script.js"></script>
 </body>
