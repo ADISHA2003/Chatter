@@ -36,6 +36,7 @@ body {
     padding: 10px;
     background-color: #f4f4f4;
     border-bottom: 1px solid #ccc;
+    text-align: center;
 }
 
 .keyword-box {
@@ -72,7 +73,6 @@ body {
     border-radius: 5px;
     word-wrap: break-word;
     max-width: 100%;
-    justify-content: center;
 }
 
 @media (max-width: 768px) {
