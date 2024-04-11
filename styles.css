@@ -26,12 +26,12 @@ body {
     border-top: 2px solid #000000;
     border-radius: 0px;
     overflow: hidden;
-    height: 84vh;
+    height: 85vh;
     z-index: 1;
 }
 
 .chat-box {
-    height: 84vh;
+    height: 85vh;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
