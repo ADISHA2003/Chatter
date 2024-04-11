@@ -37,7 +37,7 @@ body {
     -ms-overflow-style: none;
     padding: 10px;
     background-color: #f4f4f4;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 0px solid #ccc;
 }
 
 @media (min-width: 700px) {
