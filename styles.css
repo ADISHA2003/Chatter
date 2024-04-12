@@ -105,7 +105,7 @@ body {
     clear: both;
     margin: 7px;
     margin-left: 0px;
-    filter:drop-shadow(100px 70px 100px black); 
+    filter:drop-shadow(100px 70px 100px #f4f4f4); 
 }
 
 .input-container {
