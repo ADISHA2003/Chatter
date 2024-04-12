@@ -100,8 +100,9 @@ body {
 .bot-message {
     font-family: monospace;
     font-size: 15px;
-    background-color: #f4f4f4;
     color: #000;
+    border: 1px solid #cac1c1;
+    border-radius: 5px;
     float: left;
     clear: both;
     margin: 7px;
