@@ -335,11 +335,11 @@ function addToChat(message) {
   chatBox.appendChild(messageElement);
 }
 
-displayKeywords();
+displayKeywords()
 
 document.addEventListener('DOMContentLoaded', function() {
   // Text to be typed
-  const text = "Welcome to Typing Animation";
+  const text = "Chatter (Model - 1.0)";
 
   // Speed of typing (in milliseconds)
   const typingSpeed = 15;
