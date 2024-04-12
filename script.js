@@ -257,7 +257,7 @@ function startTypingAnimation() {
         } else {
             clearInterval(typingInterval);
         }
-    }, 10);
+    }, 20);
 }
 
      window.onload = function() {
