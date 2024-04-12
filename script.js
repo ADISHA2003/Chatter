@@ -335,30 +335,4 @@ function addToChat(message) {
   chatBox.appendChild(messageElement);
 }
 
-displayKeywords()
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Text to be typed
-  const text = "Chatter (Model - 1.0)";
-
-  // Speed of typing (in milliseconds)
-  const typingSpeed = 30;
-
-  // Index to keep track of current position in the text
-  let index = 0;
-
-  // Function to type text
-  function type() {
-    // Add a character from the text to the header
-    document.getElementById('header').textContent += text[index];
-    // Increment index
-    index++;
-    // If not reached end of text, call type function again after typing speed
-    if (index < text.length) {
-      setTimeout(type, typingSpeed);
-    }
-  }
-
-  // Call the type function when the DOM content is loaded
-  type();
-});
+displayKeywords();
