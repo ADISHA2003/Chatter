@@ -53,8 +53,8 @@ body {
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    margin-top: 2px;
+    margin-bottom: 2px;
     display: flex;
     white-space: nowrap;
 }
@@ -113,6 +113,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
+    margin-bottom: 1px;
 }
 
 input[type="text"] {
