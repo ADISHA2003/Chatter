@@ -15,8 +15,6 @@ body {
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    border-right: .15em solid orange;
-    white-space: nowrap;
 }
 
 .chat-container {
