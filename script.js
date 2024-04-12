@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const text = "Chatter (Model - 1.0)";
 
   // Speed of typing (in milliseconds)
-  const typingSpeed = 15;
+  const typingSpeed = 30;
 
   // Index to keep track of current position in the text
   let index = 0;
