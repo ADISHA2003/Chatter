@@ -245,19 +245,20 @@ function addBotMessage(message) {
 
 function startTypingAnimation() {
     var botMessages = document.querySelectorAll(".bot-message");
-
     var lastBotMessage = botMessages[botMessages.length - 1];
-
     var message = lastBotMessage.textContent.trim();
     lastBotMessage.textContent = "";
-    var typingInterval = setInterval(function() {
-        if (message.length > 0) {
-            lastBotMessage.textContent += message.charAt(0);
-            message = message.substring(1);
-        } else {
-            clearInterval(typingInterval);
-        }
-    }, 20);
+
+    setTimeout(function() {
+        var typingInterval = setInterval(function() {
+            if (message.length > 0) {
+                lastBotMessage.textContent += message.charAt(0);
+                message = message.substring(1);
+            } else {
+                clearInterval(typingInterval);
+            }
+        }, 20);
+    }, 500);
 }
 
      window.onload = function() {
