@@ -337,3 +337,18 @@ function addToChat(message) {
 }
 
 displayKeywords();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const text = "Chatter (Model - 1.0)";
+    const typingSpeed = 20;
+    let index = 0;
+    const header = document.querySelector('.header strong');
+    function type() {
+      header.textContent += text[index];
+      index++;
+      if (index < text.length) {
+        setTimeout(type, typingSpeed);
+      }
+    }
+    type();
+});
