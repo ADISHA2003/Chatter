@@ -340,7 +340,7 @@ displayKeywords();
 
 document.addEventListener('DOMContentLoaded', function() {
     const text = "Chatter (Model - 1.0)";
-    const typingSpeed = 20;
+    const typingSpeed = 50;
     let index = 0;
     const header = document.querySelector('.header strong');
     function type() {
