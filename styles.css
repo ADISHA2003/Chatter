@@ -144,7 +144,7 @@ input[type="text"] {
     border: none;
     background: none;
     padding: 5px;
-    margin-top: 2px;
+    margin-top: 3px;
 }
   
 #send-btn img {
@@ -156,7 +156,7 @@ input[type="text"] {
     border: none;
     background-color: none;
     padding: 5px;
-    margin-top: 2px;
+    margin-top: 3px;
 }
   
 #search-btn img {
