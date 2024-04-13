@@ -45,7 +45,7 @@ function displayResults(data) {
         return;
     }
 
-    var searchResults = results.slice(0, 5).map((result, index) => `${index + 1}. <br>${result.snippet}`);
+    var searchResults = results.slice(0, 20).map((result, index) => `${index + 1}. <br>${result.snippet}`);
     addBotMessage(searchResults.join("<br>"));
 }
 
