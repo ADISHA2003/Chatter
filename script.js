@@ -47,11 +47,17 @@ function displayResults(data) {
 
   // Function to display search results with typing animation and clickable links
   const displaySearchResults = (results) => {
-    const typingSpeed = 50; // Speed of typing animation in milliseconds
-    const chatbox = document.getElementById("chat-box");
+    const typingSpeed = 10; // Speed of typing animation in milliseconds
+    const chatbox = document.getElementById("chatbox");
 
     // Iterate through each search result
     results.forEach((result, index) => {
+      // Extract link and text from HTML format
+      const parser = new DOMParser();
+      const htmlDoc = parser.parseFromString(result, "text/html");
+      const link = htmlDoc.querySelector("a").href;
+      const text = htmlDoc.querySelector("a").textContent;
+
       // Create a new message element for each search result
       const messageElement = document.createElement("div");
       messageElement.classList.add("bot-message");
@@ -77,21 +83,26 @@ function displayResults(data) {
       };
 
       // Start typing animation for the search result
-      typeText(result, 0);
+      typeText(`${index + 1}. ${text}`, 0);
+
+      // Create a clickable link
+      const linkElement = document.createElement("a");
+      linkElement.href = link;
+      linkElement.target = "_blank";
+      linkElement.textContent = text;
+      messageElement.appendChild(linkElement);
+
+      // Add a line break
+      messageElement.appendChild(document.createElement("br"));
     });
   };
 
-  // Map and join search results
-  var searchResults = results
-    .slice(0, 5)
-    .map(
-      (result, index) =>
-        `${index + 1}. <a href="${result.link}" target="_blank">${result.title}</a><br>${result.snippet}`
-    );
+  // Map search results
+  var searchResults = results.slice(0, 1);
 
-  // Display search results with typing animation
+  // Display search results with typing animation and clickable links
   displaySearchResults(searchResults);
-}
+} 
 
 function generateBotResponse(userInput) {
     var botResponses = {
