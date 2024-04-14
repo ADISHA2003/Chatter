@@ -38,15 +38,55 @@ function performSearch(query) {
         .catch(error => console.log('Error:', error));
 }
 
-function displayResults(data) {
+function displayResults(data, maxResults = 1) {
     var results = data.items;
     if (!results || results.length === 0) {
         addBotMessage("No search results found.");
         return;
     }
 
-    var searchResults = results.slice(0,4).map((result, index) => `${index + 1}. <a href="${result.link}" target="_blank">${result.title}</a><br>${result.snippet}`);
-    addBotMessage(searchResults.join("<br>"));
+    results = results.slice(0,1);
+
+    const displaySearchResult = (result) => {
+        const typingSpeed = 15;
+        const chatbox = document.getElementById("chat-box");
+
+        if (!chatbox) {
+            console.log("Chatbox element not found");
+            return;
+        }
+
+        results.forEach((result) => {
+            const messageElement = document.createElement("div");
+            messageElement.classList.add("bot-message");
+
+            const typingAnimationSpan = document.createElement("span");
+            typingAnimationSpan.classList.add("typing-animation");
+            messageElement.appendChild(typingAnimationSpan);
+
+            chatbox.appendChild(messageElement);
+
+            const typeText = (text, i) => {
+                if (i < text.length) {
+                    typingAnimationSpan.innerHTML += text.charAt(i);
+                    setTimeout(() => {
+                        typeText(text, i + 1);
+                    }, typingSpeed);
+                } else if (result === results[maxResults - 1]) {
+                    const linkElement = document.createElement("a");
+                    linkElement.href = result.link;
+                    linkElement.target = "_blank";
+                    linkElement.textContent = result.link;
+                    messageElement.appendChild(document.createElement("br"));
+                    messageElement.appendChild(linkElement);
+                }
+            };
+
+            typeText(`${result.title}${result.snippet}`, 0);
+        });
+    };
+
+    displaySearchResult(results);
 } 
 
 function generateBotResponse(userInput) {
