@@ -62,6 +62,7 @@ function displayResults(data, maxResults = 1) {
             const typeText = (text, i) => {
                 if (i < text.length) {
                     typingAnimationSpan.innerHTML += text.charAt(i);
+                    chatbox.scrollTop = chatbox.scrollHeight;
                     setTimeout(() => {
                         typeText(text, i + 1);
                     }, typingSpeed);
@@ -232,29 +233,61 @@ function generateBotResponse(userInput) {
 }
 
 function isCalculationRequest(input) {
-    return /[+\*-/]/.test(input);
+    return /[+\*\-/]/.test(input);
 }
 
 function performCalculation(input) {
-    var numbers = input.match(/-?\d+(?:\.\d+)?/g).map(Number);
-    var operator = input.match(/[+\*-/]/)[0];
+    input = input.replace(/\s/g, '');
 
-    switch (operator) {
-        case '+':
-            return numbers[0] + numbers[1];
-        case '-':
-            return numbers[0] - numbers[1];
-        case '*':
-            return numbers[0] * numbers[1];
-        case '/':
-            if (numbers[1] === 0) {
-                return "Cannot divide by zero";
-            } else {
-                return numbers[0] / numbers[1];
+    const evaluateParentheses = (expression) => {
+        while (expression.includes('(')) {
+            const start = expression.lastIndexOf('(');
+            const end = expression.indexOf(')', start);
+            const innerExpression = expression.substring(start + 1, end);
+            const result = evaluateExpression(innerExpression);
+            expression = expression.substring(0, start) + result + expression.substring(end + 1);
+        }
+        return expression;
+    };
+
+    const evaluateExpression = (expression) => {
+        const operators = ['*', '/', '+', '-'];
+        for (const op of operators) {
+            while (expression.includes(op)) {
+                const operatorIndex = expression.indexOf(op);
+                const leftOperand = parseFloat(expression.substring(0, operatorIndex));
+                const rightOperand = parseFloat(expression.substring(operatorIndex + 1));
+                let result;
+                switch (op) {
+                    case '*':
+                        result = leftOperand * rightOperand;
+                        break;
+                    case '/':
+                        if (rightOperand === 0) {
+                            return "Cannot divide by zero";
+                        }
+                        result = leftOperand / rightOperand;
+                        break;
+                    case '+':
+                        result = leftOperand + rightOperand;
+                        break;
+                    case '-':
+                        result = leftOperand - rightOperand;
+                        break;
+                }
+                expression = expression.substring(0, operatorIndex - leftOperand.toString().length) +
+                    result +
+                    expression.substring(operatorIndex + 1 + rightOperand.toString().length);
             }
-        default:
-            return "Invalid operation";
-    }
+        }
+        return expression;
+    };
+
+    input = evaluateParentheses(input);
+
+    const result = evaluateExpression(input);
+
+    return result;
 }
 
 function addUserMessage(message) {
