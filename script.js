@@ -98,7 +98,7 @@ function displayResults(data) {
   };
 
   // Map search results
-  var searchResults = results.slice(0, 1);
+  var searchResults = results.slice(0,5);
 
   // Display search results with typing animation and clickable links
   displaySearchResults(searchResults);
