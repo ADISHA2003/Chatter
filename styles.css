@@ -12,6 +12,7 @@ body {
     padding: 5px;
     display: flex;
     border-top: 2px solid #000000;
+    font-size: 2rem;
     align-items: center;
     justify-content: space-between;
     text-align: center;
