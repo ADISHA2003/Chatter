@@ -405,7 +405,7 @@ function addToChat(message) {
 displayKeywords();
 
 document.addEventListener('DOMContentLoaded', function() {
-    const text = "Chatter (Model - 1.0)";
+    const text = "Chatter";
     const typingSpeed = 50;
     let index = 0;
     const header = document.querySelector('.header strong');
