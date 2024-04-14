@@ -45,7 +45,7 @@ function displayResults(data) {
         return;
     }
 
-    var searchResults = results.slice(0,5).map((result, index) => `${index + 1}. <a href="${result.link}" target="_blank">${result.title}</a><br>${result.snippet}`);
+    var searchResults = results.slice(0,4).map((result, index) => `${index + 1}. <a href="${result.link}" target="_blank">${result.title}</a><br>${result.snippet}`);
     addBotMessage(searchResults.join("<br>"));
 } 
 
