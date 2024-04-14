@@ -39,14 +39,58 @@ function performSearch(query) {
 }
 
 function displayResults(data) {
-    var results = data.items;
-    if (!results || results.length === 0) {
-        addBotMessage("No search results found.");
-        return;
-    }
+  var results = data.items;
+  if (!results || results.length === 0) {
+    addBotMessage("No search results found.");
+    return;
+  }
 
-    var searchResults = results.slice(0,5).map((result, index) => `${index + 1}. <a href="${result.link}" target="_blank">${result.title}</a><br>${result.snippet}`);
-    addBotMessage(searchResults.join("<br>"));
+  // Function to display search results with typing animation and clickable links
+  const displaySearchResults = (results) => {
+    const typingSpeed = 50; // Speed of typing animation in milliseconds
+    const chatbox = document.getElementById("chat-box");
+
+    // Iterate through each search result
+    results.forEach((result, index) => {
+      // Create a new message element for each search result
+      const messageElement = document.createElement("div");
+      messageElement.classList.add("bot-message");
+
+      // Create a span for typing animation
+      const typingAnimationSpan = document.createElement("span");
+      typingAnimationSpan.classList.add("typing-animation");
+      messageElement.appendChild(typingAnimationSpan);
+
+      // Append message element to chatbox
+      chatbox.appendChild(messageElement);
+
+      // Function to type each character with a delay
+      const typeText = (text, i) => {
+        if (i < text.length) {
+          // Append next character to typing animation span
+          typingAnimationSpan.innerHTML += text.charAt(i);
+          // Call the function recursively for the next character
+          setTimeout(() => {
+            typeText(text, i + 1);
+          }, typingSpeed);
+        }
+      };
+
+      // Start typing animation for the search result
+      typeText(result, 0);
+    });
+  };
+
+  // Map and join search results
+  var searchResults = results
+    .slice(0, 5)
+    .map(
+      (result, index) =>
+        `${index + 1}. <a href="${result.link}" target="_blank">${result.title}</a><br>${result.snippet}`
+    );
+
+  // Display search results with typing animation
+  displaySearchResults(searchResults);
 }
 
 function generateBotResponse(userInput) {
