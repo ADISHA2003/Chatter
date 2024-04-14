@@ -13,13 +13,6 @@ function sendMessage() {
     startTypingAnimation();
 }
 
-function startSearch() {
-    var logo = document.getElementById("logo");
-    if (logo) {
-        logo.style.opacity = 0;
-    }
-}
-
 function search() {
     var query = document.getElementById("user-input").value.trim();
     if (query === "") return;
@@ -298,7 +291,7 @@ function startTypingAnimation() {
                 clearInterval(typingInterval);
             }
         }, 15);
-    }, 750);
+    }, 500);
 }
 
      window.onload = function() {
@@ -380,7 +373,7 @@ displayKeywords();
 
 document.addEventListener('DOMContentLoaded', function() {
     const text = "Chatter (Model - 1.0)";
-    const typingSpeed = 40;
+    const typingSpeed = 50;
     let index = 0;
     const header = document.querySelector('.header strong');
     function type() {
