@@ -75,7 +75,7 @@ function displayResults(data, maxResults = 1) {
                 }
             };
 
-            typeText(`${result.title}${result.snippet}`, 0);
+            typeText(`${result.snippet}`, 0);
         });
     };
 
