@@ -39,69 +39,14 @@ function performSearch(query) {
 }
 
 function displayResults(data) {
-  var results = data.items;
-  if (!results || results.length === 0) {
-    addBotMessage("No search results found.");
-    return;
-  }
+    var results = data.items;
+    if (!results || results.length === 0) {
+        addBotMessage("No search results found.");
+        return;
+    }
 
-  // Function to display search results with typing animation and clickable links
-  const displaySearchResults = (results) => {
-    const typingSpeed = 10; // Speed of typing animation in milliseconds
-    const chatbox = document.getElementById("chat-box");
-
-    // Iterate through each search result
-    results.forEach((result, index) => {
-      // Extract link and text from HTML format
-      const parser = new DOMParser();
-      const htmlDoc = parser.parseFromString(result, "text/html");
-      const link = htmlDoc.querySelector("a").href;
-      const text = htmlDoc.querySelector("a").textContent;
-
-      // Create a new message element for each search result
-      const messageElement = document.createElement("div");
-      messageElement.classList.add("bot-message");
-
-      // Create a span for typing animation
-      const typingAnimationSpan = document.createElement("span");
-      typingAnimationSpan.classList.add("typing-animation");
-      messageElement.appendChild(typingAnimationSpan);
-
-      // Append message element to chatbox
-      chatbox.appendChild(messageElement);
-
-      // Function to type each character with a delay
-      const typeText = (text, i) => {
-        if (i < text.length) {
-          // Append next character to typing animation span
-          typingAnimationSpan.innerHTML += text.charAt(i);
-          // Call the function recursively for the next character
-          setTimeout(() => {
-            typeText(text, i + 1);
-          }, typingSpeed);
-        }
-      };
-
-      // Start typing animation for the search result
-      typeText(`${index + 1}. ${text}`, 0);
-
-      // Create a clickable link
-      const linkElement = document.createElement("a");
-      linkElement.href = link;
-      linkElement.target = "_blank";
-      linkElement.textContent = text;
-      messageElement.appendChild(linkElement);
-
-      // Add a line break
-      messageElement.appendChild(document.createElement("br"));
-    });
-  };
-
-  // Map search results
-  var searchResults = results.slice(0,5);
-
-  // Display search results with typing animation and clickable links
-  displaySearchResults(searchResults);
+    var searchResults = results.slice(0,5).map((result, index) => `${index + 1}. <a href="${result.link}" target="_blank">${result.title}</a><br>${result.snippet}`);
+    addBotMessage(searchResults.join("<br>"));
 } 
 
 function generateBotResponse(userInput) {
