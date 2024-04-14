@@ -48,7 +48,7 @@ function displayResults(data) {
   // Function to display search results with typing animation and clickable links
   const displaySearchResults = (results) => {
     const typingSpeed = 10; // Speed of typing animation in milliseconds
-    const chatbox = document.getElementById("chatbox");
+    const chatbox = document.getElementById("chat-box");
 
     // Iterate through each search result
     results.forEach((result, index) => {
