@@ -311,8 +311,8 @@ function addBotMessage(message) {
   botLogoImg.src = "chatter(1).png"; // Replace with your logo URL or file path
   botLogoImg.alt = "Chatbot Logo";
   botLogoImg.className = "bot-logo";
-  botLogoImg.width = 10; // Set width of the logo image
-  botLogoImg.height = 10; // Set height of the logo image
+  botLogoImg.width = 50; // Set width of the logo image
+  botLogoImg.height = 50; // Set height of the logo image
   
   // Create bot message text
   var botMessageText = document.createElement("div");
@@ -328,6 +328,8 @@ function addBotMessage(message) {
   // Scroll to the bottom of chat box
   chatBox.scrollTop = chatBox.scrollHeight;
 }
+
+addBotmessage("generateBotResponse");
 
 function startTypingAnimation() {
     var botMessages = document.querySelectorAll(".bot-message");
