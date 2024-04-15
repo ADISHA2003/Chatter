@@ -118,6 +118,7 @@ body {
     align-items: center;
     border: 2px solid #000000;
     border-radius: 50px;
+    margin-bottom: 4px;
 }
 
 input[type="text"] {
