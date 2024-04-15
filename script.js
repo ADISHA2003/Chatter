@@ -398,7 +398,6 @@ function displayKeywords() {
 }
 
 displayKeywords();
-setInterval(displayKeywords, 15000);
 
 document.addEventListener('DOMContentLoaded', function() {
     const text = "Chatter";
