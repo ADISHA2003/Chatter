@@ -38,10 +38,10 @@ function displayResults(data, maxResults = 1) {
         return;
     }
 
-    results = results.slice(0,1);
+    results = results.slice(0,4);
 
     const displaySearchResult = (result) => {
-        const typingSpeed = 15;
+        const typingSpeed = 6;
         const chatbox = document.getElementById("chat-box");
 
         if (!chatbox) {
