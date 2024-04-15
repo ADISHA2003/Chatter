@@ -371,27 +371,30 @@ const questions = [
     "Write a poem."
   ];
 
-  function displayKeywords() {
-    const keywordBox = document.getElementById('keyword-box');
-    keywordBox.innerHTML = '';
-
-    for (let i = 0; i < questions.length; i++) {
-      const keyword = questions[i];
-      const keywordElement = document.createElement('div');
-      keywordElement.classList.add('keyword');
-      keywordElement.textContent = keyword;
-      keywordElement.addEventListener('click', () => {
-        document.getElementById('user-input').value = keyword;
-      });
-      keywordBox.appendChild(keywordElement);
-    }
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
+  return array;
+}
 
-function addToChat(message) {
-  const chatBox = document.getElementById('chat-box');
-  const messageElement = document.createElement('div');
-  messageElement.textContent = message;
-  chatBox.appendChild(messageElement);
+function displayKeywords() {
+  const keywordBox = document.getElementById('keyword-box');
+  keywordBox.innerHTML = '';
+
+  const shuffledQuestions = shuffle(questions);
+
+  for (let i = 0; i < shuffledQuestions.length; i++) {
+    const keyword = shuffledQuestions[i];
+    const keywordElement = document.createElement('div');
+    keywordElement.classList.add('keyword');
+    keywordElement.textContent = keyword;
+    keywordElement.addEventListener('click', () => {
+      document.getElementById('user-input').value = keyword;
+    });
+    keywordBox.appendChild(keywordElement);
+  }
 }
 
 displayKeywords();
