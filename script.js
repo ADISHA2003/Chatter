@@ -38,7 +38,7 @@ function displayResults(data, maxResults = 1) {
         return;
     }
 
-    results = results.slice(0,4);
+    results = results.slice(0,1);
 
     const displaySearchResult = (result) => {
         const typingSpeed = 6;
