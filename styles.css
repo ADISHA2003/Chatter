@@ -113,7 +113,7 @@ body {
     max-width: 100%;
     float: none;
     position: relative;
-    padding: 7px;
+    padding: 3px;
     display: flex;
     align-items: center;
     border: 2px solid #000000;
@@ -147,7 +147,7 @@ input[type="text"] {
 #send-btn {
     border: none;
     background: none;
-    padding: 5px;
+    padding: 2px;
 }
   
 #send-btn img {
@@ -159,7 +159,7 @@ input[type="text"] {
 #search-btn {
     border: none;
     background-color: none;
-    padding: 5px;
+    padding: 2px;
 }
   
 #search-btn img {
