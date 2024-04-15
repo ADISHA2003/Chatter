@@ -11,7 +11,7 @@ body {
     color: #000000;
     padding: 5px;
     display: flex;
-    border-top: 2px solid #000000;
+    border-top: 0px solid #000000;
     font-size: 1.5rem;
     align-items: center;
     justify-content: space-between;
@@ -24,7 +24,7 @@ body {
     max-width: 100%;
     margin: 5px auto;
     position: relative;
-    border-top: 2px solid #000000;
+    border-top: 0px solid #000000;
     border-radius: 0px;
     overflow: hidden;
     height: 85vh;
