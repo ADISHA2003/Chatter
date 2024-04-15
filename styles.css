@@ -107,15 +107,6 @@ body {
     clear: both;
     margin: 7px;
     margin-left: 0px;
-    display: flex;
-    align-items: flex-start;
-}
-
-/* Style for chatbot logo */
-.bot-logo {
-  width: 50px; /* Set the width of the logo image */
-  height: 50px; /* Set the height of the logo image */
-  margin-right: 10px;
 }
 
 .input-container {
