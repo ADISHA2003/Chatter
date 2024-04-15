@@ -410,19 +410,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     type();
 });
-
-function handleInputFocus() {
-    document.body.style.position = 'fixed';
-  }
-
-  // Function to handle input field blur
-  function handleInputBlur() {
-    document.body.style.position = '';
-  }
-
-  // Get input field element
-  const inputField = document.getElementById('user-input');
-
-  // Add event listeners for focus and blur
-  inputField.addEventListener('focus', handleInputFocus);
-  inputField.addEventListener('blur', handleInputBlur);
