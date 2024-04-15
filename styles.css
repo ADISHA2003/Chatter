@@ -99,7 +99,6 @@ body {
 }
 
 .bot-message {
-    font-family: monospace;
     font-size: 15px;
     color: #000;
     border: 1px solid #ccc;
