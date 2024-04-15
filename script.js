@@ -331,7 +331,7 @@ function addBotMessage(message, imageUrl, imageSize) {
 
 // Example usage:
 var message = "Hello! How can I help you?";
-var imageUrl = "Chatter(1).png";
+var imageUrl = "chatter(1).png";
 var imageSize = { width: 50, height: 50 };
 addBotMessage(message, imageUrl, imageSize);
 
