@@ -115,7 +115,7 @@ body {
 .bot-logo {
   width: 50px; /* Set the width of the logo image */
   height: 50px; /* Set the height of the logo image */
-  margin-right: 0px;
+  margin-right: 10px;
 }
 
 .input-container {
