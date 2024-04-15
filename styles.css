@@ -116,21 +116,23 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 2px;
+    border: 2px solid #000000;
+    border-radius: 50px;
 }
 
 input[type="text"] {
     background-color: #f4f4f4;
     justify-self: center;
-    padding: 15px;
-    border: 1px solid #000000;
+    padding: 5px;
     border-radius: 50px;
+    border: none;
     margin: 0px;
     float: none;
     max-width: 100%;
     flex: 1;
     margin-right: 0px;
-    margin-left: 3px;
+    margin-left: 4px;
+    outline: none;
 }
 
 .input-container button {
@@ -138,31 +140,31 @@ input[type="text"] {
     border: none;
     cursor: pointer;
     padding: 0;
-    margin: 0;
+    margin-top: 3px;
 }
 
 #send-btn {
     border: none;
     background: none;
     padding: 5px;
-    margin-top: 3px;
 }
   
 #send-btn img {
     width: 40px;
     height: 40px;
+    border-radius: 50px;
 }
 
 #search-btn {
     border: none;
     background-color: none;
     padding: 5px;
-    margin-top: 3px;
 }
   
 #search-btn img {
-    width: 41px;
-    height: 41px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
 }
 
 .footer {
