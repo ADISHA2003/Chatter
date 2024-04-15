@@ -299,7 +299,7 @@ function addUserMessage(message) {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-function addBotMessage(message, imageUrl, imageSize) {
+function addBotMessage(message) {
   var chatBox = document.getElementById("chat-box");
   
   // Create bot message container
@@ -308,11 +308,11 @@ function addBotMessage(message, imageUrl, imageSize) {
   
   // Create logo image
   var botLogoImg = new Image();
-  botLogoImg.src = imageUrl;
+  botLogoImg.src = "chatter(1).png"; // Replace with your logo URL or file path
   botLogoImg.alt = "Chatbot Logo";
   botLogoImg.className = "bot-logo";
-  botLogoImg.width = imageSize.width;
-  botLogoImg.height = imageSize.height;
+  botLogoImg.width = 10; // Set width of the logo image
+  botLogoImg.height = 10; // Set height of the logo image
   
   // Create bot message text
   var botMessageText = document.createElement("div");
@@ -328,12 +328,6 @@ function addBotMessage(message, imageUrl, imageSize) {
   // Scroll to the bottom of chat box
   chatBox.scrollTop = chatBox.scrollHeight;
 }
-
-// Example usage:
-var message = "Hello! How can I help you?";
-var imageUrl = "chatter(1).png";
-var imageSize = { width: 50, height: 50 };
-addBotMessage(message, imageUrl, imageSize);
 
 function startTypingAnimation() {
     var botMessages = document.querySelectorAll(".bot-message");
