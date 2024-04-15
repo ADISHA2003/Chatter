@@ -329,8 +329,6 @@ function addBotMessage(message) {
   chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-addBotmessage("generateBotResponse");
-
 function startTypingAnimation() {
     var botMessages = document.querySelectorAll(".bot-message");
     var lastBotMessage = botMessages[botMessages.length - 1];
