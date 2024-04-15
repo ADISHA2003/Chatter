@@ -323,8 +323,8 @@ function startTypingAnimation() {
             } else {
                 clearInterval(typingInterval);
             }
-        }, 15);
-    }, 500);
+        }, 6);
+    }, 600);
 }
 
      window.onload = function() {
