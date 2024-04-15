@@ -123,14 +123,6 @@ body {
     margin-right: 4px;
 }
 
-.input-container input:focus {
-    position: fixed;
-    bottom: 10px; /* Adjust this value as needed */
-    left: 10px; /* Adjust this value as needed */
-    right: 10px; /* Adjust this value as needed */
-    z-index: 9999; /* Ensures the input field is above other elements */
-}
-
 input[type="text"] {
     background-color: #f4f4f4;
     justify-self: center;
