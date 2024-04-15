@@ -113,6 +113,7 @@ body {
     max-width: 100%;
     float: none;
     position: relative;
+    padding: 15px;
     display: flex;
     align-items: center;
     border: 2px solid #000000;
@@ -124,7 +125,6 @@ input[type="text"] {
     background-color: #f4f4f4;
     justify-self: center;
     font-size: 16px;
-    padding: 5px;
     border-radius: 50px;
     border: none;
     margin: 0px;
