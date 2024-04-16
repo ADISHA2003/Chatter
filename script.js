@@ -48,7 +48,7 @@ function handleUserInput(userInput) {
 }
 
 // Call handleUserInput function when the user submits a message
-handleUserInput("User message");
+handleUserInput("User-message");
 
 function displayResults(data, maxResults = 1) {
     var results = data.items;
