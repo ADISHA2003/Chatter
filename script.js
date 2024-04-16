@@ -31,6 +31,25 @@ function performSearch(query) {
         .catch(error => console.log('Error:', error));
 }
 
+// Function to display user message
+function displayUserMessage(message) {
+    // Code to display the user message
+    addUserMessage(message);
+}
+
+// Function to handle user input and display results
+function handleUserInput(userInput) {
+    // Display user message first
+    displayUserMessage(userInput);
+
+    // Call displayResults function to fetch and display search results
+    // Assuming data is available to pass to the displayResults function
+    displayResults(data); // You need to pass the appropriate data to this function
+}
+
+// Call handleUserInput function when the user submits a message
+handleUserInput("User message");
+
 function displayResults(data, maxResults = 1) {
     var results = data.items;
     if (!results || results.length === 0) {
