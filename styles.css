@@ -35,9 +35,7 @@ body {
 #close-button {
   position: absolute;
   top: 5px;
-  right: 5px;
-  width: 2px;
-  height: 2px; 
+  right: 5px; 
   cursor: pointer;
 }
 
