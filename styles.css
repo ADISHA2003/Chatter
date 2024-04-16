@@ -91,7 +91,7 @@ body {
     color: black;
     padding: 3px;
     font-weight: bolder;
-    float: both;
+    float: left;
     clear: both;
     margin-top: 5px;
     margin-bottom: 3px;
@@ -103,7 +103,7 @@ body {
     color: #000;
     border: 1px solid #7a7a7a;
     border-radius: 5px;
-    float: both;
+    float: left;
     clear: both;
     margin: 7px;
     margin-left: 0px;
