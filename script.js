@@ -41,7 +41,7 @@ function displayResults(data, maxResults = 1) {
     results = results.slice(0,1);
 
     const displaySearchResult = (result) => {
-        const typingSpeed = 10;
+        const typingSpeed = 6;
         const chatbox = document.getElementById("chat-box");
 
         if (!chatbox) {
@@ -79,6 +79,7 @@ function displayResults(data, maxResults = 1) {
             typeText(`${result.snippet}`, 0);
         });
     };
+    displaySearchResult(results);
 }
 
 function generateBotResponse(userInput) {
