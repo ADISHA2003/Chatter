@@ -40,49 +40,48 @@ function displayResults(data, maxResults = 1) {
 
     results = results.slice(0,1);
 
-    const displaySearchResult = (results) => {
-    const typingSpeed = 10; // Adjust typing speed if needed
-    const chatbox = document.getElementById("chat-box");
+    const displaySearchResult = (result) => {
+        const typingSpeed = 10;
+        const chatbox = document.getElementById("chat-box");
 
-    if (!chatbox) {
-        console.log("Chatbox element not found");
-        return;
-    }
+        if (!chatbox) {
+            console.log("Chatbox element not found");
+            return;
+        }
 
-    results.forEach((result) => {
-        const messageElement = document.createElement("div");
-        messageElement.classList.add("bot-message");
+        results.forEach((result) => {
+            const messageElement = document.createElement("div");
+            messageElement.classList.add("bot-message");
 
-        const typingAnimationSpan = document.createElement("span");
-        typingAnimationSpan.classList.add("typing-animation");
-        messageElement.appendChild(typingAnimationSpan);
+            const typingAnimationSpan = document.createElement("span");
+            typingAnimationSpan.classList.add("typing-animation");
+            messageElement.appendChild(typingAnimationSpan);
 
-        chatbox.appendChild(messageElement);
+            chatbox.appendChild(messageElement);
 
-        const typeText = (text, i) => {
-            if (i < text.length) {
-                
-typingAnimationSpan.innerHTML += text.charAt(i);
-                chatbox.scrollTop = chatbox.scrollHeight;
-                setTimeout(() => {
-                    typeText(text, i + 1);
-                }, typingSpeed);
-            } else if (result === results[maxResults - 1]) {
-                const linkElement = document.createElement("a");
-                linkElement.href = result.link;
-                linkElement.target = "_blank";
-                linkElement.textContent = "[know more]";
-                messageElement.appendChild(document.createElement("br"));
-                messageElement.appendChild(linkElement);
-            }
-        };
+            const typeText = (text, i) => {
+                if (i < text.length) {
+                    typingAnimationSpan.innerHTML += text.charAt(i);
+                    chatbox.scrollTop = chatbox.scrollHeight;
+                    setTimeout(() => {
+                        typeText(text, i + 1);
+                    }, typingSpeed);
+                } else if (result === results[maxResults - 1]) {
+                    const linkElement = document.createElement("a");
+                    linkElement.href = result.link;
+                    linkElement.target = "_blank";
+                    linkElement.textContent = "[know more]";
+                    messageElement.appendChild(document.createElement("br"));
+                    messageElement.appendChild(linkElement);
+                }
+            };
 
-        // Display more text from the snippet
-        typeText(`${result.snippet}`, 0);
-    });
-};
-    displaySearchResult(results);
+            typeText(`${result.snippet}`, 0);
+        });
+    };
 } 
+
+I want that more text should be displayed in the search results.do something about it to make typed text more lengthy i.e. more defined search results with the link at the end.
 
 function generateBotResponse(userInput) {
     var botResponses = {
