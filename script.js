@@ -414,7 +414,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('floating-window').style.display = 'block';
+  
+  if (!localStorage.getItem('floatingWindowDisplayed')) {
+        document.getElementById('floating-window').style.display = 'block';
+    localStorage.setItem('floatingWindowDisplayed', true);
+  }
 });
 
 document.getElementById('close-button').addEventListener('click', function() {
