@@ -174,8 +174,8 @@ input[type="text"] {
     padding: 5px;
     margin: 0px;
     background-color: #f4f4f4;
-    align-items: center;
-    font-size: 12px;
+    text-align: center;
+    font-size: 16px;
     color: #000000;
 }
 
