@@ -127,7 +127,7 @@ input[type="text"] {
     background-color: #f4f4f4;
     justify-self: center;
     font-size: 16px;
-    border-radius: 50px;
+    border-radius: 0px;
     border: none;
     margin: 0px;
     float: none;
