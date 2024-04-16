@@ -412,3 +412,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     type();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('floating-window').style.display = 'block';
+});
+
+document.getElementById('close-button').addEventListener('click', function() {
+  document.getElementById('floating-window').style.display = 'none';
+});
