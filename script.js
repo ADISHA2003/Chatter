@@ -32,7 +32,7 @@ function performSearch(query) {
 }
 
 function displayResults(usermessage,data, maxResults = 1) {
-    addBotMessage(userMessage);
+    addUserMessage(userMessage);
     var results = data.items;
     if (!results || results.length === 0) {
         addBotMessage("No search results found.");
