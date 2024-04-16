@@ -85,7 +85,7 @@ function displayResults(data, maxResults = 1) {
 function generateBotResponse(userInput) {
     var botResponses = {
         "hello": "Hello! How can I assist you today?",
-        "hi": "Hi there!",
+        "hi": "Hi there! How can I assist you today?",
         "no problem": "Thanks for understanding me!",
         "how are you": "I'm doing well, thank you for asking. How about you?",
         "name": "You can call me Chatter.",
