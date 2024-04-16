@@ -85,15 +85,13 @@ body {
     max-width: 100%;
     word-wrap: break-word;
     filter:drop-shadow(100px 70px 100px #f4f4f4);
-    margin-left: 8px;
-    margin-right: 8px;
 }
 
 .user-message {
     color: black;
     padding: 3px;
     font-weight: bolder;
-    float: none;
+    float: both;
     clear: both;
     margin-top: 5px;
     margin-bottom: 3px;
@@ -105,7 +103,7 @@ body {
     color: #000;
     border: 1px solid #7a7a7a;
     border-radius: 5px;
-    float: none;
+    float: both;
     clear: both;
     margin: 7px;
     margin-left: 0px;
