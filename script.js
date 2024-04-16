@@ -79,9 +79,7 @@ function displayResults(data, maxResults = 1) {
             typeText(`${result.snippet}`, 0);
         });
     };
-} 
-
-I want that more text should be displayed in the search results.do something about it to make typed text more lengthy i.e. more defined search results with the link at the end.
+}
 
 function generateBotResponse(userInput) {
     var botResponses = {
