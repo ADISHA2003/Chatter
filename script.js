@@ -31,7 +31,7 @@ function performSearch(query) {
         .catch(error => console.log('Error:', error));
 }
 
-function displayResults(usermessage,data, maxResults = 1) {
+function displayResults(data, maxResults = 1) {
     var results = data.items;
     if (!results || results.length === 0) {
         addBotMessage("No search results found.");
