@@ -37,6 +37,8 @@ body {
   top: 5px;
   right: 5px; 
   cursor: pointer;
+  width: 30px;
+  height: 30px;
 }
 
 #content {
