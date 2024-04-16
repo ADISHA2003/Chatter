@@ -61,10 +61,12 @@ function displayResults(data, maxResults = 1) {
 
         const typeText = (text, i) => {
             if (i < text.length) {
-                typingAnimationSpan.innerHTML += text.charAt(i);
+                
+typingAnimationSpan.innerHTML += text.substr(i, 5);
+
                 chatbox.scrollTop = chatbox.scrollHeight;
                 setTimeout(() => {
-                    typeText(text, i + 1);
+                    typeText(text, i + 5);
                 }, typingSpeed);
             } else if (result === results[maxResults - 1]) {
                 const linkElement = document.createElement("a");
