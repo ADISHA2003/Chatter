@@ -16,7 +16,6 @@ body {
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    filter:dropshadow(10px 7px 10px black)
 }
 
 #floating-window {
