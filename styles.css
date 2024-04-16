@@ -113,7 +113,7 @@ body {
     max-width: 100%;
     float: none;
     position: relative;
-    height: 10px;
+    padding: 1px;
     display: flex;
     align-items: center;
     border: 2px solid #000000;
