@@ -70,7 +70,7 @@ function displayResults(data, maxResults = 1) {
                     const linkElement = document.createElement("a");
                     linkElement.href = result.link;
                     linkElement.target = "_blank";
-                    linkElement.textContent = "[know more]";
+                    linkElement.textContent = "know more";
                     messageElement.appendChild(document.createElement("br"));
                     messageElement.appendChild(linkElement);
                 }
