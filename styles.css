@@ -51,7 +51,7 @@ body {
     border-top: 2px solid #000000;
     border-radius: 0px;
     overflow: hidden;
-    min-height: 90vh;
+    min-height: 80vh;
     z-index: 1;
 }
 
