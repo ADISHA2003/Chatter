@@ -51,12 +51,12 @@ body {
     border-top: 0px solid #000000;
     border-radius: 0px;
     overflow: hidden;
-    height: 83vh;
+    height: 80vh auto;
     z-index: 1;
 }
 
 .chat-box {
-    height: 83vh;
+    height: 80vh auto;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
