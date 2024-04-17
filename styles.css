@@ -56,7 +56,7 @@ body {
 }
 
 .chat-box {
-    height: 80vh;
+    height: 75vh;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
