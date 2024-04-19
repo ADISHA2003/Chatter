@@ -141,7 +141,7 @@ body {
     height: 45px;
     display: flex;
     align-items: center;
-    border: 2px solid #white;
+    border: 2px solid #ffffff;
     border-radius: 50px;
     margin-bottom: 0px;
     margin-left: 5px;
@@ -176,7 +176,7 @@ input[type="text"] {
     border: none;
     background-color: #f4f4f4;
     padding: 2px;
-    border-radius: 50px;
+    border-radius: 30px;
 }
   
 #send-btn img {
@@ -188,7 +188,7 @@ input[type="text"] {
     border: none;
     background-color: #f4f4f4;
     padding: 2px;
-    border-radius: 50px;
+    border-radius: 30px;
 }
   
 #search-btn img {
