@@ -175,8 +175,8 @@ input[type="text"] {
 #send-btn {
     border: none;
     background-color: #f4f4f4;
-    padding: 3px;
-    border-radius: 30px;
+    padding: 1px;
+    border-radius: 50px;
 }
   
 #send-btn img {
@@ -187,8 +187,8 @@ input[type="text"] {
 #search-btn {
     border: none;
     background-color: #f4f4f4;
-    padding: 3px;
-    border-radius: 30px;
+    padding: 1px;
+    border-radius: 50px;
 }
   
 #search-btn img {
