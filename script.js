@@ -401,7 +401,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const text = "Chatter";
     const typingSpeed = 50;
     let index = 0;
-    const headerStrong = document.querySelector('.header');
+    const headerStrong = document.querySelector('header');
 
     if (headerStrong) {
         function type() {
