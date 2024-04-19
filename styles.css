@@ -62,7 +62,7 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding: 10px;
-    background-color: #f4f4f4;
+    background-color: #17202A;
     border: 0px solid #ccc;
 }
 
@@ -113,7 +113,7 @@ body {
 }
 
 .user-message {
-    color: black;
+    color: white;
     padding: 3px;
     font-weight: bolder;
     float: left;
@@ -125,7 +125,7 @@ body {
 
 .bot-message {
     font-size: 15px;
-    color: #000;
+    color: white;
     border: 1px solid #7a7a7a;
     border-radius: 5px;
     float: left;
