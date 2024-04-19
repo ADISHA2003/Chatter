@@ -16,6 +16,21 @@ body {
     justify-content: space-between;
 }
 
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    animation: textAnimation 1s ease-out;
+}
+
 #floating-window {
   display: none;
   position: absolute;
@@ -219,8 +234,8 @@ input[type="text"] {
     left: 10px;
     background-color: #000000;
     color: #fff;
-    width: 0px;
-    height: 0px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
@@ -236,8 +251,8 @@ input[type="text"] {
     left: 10px;
     background-color: #000000;
     color: #fff;
-    width: 0px;
-    height: 0px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
