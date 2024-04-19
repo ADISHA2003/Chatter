@@ -141,7 +141,7 @@ body {
     height: 45px;
     display: flex;
     align-items: center;
-    border: 2px solid #17202A;
+    border: 2px solid #white;
     border-radius: 50px;
     margin-bottom: 0px;
     margin-left: 5px;
@@ -149,7 +149,8 @@ body {
 }
 
 input[type="text"] {
-    background-color: #f4f4f4;
+    background-color: #17202A;
+    color: white;
     justify-self: center;
     font-size: 16px;
     border-radius: 0px;
@@ -175,6 +176,7 @@ input[type="text"] {
     border: none;
     background-color: #f4f4f4;
     padding: 2px;
+    border-radius: 50px;
 }
   
 #send-btn img {
@@ -186,6 +188,7 @@ input[type="text"] {
     border: none;
     background-color: #f4f4f4;
     padding: 2px;
+    border-radius: 50px;
 }
   
 #search-btn img {
