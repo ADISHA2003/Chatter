@@ -173,7 +173,7 @@ input[type="text"] {
 
 #send-btn {
     border: none;
-    background: none;
+    background-color: #f4f4f4;
     padding: 2px;
 }
   
@@ -184,7 +184,7 @@ input[type="text"] {
 
 #search-btn {
     border: none;
-    background-color: none;
+    background-color: #f4f4f4;
     padding: 2px;
 }
   
