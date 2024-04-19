@@ -7,30 +7,38 @@ body {
 }
 
 .header {
-    background-color: #f4f4f4;
-    color: #000000;
-    padding: 5px;
-    display: flex;
-    border-top: 0px solid #000000;
-    font-size: 1.5rem;
-    position: relative;
-    text-align: center;
-}
-
-@keyframes textAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
+        background-color: #f4f4f4;
+        color: #000000;
+        padding: 5px;
+        display: flex;
+        border-top: 0px solid #000000;
+        font-size: 1.5rem;
+        justify-content: center; /* Center align text */
+        position: relative;
+        overflow: hidden; /* Hide overflowing content */
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-.header {
-    animation: textAnimation 1s ease-out;
-}
+    .header::before {
+        content: "Text Typing Animation";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        background: linear-gradient(to right, transparent 50%, #000000 50%);
+        background-size: 200% 100%;
+        animation: typing 5s linear infinite;
+        white-space: nowrap; /* Prevent line break */
+    }
+
+    @keyframes typing {
+        0% {
+            left: -100%;
+        }
+        100% {
+            left: 100%;
+        }
+    }
 
 #floating-window {
   display: none;
