@@ -13,7 +13,6 @@ body {
     display: flex;
     border-top: 0px solid #000000;
     font-size: 1.5rem;
-    text-align: center;
     justify-content: space-between;
 }
 
@@ -51,12 +50,12 @@ body {
     border-top: 2px solid #000000;
     border-radius: 0px;
     overflow: hidden;
-    height: 84vh;
+    height: 80vh;
     z-index: 1;
 }
 
 .chat-box {
-    height: 84vh;
+    height: 80vh;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
