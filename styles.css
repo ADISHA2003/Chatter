@@ -14,8 +14,7 @@ body {
     border-top: 0px solid #000000;
     font-size: 1.5rem;
     text-align: center;
-    align-items: center;
-    justify-content: spacebetween;
+    justify-content: space-between;
 }
 
 #floating-window {
