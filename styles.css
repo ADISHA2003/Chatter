@@ -175,7 +175,6 @@ input[type="text"] {
 #send-btn {
     border-radius: 50px;
     background-color: #17202A;
-    padding: 2px;
 }
   
 #send-btn img {
@@ -187,7 +186,6 @@ input[type="text"] {
 #search-btn {
     border-radius: 50px;
     background-color: #17202A;
-    padding: 2px;
 }
   
 #search-btn img {
