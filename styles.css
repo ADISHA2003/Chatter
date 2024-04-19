@@ -181,6 +181,7 @@ input[type="text"] {
 #send-btn img {
     width: 30px;
     height: 30px;
+    border-radius: 50px;
 }
 
 #search-btn {
@@ -192,6 +193,7 @@ input[type="text"] {
 #search-btn img {
     width: 30px;
     height: 30px;
+    border-radius: 50px;
 }
 
 .footer {
