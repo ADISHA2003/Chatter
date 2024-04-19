@@ -189,14 +189,14 @@ input[type="text"] {
 }
   
 #search-btn img {
-    width: 35px;
-    height: 35px;
+    width: 37px;
+    height: 37px;
     border-radius: 50px;
 }
 
 .footer {
     padding: 1px;
-    margin: 0px;
+    margin-top: 2px;
     background-color: #17202A;
     text-align: center;
     font-size: 13px;
