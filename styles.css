@@ -134,6 +134,7 @@ body {
 }
 
 .input-container {
+    background-color: f4f4f4; 
     max-width: 100%;
     float: none;
     position: relative;
@@ -195,10 +196,10 @@ input[type="text"] {
 .footer {
     padding: 1px;
     margin: 0px;
-    background-color: #f4f4f4;
+    background-color: #17202A;
     text-align: center;
     font-size: 13px;
-    color: #000000;
+    color: #ffffff;
 }
 
 .logo {
