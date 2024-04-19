@@ -401,15 +401,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const text = "Chatter";
     const typingSpeed = 50;
     let index = 0;
-    const header = document.querySelector('.header strong');
-    function type() {
-      header.textContent += text[index];
-      index++;
-      if (index < text.length) {
-        setTimeout(type, typingSpeed);
-      }
+    const headerStrong = document.querySelector('.header strong');
+
+    if (headerStrong) {
+        function type() {
+            headerStrong.textContent += text[index];
+            index++;
+            if (index < text.length) {
+                setTimeout(type, typingSpeed);
+            }
+        }
+        type();
+    } else {
+        console.error("Header strong element not found.");
     }
-    type();
 });
 
 document.addEventListener('DOMContentLoaded', function() {
