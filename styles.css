@@ -3,19 +3,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #17202A;
+    background-color: #f4f4f4;
 }
 
 .header {
-        background-color: #17202A;
-        color: #ffffff;
-        padding: 5px;
-        display: flex;
-        border-top: 0px solid #17202A;
-        font-size: 1.5rem;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
+    background-color: #f4f4f4;
+    color: #000000;
+    padding: 5px;
+    display: flex;
+    border-top: 0px solid #000000;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
 }
 
 #floating-window {
@@ -49,7 +49,7 @@ body {
     max-width: 100%;
     margin: 0px auto;
     position: relative;
-    border-top: 2px solid #17202A;
+    border-top: 0px solid #17202A;
     border-radius: 0px;
     overflow: hidden;
     height: 80vh;
@@ -62,7 +62,7 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding: 10px;
-    background-color: #17202A;
+    background-color: #f4f4f4;
     border: 0px solid #ccc;
 }
 
@@ -112,7 +112,7 @@ body {
 }
 
 .user-message {
-    color: white;
+    color: black;
     padding: 3px;
     font-weight: bolder;
     float: left;
@@ -123,14 +123,15 @@ body {
 }
 
 .bot-message {
+    font-family: monospace;
     font-size: 15px;
-    color: white;
-    border: 0px solid #7a7a7a;
+    color: #000;
+    border: 0px solid #000;
     border-radius: 5px;
     float: left;
     clear: both;
     margin: 7px;
-    margin-left: 0px;
+    margin-left: 0px; 
 }
 
 .input-container {
@@ -149,8 +150,8 @@ body {
 }
 
 input[type="text"] {
-    background-color: #17202A;
-    color: white;
+    background-color: #f4f4f4;
+    color: black;
     justify-self: center;
     font-size: 16px;
     border-radius: 0px;
@@ -174,33 +175,33 @@ input[type="text"] {
 
 #send-btn {
     border-radius: 50px;
-    background-color: #17202A;
+    background-color: #f4f4f4;
 }
   
 #send-btn img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50px;
 }
 
 #search-btn {
     border-radius: 50px;
-    background-color: #17202A;
+    background-color: #f4f4f4;
 }
   
 #search-btn img {
-    width: 39px;
-    height: 39px;
+    width: 40px;
+    height: 40px;
     border-radius: 50px;
 }
 
 .footer {
     padding: 1px;
     margin-top: 2px;
-    background-color: #17202A;
+    background-color: #f4f4f4;
     text-align: center;
-    font-size: 13px;
-    color: #ffffff;
+    font-size: 14px;
+    color: #000000;
 }
 
 .logo {
