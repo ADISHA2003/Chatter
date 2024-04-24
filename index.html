@@ -8,8 +8,13 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<header class="header"><strong>Chatter-1.0</strong></header>
+<header class="header">
+        <button id="about-btn" class="about-btn"><i class="fas fa-info-circle"></i></button>
+        <strong></strong>
+        <button id="aboutbot-btn" class="aboutbot-btn"><i class="fas fa-info-circle"></i></button>
+    </header>
     <div class="chat-container" id="chat-container">
+        <img class="logo" src="https://botchatter.vercel.app/Chatter.png" alt="Logo" id="logo">
         <div id="floating-window">
     <div id="close-button">&times;</div>
     <div id="content">
@@ -32,7 +37,7 @@
         </div>
     </div>
     <footer class="footer">
-    Chatter can make mistakes. Consider checking important information <a href="aboutbot.html">here.</a>
+    Chatter can make mistakes. Consider checking important information.
     </footer>
 
     <script src="script.js"></script>
