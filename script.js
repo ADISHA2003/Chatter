@@ -377,15 +377,14 @@ function shuffle(array) {
   return array;
 }
 
-function displayRandomKeywords() {
+function displayKeywords() {
   const keywordBox = document.getElementById('keyword-box');
   keywordBox.innerHTML = '';
 
   const shuffledQuestions = shuffle(questions);
 
-  const randomQuestions = shuffledQuestions.slice(0, 6);
-
-  randomQuestions.forEach(keyword => {
+  for (let i = 0; i < shuffledQuestions.length; i++) {
+    const keyword = shuffledQuestions[i];
     const keywordElement = document.createElement('div');
     keywordElement.classList.add('keyword');
     keywordElement.textContent = keyword;
@@ -393,10 +392,10 @@ function displayRandomKeywords() {
       document.getElementById('user-input').value = keyword;
     });
     keywordBox.appendChild(keywordElement);
-  });
+  }
 }
 
-window.onload = displayRandomKeywords;
+displayKeywords();
 
 document.addEventListener('DOMContentLoaded', function() {
     const text = "Chatter (Model - 1.0)";
