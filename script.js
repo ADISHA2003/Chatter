@@ -413,8 +413,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         type();
-
-        headerStrong.style.textAlign = "center";
     } else {
         console.error("Header strong element not found.");
     }
