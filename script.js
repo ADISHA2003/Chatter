@@ -377,14 +377,15 @@ function shuffle(array) {
   return array;
 }
 
-function displayKeywords() {
+function displayRandomKeywords() {
   const keywordBox = document.getElementById('keyword-box');
   keywordBox.innerHTML = '';
 
   const shuffledQuestions = shuffle(questions);
 
-  for (let i = 0; i < shuffledQuestions.length; i++) {
-    const keyword = shuffledQuestions[i];
+  const randomQuestions = shuffledQuestions.slice(0, 4);
+
+  randomQuestions.forEach(keyword => {
     const keywordElement = document.createElement('div');
     keywordElement.classList.add('keyword');
     keywordElement.textContent = keyword;
@@ -392,13 +393,13 @@ function displayKeywords() {
       document.getElementById('user-input').value = keyword;
     });
     keywordBox.appendChild(keywordElement);
-  }
+  });
 }
 
-displayKeywords();
+window.onload = displayRandomKeywords;
 
 document.addEventListener('DOMContentLoaded', function() {
-    const text = "Chatter - 1.0";
+    const text = "Chatter (Model - 1.0)";
     const typingSpeed = 50;
     let index = 0;
     const headerStrong = document.querySelector('header');
