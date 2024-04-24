@@ -383,7 +383,7 @@ function displayRandomKeywords() {
 
   const shuffledQuestions = shuffle(questions);
 
-  const randomQuestions = shuffledQuestions.slice(0, 4);
+  const randomQuestions = shuffledQuestions.slice(0, 6);
 
   randomQuestions.forEach(keyword => {
     const keywordElement = document.createElement('div');
