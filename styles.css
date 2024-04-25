@@ -78,7 +78,7 @@ body {
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    margin-left: 4px;
+    margin-left: 0px;
     margin-bottom: 0px;
     display: flex;
     white-space: nowrap;
@@ -91,7 +91,7 @@ body {
     border: 2px solid rgb(7, 247, 7);
     border-radius: 5px;
     cursor: pointer;
-    margin-right: none;
+    margin-right: 2px;
     font-size: 1rem;
     text-align: center;
     position: relative;
@@ -130,7 +130,8 @@ body {
     float: left;
     clear: both;
     margin: 7px;
-    margin-left: 0px; 
+    margin-left: 0px;
+    filter: drop-shadow(100px 70px 100px blue);
 }
 
 .input-container {
