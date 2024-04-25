@@ -70,7 +70,8 @@ function displayResults(data, maxResults = 1) {
                     const linkElement = document.createElement("a");
                     linkElement.href = result.link;
                     linkElement.target = "_blank";
-                    linkElement.textContent = "know more";
+                    linkElement.textContent = "[know more]";
+                    linkElement.style.color = "white";
                     messageElement.appendChild(document.createElement("br"));
                     messageElement.appendChild(linkElement);
                 }
@@ -349,7 +350,6 @@ function hideLogoOnSearch() {
 document.getElementById("search-btn").addEventListener("click", hideLogoOnSearch);
 
 const questions = [
-    "Hi",
     "What is Blockchain?",
     "Can you code?",
     "What is your purpose?",
@@ -357,13 +357,11 @@ const questions = [
     "who created you?",
     "what's your name?",
     "What is ML?",
-    "Thank you!",
     "What is AI?",
     "What time is it?",
     "What is the date today?",
     "How old are you?",
     "Tell me a joke.",
-    "Bye",
     "What is NLP?",
     "What is Cloud Computing?",
     "Write a poem."
