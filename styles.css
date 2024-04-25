@@ -3,15 +3,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: blue;
 }
 
 .header {
-    background-color: #f4f4f4;
-    color: #000000;
+    background-color: blue;
+    color: rgb(7, 247, 7);
     padding: 5px;
     display: flex;
-    border-bottom: 1px solid #000000;
+    border-bottom: 0px solid #000000;
     font-size: 1.5rem;
     justify-content: center;
     text-align: center;
@@ -61,7 +61,7 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding: 10px;
-    background-color: #f4f4f4;
+    background-color: blue;
     border: 0px solid #ccc;
 }
 
@@ -86,9 +86,9 @@ body {
 
 .keyword {
     padding: 1vh 3vh;
-    background-color: #000000;
-    color: #ffffff;
-    border: 2px solid #f4f4f4;
+    background-color: blue;
+    color: rgb(7, 247, 7);
+    border: 2px solid rgb(7, 247, 7);
     border-radius: 5px;
     cursor: pointer;
     margin-right: none;
@@ -111,7 +111,7 @@ body {
 }
 
 .user-message {
-    color: black;
+    color: rgb(7, 247, 7);
     padding: 3px;
     font-weight: bolder;
     float: left;
@@ -124,7 +124,7 @@ body {
 .bot-message {
     font-family: monospace;
     font-size: 15px;
-    color: #000;
+    color: rgb(7, 247, 7);
     border: 0px solid #000;
     border-radius: 5px;
     float: left;
@@ -134,14 +134,14 @@ body {
 }
 
 .input-container {
-    background-color: #f4f4f4; 
+    background-color: blue; 
     max-width: 100%;
     float: none;
     position: relative;
     height: 45px;
     display: flex;
     align-items: center;
-    border: 2px solid #000000;
+    border: 2px solid rgb(7, 247, 7);
     border-radius: 10px;
     margin-bottom: 0px;
     margin-left: 5px;
@@ -149,8 +149,8 @@ body {
 }
 
 input[type="text"] {
-    background-color: #f4f4f4;
-    color: black;
+    background-color: blue;
+    color: rgb(7, 247, 7);
     justify-self: center;
     font-size: 16px;
     border-radius: 0px;
@@ -162,6 +162,10 @@ input[type="text"] {
     margin-right: 0px;
     margin-left: 8px;
     outline: none;
+}
+
+input::placeholder {
+    color:  rgb(7, 247, 7);
 }
 
 .input-container button {
@@ -200,10 +204,10 @@ input[type="text"] {
 .footer {
     padding: 1px;
     margin-top: 2px;
-    background-color: #f4f4f4;
+    background-color: blue;
     text-align: center;
     font-size: 14px;
-    color: #000000;
+    color: rgb(7, 247, 7);
 }
 
 .logo {
