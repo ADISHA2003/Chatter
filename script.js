@@ -41,7 +41,7 @@ function displayResults(data, maxResults = 1) {
     results = results.slice(0,1);
 
     const displaySearchResult = (result) => {
-        const typingSpeed = 1;
+        const typingSpeed = 15;
         const chatbox = document.getElementById("chat-box");
 
         if (!chatbox) {
@@ -314,8 +314,8 @@ function startTypingAnimation() {
             } else {
                 clearInterval(typingInterval);
             }
-        }, 1);
-    }, 600);
+        }, 15);
+    }, 700);
 }
 
      window.onload = function() {
