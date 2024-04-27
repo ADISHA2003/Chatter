@@ -20,9 +20,11 @@ function search() {
     performSearch(query);
 }
 
+require('dotenv').config(); // Load environment variables from .env file
+
 function performSearch(query) {
-    var apiKey = "AIzaSyBn-1DwSjXpqV5nteGRxbiW-LvxS7pDz-Q";
-    var cx = "73ecbbd20d97b4289";
+    var apiKey = process.env.API_KEY;
+    var cx = process.env.CX;
     var url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
 
     fetch(url)
