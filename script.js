@@ -13,15 +13,6 @@ function sendMessage() {
     startTypingAnimation();
 }
 
-function addUserMessage(message) {
-    var chatBox = document.getElementById("chat-box");
-    var userDiv = document.createElement("div");
-    userDiv.className = "user-message";
-    userDiv.textContent = message;
-    chatBox.appendChild(userDiv);
-    chatBox.scrollTop = chatBox.scrollHeight;
-}
-
 function search() {
     var query = document.getElementById("user-input").value.trim();
     if (query === "") return;
@@ -40,7 +31,16 @@ function performSearch(query) {
         .catch(error => console.log('Error:', error));
 }
 
-function displayResults(data, maxResults = 5) {
+function addUserMessage(message) {
+    var chatBox = document.getElementById("chat-box");
+    var userDiv = document.createElement("div");
+    userDiv.className = "user-message";
+    userDiv.textContent = message;
+    chatBox.appendChild(userDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function displayResults(data, maxResults = 3) {
     var results = data.items;
     if (!results || results.length === 0) {
         addBotMessage("No search results found.");
