@@ -47,7 +47,7 @@ function displayResults(data, maxResults) {
 
     results = results.slice(0, maxResults);
 
-    const typingSpeed = 10;
+    const typingSpeed = 5;
     const chatbox = document.getElementById("chat-box");
 
     if (!chatbox) {
