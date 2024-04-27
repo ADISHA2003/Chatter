@@ -40,7 +40,7 @@ function displayResults(data, maxResults = 5) {
 
     results = results.slice(0, maxResults);
 
-    const typingSpeed = 5;
+    const typingSpeed = 10;
     const chatbox = document.getElementById("chat-box");
 
     if (!chatbox) {
@@ -81,7 +81,7 @@ function displayResults(data, maxResults = 5) {
                     // If there are more results, type the next one after a delay
                     setTimeout(() => {
                         typeSearchResult(results[index + 1], index + 1);
-                    }, 500); // Delay before typing the next search result
+                    }, 0); // Delay before typing the next search result
                 }
             }
         };
