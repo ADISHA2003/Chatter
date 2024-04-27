@@ -31,7 +31,7 @@ function performSearch(query) {
         .catch(error => console.log('Error:', error));
 }
 
-function displayResults(data, maxResults = 3) {
+function displayResults(data, maxResults = 2) {
     var results = data.items;
     if (!results || results.length === 0) {
         addBotMessage("No search results found.");
@@ -40,21 +40,15 @@ function displayResults(data, maxResults = 3) {
 
     results = results.slice(0, maxResults);
 
-    const displaySearchResult = (results) => {
-        const typingSpeed = 15;
-        const chatbox = document.getElementById("chat-box");
+    const typingSpeed = 15;
+    const chatbox = document.getElementById("chat-box");
 
-        if (!chatbox) {
-            console.log("Chatbox element not found");
-            return;
-        }
+    if (!chatbox) {
+        console.log("Chatbox element not found");
+        return;
+    }
 
-        let combinedText = ''; // Combined text from all search results
-
-        results.forEach((result, index) => {
-            combinedText += result.snippet; // Concatenate snippet of each result
-        });
-
+    const typeSearchResult = (result, index) => {
         const messageElement = document.createElement("div");
         messageElement.classList.add("bot-message");
 
@@ -67,28 +61,36 @@ function displayResults(data, maxResults = 3) {
         let i = 0;
 
         const typeText = () => {
-            if (i < combinedText.length) {
-                typingAnimationSpan.innerHTML += combinedText.charAt(i);
+            if (i < result.snippet.length) {
+                typingAnimationSpan.innerHTML += result.snippet.charAt(i);
                 chatbox.scrollTop = chatbox.scrollHeight;
                 setTimeout(() => {
                     i++;
                     typeText();
                 }, typingSpeed);
-            } else if (results.length > 0) {
-                // If there are results, append "know more" link to the last one
+            } else {
+                // After typing the snippet, add "Know More" link
                 const linkElement = document.createElement("a");
-                linkElement.href = results[results.length - 1].link;
+                linkElement.href = result.link;
                 linkElement.target = "_blank";
                 linkElement.textContent = "[know more]";
                 linkElement.style.color = "white";
                 messageElement.appendChild(linkElement);
+
+                if (index < results.length - 1) {
+                    // If there are more results, type the next one after a delay
+                    setTimeout(() => {
+                        chatbox.removeChild(messageElement); // Remove the current message
+                        typeSearchResult(results[index + 1], index + 1);
+                    }, 1000); // Delay before typing the next search result
+                }
             }
         };
 
         typeText();
     };
 
-    displaySearchResult(results);
+    typeSearchResult(results[0], 0); // Start typing the first search result
 }
 
 function generateBotResponse(userInput) {
