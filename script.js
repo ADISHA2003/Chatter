@@ -13,6 +13,15 @@ function sendMessage() {
     startTypingAnimation();
 }
 
+function addUserMessage(message) {
+    var chatBox = document.getElementById("chat-box");
+    var userDiv = document.createElement("div");
+    userDiv.className = "user-message";
+    userDiv.textContent = message;
+    chatBox.appendChild(userDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
 function search() {
     var query = document.getElementById("user-input").value.trim();
     if (query === "") return;
