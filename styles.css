@@ -111,7 +111,7 @@ body {
 }
 
 .user-message {
-    color: rgb(7, 247, 7);
+    color: white;
     padding: 3px;
     font-weight: bolder;
     float: left;
@@ -124,14 +124,14 @@ body {
 .bot-message {
     font-family: monospace;
     font-size: 15px;
-    color: rgb(7, 247, 7);
+    color: white;
     border: 0px solid #000;
     border-radius: 5px;
     float: left;
     clear: both;
     margin: 7px;
     margin-left: 0px;
-    filter: drop-shadow(100px 70px 100px blue);
+    filter: drop-shadow(100px 70px 100px #363636);
 }
 
 .input-container {
