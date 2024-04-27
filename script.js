@@ -56,7 +56,8 @@ function displayResults(data, maxResults = 3) {
         console.log("Chatbox element not found");
         return;
     }
-
+    const userInput = document.getElementById("user-input").value; // Assuming "user-input" is the ID of the input field where the user message is entered
+    addUserMessage(userInput); // Add user message to the chatbox
     const typeSearchResult = (result, index) => {
         const messageElement = document.createElement("div");
         messageElement.classList.add("bot-message");
