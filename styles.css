@@ -258,3 +258,21 @@ input::placeholder {
 .aboutbot-btn:hover {
     background-color: #000000;
 }
+
+/* CSS for the input field */
+#result-number {
+    margin-top: 10px; /* Adjust margin as needed */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100px; /* Adjust width as needed */
+}
+
+/* CSS for the label */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
