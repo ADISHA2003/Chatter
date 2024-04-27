@@ -31,7 +31,7 @@ function performSearch(query) {
         .catch(error => console.log('Error:', error));
 }
 
-function displayResults(data, maxResults = 10) {
+function displayResults(data, maxResults = 5) {
     var results = data.items;
     if (!results || results.length === 0) {
         addBotMessage("No search results found.");
@@ -40,7 +40,7 @@ function displayResults(data, maxResults = 10) {
 
     results = results.slice(0, maxResults);
 
-    const typingSpeed = 15;
+    const typingSpeed = 5;
     const chatbox = document.getElementById("chat-box");
 
     if (!chatbox) {
@@ -81,7 +81,7 @@ function displayResults(data, maxResults = 10) {
                     // If there are more results, type the next one after a delay
                     setTimeout(() => {
                         typeSearchResult(results[index + 1], index + 1);
-                    }, 1000); // Delay before typing the next search result
+                    }, 500); // Delay before typing the next search result
                 }
             }
         };
