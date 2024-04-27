@@ -136,7 +136,7 @@ body {
 }
 
 .input-container {
-    background-color: #363636; 
+    background-color: #ffffff; 
     max-width: 100%;
     float: none;
     position: relative;
@@ -144,15 +144,15 @@ body {
     display: flex;
     align-items: center;
     border: 2px solid white;
-    border-radius: 10px;
+    border-radius: 50px;
     margin-top: 2px;
     margin-left: 5px;
     margin-right: 5px;
 }
 
 input[type="text"] {
-    background-color: #363636;
-    color: white;
+    background-color: white;
+    color: black;
     justify-self: center;
     font-size: 16px;
     border-radius: 0px;
@@ -215,7 +215,7 @@ input::placeholder {
 .about-btn {
     top: 10px;
     left: 10px;
-    background-color: #000000;
+    background-color: #363636;
     color: #fff;
     width: 0px;
     height: 0px;
@@ -228,7 +228,7 @@ input::placeholder {
 .aboutbot-btn {
     top: 10px;
     left: 10px;
-    background-color: #000000;
+    background-color: #363636;
     color: #fff;
     width: 0px;
     height: 0px;
