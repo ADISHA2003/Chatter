@@ -65,18 +65,16 @@ function displayResults(data, maxResults = 3) {
         const typingAnimationSpan = document.createElement("span");
         typingAnimationSpan.classList.add("typing-animation");
         messageElement.appendChild(typingAnimationSpan);
-      // Add bullet before the search result
-    const bullet = document.createElement("span");
-    bullet.textContent = "• ";
-    bullet.style.marginRight = "5px"; // Adjust margin as needed
-    messageElement.appendChild(bullet);
         chatbox.appendChild(messageElement);
 
         let i = 0;
 
         const typeText = () => {
             if (i < result.snippet.length) {
-                typingAnimationSpan.innerHTML += result.snippet.charAt(i);
+               // Add bullet at the start of the snippet
+            if (i === 0) {
+                typingAnimationSpan.innerHTML += "• ";
+            } typingAnimationSpan.innerHTML += result.snippet.charAt(i);
                 chatbox.scrollTop = chatbox.scrollHeight;
                 setTimeout(() => {
                     i++;
