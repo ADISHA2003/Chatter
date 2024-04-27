@@ -27,7 +27,10 @@ function performSearch(query) {
 
     fetch(url)
         .then(response => response.json())
-        .then(data => displayResults(data))
+        .then(data => {
+            const resultNumber = document.getElementById("result-number").value;
+            displayResults(data, resultNumber);
+        })
         .catch(error => console.log('Error:', error));
 }
 
