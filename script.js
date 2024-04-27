@@ -31,16 +31,16 @@ function performSearch(query) {
         .catch(error => console.log('Error:', error));
 }
 
-function displayResults(data, maxResults = 1) {
+function displayResults(data, maxResults = 2) {
     var results = data.items;
     if (!results || results.length === 0) {
         addBotMessage("No search results found.");
         return;
     }
 
-    results = results.slice(0,1);
+    results = results.slice(0, maxResults);
 
-    const displaySearchResult = (result) => {
+    const displaySearchResult = (results) => {
         const typingSpeed = 15;
         const chatbox = document.getElementById("chat-box");
 
@@ -49,37 +49,45 @@ function displayResults(data, maxResults = 1) {
             return;
         }
 
-        results.forEach((result) => {
-            const messageElement = document.createElement("div");
-            messageElement.classList.add("bot-message");
+        let combinedText = ''; // Combined text from all search results
 
-            const typingAnimationSpan = document.createElement("span");
-            typingAnimationSpan.classList.add("typing-animation");
-            messageElement.appendChild(typingAnimationSpan);
-
-            chatbox.appendChild(messageElement);
-
-            const typeText = (text, i) => {
-                if (i < text.length) {
-                    typingAnimationSpan.innerHTML += text.charAt(i);
-                    chatbox.scrollTop = chatbox.scrollHeight;
-                    setTimeout(() => {
-                        typeText(text, i + 1);
-                    }, typingSpeed);
-                } else if (result === results[maxResults - 1]) {
-                    const linkElement = document.createElement("a");
-                    linkElement.href = result.link;
-                    linkElement.target = "_blank";
-                    linkElement.textContent = "[know more]";
-                    linkElement.style.color = "white";
-                    messageElement.appendChild(document.createElement("br"));
-                    messageElement.appendChild(linkElement);
-                }
-            };
-
-            typeText(`${result.snippet}`, 0);
+        results.forEach((result, index) => {
+            combinedText += result.snippet; // Concatenate snippet of each result
         });
+
+        const messageElement = document.createElement("div");
+        messageElement.classList.add("bot-message");
+
+        const typingAnimationSpan = document.createElement("span");
+        typingAnimationSpan.classList.add("typing-animation");
+        messageElement.appendChild(typingAnimationSpan);
+
+        chatbox.appendChild(messageElement);
+
+        let i = 0;
+
+        const typeText = () => {
+            if (i < combinedText.length) {
+                typingAnimationSpan.innerHTML += combinedText.charAt(i);
+                chatbox.scrollTop = chatbox.scrollHeight;
+                setTimeout(() => {
+                    i++;
+                    typeText();
+                }, typingSpeed);
+            } else if (results.length > 0) {
+                // If there are results, append "know more" link to the last one
+                const linkElement = document.createElement("a");
+                linkElement.href = results[results.length - 1].link;
+                linkElement.target = "_blank";
+                linkElement.textContent = "[know more]";
+                linkElement.style.color = "white";
+                messageElement.appendChild(linkElement);
+            }
+        };
+
+        typeText();
     };
+
     displaySearchResult(results);
 }
 
