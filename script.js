@@ -84,7 +84,7 @@ function displayResults(data, maxResults) {
                 linkElement.href = result.link;
                 linkElement.target = "_blank";
                 linkElement.textContent = "[know more]";
-                linkElement.style.color = "blue";
+                linkElement.style.color = "purple";
                 messageElement.appendChild(linkElement);
 
                 if (index < results.length - 1) {
