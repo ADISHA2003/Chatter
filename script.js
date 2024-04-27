@@ -89,9 +89,7 @@ function displayResults(data, maxResults = 2) {
         typeText();
     };
 
-    results.forEach((result, index) => {
-        typeSearchResult(result, index);
-    });
+    typeSearchResult(results[0], 0); // Start typing the first search result
 }
 
 function generateBotResponse(userInput) {
