@@ -333,7 +333,7 @@ function startTypingAnimation() {
             } else {
                 clearInterval(typingInterval);
             }
-        }, 15);
+        }, 5);
     }, 700);
 }
 
