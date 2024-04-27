@@ -31,15 +31,6 @@ function performSearch(query) {
         .catch(error => console.log('Error:', error));
 }
 
-function addUserMessage(message) {
-    var chatBox = document.getElementById("chat-box");
-    var userDiv = document.createElement("div");
-    userDiv.className = "user-message";
-    userDiv.textContent = message;
-    chatBox.appendChild(userDiv);
-    chatBox.scrollTop = chatBox.scrollHeight;
-}
-
 function displayResults(data, maxResults = 3) {
     var results = data.items;
     if (!results || results.length === 0) {
