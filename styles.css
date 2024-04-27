@@ -167,7 +167,7 @@ input[type="text"] {
 }
 
 input::placeholder {
-    color:  #ccc;
+    color:  #363636;
 }
 
 .input-container button {
@@ -180,7 +180,7 @@ input::placeholder {
 
 #send-btn {
     border-radius: 50px;
-    background-color: #363636;
+    background-color: #ffffff;
     margin-right: 1px;
 }
   
@@ -192,7 +192,7 @@ input::placeholder {
 
 #search-btn {
     border-radius: 50px;
-    background-color: #363636;
+    background-color: #ffffff;
     margin-left: 1px;
     margin-right: 2px;
 }
