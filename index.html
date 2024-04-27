@@ -1,41 +1,44 @@
-import React from 'react';
-import './styles.css'; // Import your CSS file
-
-function Chatter() {
-    return (
-        <div>
-            <header className="header">
-                <button id="about-btn" className="about-btn"><i className="fas fa-info-circle"></i></button>
-                <strong></strong>
-                <button id="aboutbot-btn" className="aboutbot-btn"><i className="fas fa-info-circle"></i></button>
-            </header>
-            <div className="chat-container" id="chat-container">
-                <div id="floating-window">
-                    <div id="close-button">&times;</div>
-                    <div id="content">
-                        <h2>How to Use Chatter</h2>
-                        <p>Interacting with chatter is as simple as typing your queries or messages in the chat input field and clicking 'Send icon' to submit. For real-time information access, utilize the 'Search icon' button.</p>
-                    </div>
-                </div>
-                <div className="chat-box" id="chat-box"></div>
-                <div className="keyword-box-container">
-                    <div className="keyword-box" id="keyword-box"></div>
-                </div>
-                <div className="input-container">
-                    <input type="text" id="user-input" placeholder="Send Message..." />
-                    <button id="send-btn">
-                        <img src="https://cdn-icons-png.flaticon.com/512/54/54240.png" alt="Send Icon" />
-                    </button>
-                    <button id="search-btn">
-                        <img src="https://pluspng.com/img-png/search-button-png-search-button-512.png" alt="Search Icon" />
-                    </button>
-                </div>
-            </div>
-            <footer className="footer">
-                Chatter can make mistakes. Consider checking important information <a href="about.html" style={{color: 'white'}}>here</a>
-            </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatter</title>
+    <link rel="icon" type="image/png" href="chatter(1).png">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<header class="header">
+        <button id="about-btn" class="about-btn"><i class="fas fa-info-circle"></i></button>
+        <strong></strong>
+        <button id="aboutbot-btn" class="aboutbot-btn"><i class="fas fa-info-circle"></i></button>
+    </header>
+    <div class="chat-container" id="chat-container">
+        <div id="floating-window">
+    <div id="close-button">&times;</div>
+    <div id="content">
+      <h2>How to Use Chatter</h2>
+      <p>Interacting with chatter is as simple as typing your queries or messages in the chat input field and clicking 'Send icon' to submit. For real-time information access, utilize the 'Search icon' button.</p>
+    </div>
+  </div>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="keyword-box-container">
+            <div class="keyword-box" id="keyword-box"></div>
         </div>
-    );
-}
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Send Message...">
+            <button id="send-btn" onclick="sendMessage()">
+                <img src="https://cdn-icons-png.flaticon.com/512/54/54240.png" alt="Send Icon">
+            </button>
+            <button id="search-btn" onclick="search()">
+                <img src="https://pluspng.com/img-png/search-button-png-search-button-512.png" alt="Search Icon">
+            </button>
+        </div>
+    </div>
+    <footer class="footer">
+    Chatter can make mistakes. Consider checking important information <a href="about.html" style="color: white;">here</a>
+    </footer>
 
-export default Chatter;
+    <script src="script.js"></script>
+</body>
+</html>
