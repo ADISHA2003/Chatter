@@ -61,7 +61,7 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding: 10px;
-    background-color: #363636;
+    background-color: #000000;
     border: 0px solid #ccc;
 }
 
@@ -124,7 +124,7 @@ body {
 .bot-message {
     font-family: monospace;
     font-size: 15px;
-    background-color: #000000;
+    background-color: #363636;
     color: white;
     border: 0px solid #000;
     border-radius: 5px;
