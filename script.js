@@ -31,7 +31,7 @@ function performSearch(query) {
         .catch(error => console.log('Error:', error));
 }
 
-function displayResults(data, maxResults = 2) {
+function displayResults(data, maxResults = 3) {
     var results = data.items;
     if (!results || results.length === 0) {
         addBotMessage("No search results found.");
@@ -80,7 +80,6 @@ function displayResults(data, maxResults = 2) {
                 if (index < results.length - 1) {
                     // If there are more results, type the next one after a delay
                     setTimeout(() => {
-                        chatbox.removeChild(messageElement); // Remove the current message
                         typeSearchResult(results[index + 1], index + 1);
                     }, 1000); // Delay before typing the next search result
                 }
@@ -90,7 +89,9 @@ function displayResults(data, maxResults = 2) {
         typeText();
     };
 
-    typeSearchResult(results[0], 0); // Start typing the first search result
+    results.forEach((result, index) => {
+        typeSearchResult(result, index);
+    });
 }
 
 function generateBotResponse(userInput) {
