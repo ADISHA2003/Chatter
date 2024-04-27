@@ -73,7 +73,7 @@ body {
 }
 
 .keyword-box {
-    display: inline-block;
+    display: grid;
     position: relative;
     overflow-x: scroll;
     scrollbar-width: none;
