@@ -78,7 +78,7 @@ body {
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    margin-left: 0px;
+    margin-top: 4px;
     margin-bottom: 0px;
     display: flex;
     white-space: nowrap;
