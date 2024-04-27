@@ -73,26 +73,15 @@ body {
 }
 
 .keyword-box {
-  display: inline-block;
-  position: relative;
-  overflow-x: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  margin-top: 4px;
-  margin-bottom: 0px;
-  display: flex;
-  white-space: nowrap;
-}
-
-.keyword-box:before {
-  content: "";
-  position: absolute;
-  top: -4px; /* Adjust the position to overlap with the margin-top */
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: rgba(255, 255, 255, 0.5); /* Adjust the transparency here */
-  z-index: 1; /* Ensure it's above the content */
+    display: inline-block;
+    position: relative;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    display: flex;
+    white-space: nowrap;
 }
 
 .keyword {
