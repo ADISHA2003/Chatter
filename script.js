@@ -20,8 +20,6 @@ function search() {
     performSearch(query);
 }
 
-require('dotenv').config(); // Load environment variables from .env file
-
 function performSearch(query) {
     var apiKey = process.env.API_KEY;
     var cx = process.env.CX;
