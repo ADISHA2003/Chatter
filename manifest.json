@@ -2,13 +2,13 @@
   "name": "Chatter",
   "short_name": "Chatter",
   "start_url": "/",
-  "display": "minimal-ui",
+  "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#363636",
   "icons": [
     {
       "src": "chatter(1).png",
-      "sizes": "192x192",
+      "sizes": "250x250",
       "type": "image/png"
     }
   ]
