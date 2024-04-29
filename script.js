@@ -28,7 +28,7 @@ function performSearch(query) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            const resultNumber = getRandomNumber(1, 5); // Generate a random number between 1 and 10
+            const resultNumber = getRandomNumber(1, 10); // Generate a random number between 1 and 10
             displayResults(data, resultNumber);
         })
         .catch(error => console.log('Error:', error));
@@ -47,7 +47,7 @@ function displayResults(data, maxResults) {
 
     results = results.slice(0, maxResults);
 
-    const typingSpeed = 5;
+    const typingSpeed = 1;
     const chatbox = document.getElementById("chat-box");
 
     if (!chatbox) {
@@ -370,20 +370,20 @@ document.getElementById("search-btn").addEventListener("click", hideLogoOnSearch
 
 const questions = [
     "What is Blockchain?",
-    "Can you code?",
-    "What is your purpose?",
+    "How to do meditation?",
     "what are your limitations?",
     "who created you?",
-    "what's your name?",
+    "How to overcome anxiety?",
     "What is ML?",
     "What is AI?",
     "What time is it?",
     "What is the date today?",
-    "How old are you?",
+    "What are renewable energy sources?",
     "Tell me a joke.",
     "What is NLP?",
     "What is Cloud Computing?",
-    "Write a poem."
+    "Write a poem.",
+    "How to improve my communication skills?"
   ];
 
 function shuffle(array) {
