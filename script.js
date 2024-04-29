@@ -445,3 +445,13 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('close-button').addEventListener('click', function() {
   document.getElementById('floating-window').style.display = 'none';
 });
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
