@@ -13,8 +13,6 @@ function sendMessage() {
     startTypingAnimation();
 }
 
-//script.js
-
 const config = require('./config');
 
 function search() {
@@ -28,10 +26,7 @@ function performSearch(query) {
     var apiKey = config.apiKey;
     var cx = config.cx;
     var url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
-
-    // Perform the search using the URL
-}
-
+    
     fetch(url)
         .then(response => response.json())
         .then(data => {
