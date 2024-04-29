@@ -13,8 +13,6 @@ function sendMessage() {
     startTypingAnimation();
 }
 
-const config = require('./config');
-
 function search() {
     var query = document.getElementById("user-input").value.trim();
     if (query === "") return;
@@ -23,8 +21,8 @@ function search() {
 }
 
 function performSearch(query) {
-    var apiKey = config.apiKey;
-    var cx = config.cx;
+    var apiKey = "AIzaSyBn-1DwSjXpqV5nteGRxbiW-LvxS7pDz-Q";
+    var cx = "73ecbbd20d97b4289";
     var url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
     
     fetch(url)
