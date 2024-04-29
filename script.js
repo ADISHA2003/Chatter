@@ -415,8 +415,8 @@ function displayKeywords() {
 displayKeywords();
 
 document.addEventListener('DOMContentLoaded', function() {
-    const text = "Chatter (Model - 1.0)";
-    const typingSpeed = 70;
+    const text = "Chatter";
+    const typingSpeed = 80;
     let index = 0;
     const headerStrong = document.querySelector('header');
 
