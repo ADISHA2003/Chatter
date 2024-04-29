@@ -2,7 +2,7 @@
   "name": "Chatter",
   "short_name": "Chatter",
   "start_url": "/",
-  "display": "fullscreen",
+  "display": "minimal-ui",
   "background_color": "#000000",
   "theme_color": "#363636",
   "icons": [
