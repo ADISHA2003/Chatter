@@ -3,8 +3,9 @@
   "short_name": "Chatter",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#3367D6",
+  "background_color": "#000000",
+  "color": "#ffffff",
+  "theme_color": "#363636",
   "icons": [
     {
       "src": "chatter(1).png",
