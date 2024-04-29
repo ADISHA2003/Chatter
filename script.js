@@ -13,6 +13,8 @@ function sendMessage() {
     startTypingAnimation();
 }
 
+//script.js
+
 const config = require('./config');
 
 function search() {
