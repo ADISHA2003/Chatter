@@ -113,8 +113,9 @@ body {
 .user-message {
     color: white;
     padding: 3px;
+    font-size: 18px;
     font-weight: bolder;
-    float: right;
+    float: left;
     clear: both;
     margin-top: 5px;
     margin-bottom: 3px;
@@ -133,7 +134,6 @@ body {
     margin: 7px;
     margin-left: 0px;
     line-height: 1.5;
-    margin-right: 20px;
 }
 
 .input-container {
