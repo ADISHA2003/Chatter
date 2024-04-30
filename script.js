@@ -47,17 +47,15 @@ function displayResults(data, maxResults) {
 
     results = results.slice(0, maxResults);
 
-    const typingSpeed = 50; // Adjust typing speed as needed
+    const typingSpeed = 1;
     const chatbox = document.getElementById("chat-box");
 
     if (!chatbox) {
         console.log("Chatbox element not found");
         return;
     }
-
     const userInput = document.getElementById("user-input").value; // Assuming "user-input" is the ID of the input field where the user message is entered
     addUserMessage(userInput); // Add user message to the chatbox
-
     const typeSearchResult = (result, index) => {
         const messageElement = document.createElement("div");
         messageElement.classList.add("bot-message");
@@ -67,19 +65,19 @@ function displayResults(data, maxResults) {
         messageElement.appendChild(typingAnimationSpan);
         chatbox.appendChild(messageElement);
 
-        const snippetWords = result.snippet.split(" ");
         let i = 0;
 
-        const typeWords = () => {
-            if (i < snippetWords.length) {
-                // Add bullet at the start of the snippet
-                if (i === 0) {
-                    typingAnimationSpan.innerHTML += "• ";
-                }
-                typingAnimationSpan.innerHTML += snippetWords[i] + " ";
+        const typeText = () => {
+            if (i < result.snippet.length) {
+               // Add bullet at the start of the snippet
+            if (i === 0) {
+                typingAnimationSpan.innerHTML += "•";
+            } typingAnimationSpan.innerHTML += result.snippet.charAt(i);
                 chatbox.scrollTop = chatbox.scrollHeight;
-                i++;
-                setTimeout(typeWords, typingSpeed);
+                setTimeout(() => {
+                    i++;
+                    typeText();
+                }, typingSpeed);
             } else {
                 // After typing the snippet, add "Know More" link
                 const linkElement = document.createElement("a");
@@ -98,11 +96,13 @@ function displayResults(data, maxResults) {
             }
         };
 
-        typeWords();
+        typeText();
     };
 
     typeSearchResult(results[0], 0); // Start typing the first search result
 }
+
+Update this function to type word by word and not character by character 
 
 function generateBotResponse(userInput) {
     var botResponses = {
