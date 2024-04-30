@@ -102,8 +102,6 @@ function displayResults(data, maxResults) {
     typeSearchResult(results[0], 0); // Start typing the first search result
 }
 
-Update this function to type word by word and not character by character 
-
 function generateBotResponse(userInput) {
     var botResponses = {
         "hello": "Hello! How can I assist you today?",
