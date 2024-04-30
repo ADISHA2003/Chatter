@@ -172,7 +172,7 @@ input::placeholder {
 }
 
 .input-container button {
-    background: none;
+    background-color: #fff;
     border-radius: 50px;
     cursor: pointer;
     padding: 0;
