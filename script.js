@@ -334,7 +334,7 @@ function startTypingAnimation() {
             } else {
                 clearInterval(typingInterval);
             }
-        }, 5); // Adjust the typing speed as needed
+        }, 50); // Adjust the typing speed as needed
     }, 700);
 }
 
