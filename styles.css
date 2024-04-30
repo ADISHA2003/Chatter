@@ -171,6 +171,15 @@ input::placeholder {
     color:  #363636;
 }
 
+.input-container button {
+    background-color: #fff;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 0px;
+}
+
 #send-btn {
     background-color: #ffffff;
     margin-right: 0px;
