@@ -180,28 +180,24 @@ input::placeholder {
 }
 
 #send-btn {
-    border-radius: 50px;
     background-color: #ffffff;
-    margin-right: 1px;
+    margin-right: 0px;
 }
   
 #send-btn img {
     width: 38px;
     height: 38px;
-    border-radius: 50px;
 }
 
 #search-btn {
-    border-radius: 0px;
-    background-color: #ffffff;
-    margin-left: 1px;
+    background-color: #363636;
+    margin-left: 0px;
     margin-right: 2px;
 }
   
 #search-btn img {
     width: 38px;
     height: 38px;
-    border-radius: 50px;
 }
 
 .footer {
