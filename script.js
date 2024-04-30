@@ -322,26 +322,20 @@ function addBotMessage(message) { var chatBox = document.getElementById("chat-bo
 function startTypingAnimation() {
     var botMessages = document.querySelectorAll(".bot-message");
     var lastBotMessage = botMessages[botMessages.length - 1];
-    var message = lastBotMessage.textContent.trim();
+    var message = lastBotMessage.textContent.trim().split(" ");
     lastBotMessage.textContent = "";
 
     setTimeout(function() {
         var i = 0;
         var typingInterval = setInterval(function() {
             if (i < message.length) {
-                if (message.charAt(i) === ' ') {
-                    setTimeout(function() {
-                        lastBotMessage.textContent += ' ';
-                    }, 200); // Delay between words
-                } else {
-                    lastBotMessage.textContent += message.charAt(i);
-                }
+                lastBotMessage.textContent += message[i] + " ";
                 i++;
             } else {
                 clearInterval(typingInterval);
             }
-        }, 5); // Character typing speed
-    }, 700); // Initial delay before typing starts
+        }, 5); // Adjust the typing speed as needed
+    }, 700);
 }
 
      window.onload = function() {
