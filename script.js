@@ -83,7 +83,7 @@ function displayResults(data, maxResults) {
                 const linkElement = document.createElement("a");
                 linkElement.href = result.link;
                 linkElement.target = "_blank";
-                linkElement.textContent = "[know more]";
+                linkElement.textContent = "read more";
                 linkElement.style.color = "deepskyblue";
                 messageElement.appendChild(linkElement);
 
