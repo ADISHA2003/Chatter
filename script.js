@@ -326,15 +326,22 @@ function startTypingAnimation() {
     lastBotMessage.textContent = "";
 
     setTimeout(function() {
+        var i = 0;
         var typingInterval = setInterval(function() {
-            if (message.length > 0) {
-                lastBotMessage.textContent += message.charAt(0);
-                message = message.substring(1);
+            if (i < message.length) {
+                if (message.charAt(i) === ' ') {
+                    setTimeout(function() {
+                        lastBotMessage.textContent += ' ';
+                    }, 200); // Delay between words
+                } else {
+                    lastBotMessage.textContent += message.charAt(i);
+                }
+                i++;
             } else {
                 clearInterval(typingInterval);
             }
-        }, 5);
-    }, 700);
+        }, 5); // Character typing speed
+    }, 700); // Initial delay before typing starts
 }
 
      window.onload = function() {
