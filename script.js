@@ -319,25 +319,6 @@ function addUserMessage(message) {
 
 function addBotMessage(message) { var chatBox = document.getElementById("chat-box"); var botDiv = document.createElement("div"); botDiv.className = "bot-message"; botDiv.innerHTML = message; chatBox.appendChild(botDiv); chatBox.scrollTop = chatBox.scrollHeight;}
 
-function startTypingAnimation() {
-    var botMessages = document.querySelectorAll(".bot-message");
-    var lastBotMessage = botMessages[botMessages.length - 1];
-    var message = lastBotMessage.textContent.trim().split(" ");
-    lastBotMessage.textContent = "";
-
-    setTimeout(function() {
-        var i = 0;
-        var typingInterval = setInterval(function() {
-            if (i < message.length) {
-                lastBotMessage.textContent += message[i] + " ";
-                i++;
-            } else {
-                clearInterval(typingInterval);
-            }
-        }, 50); // Adjust the typing speed as needed
-    }, 700);
-}
-
      window.onload = function() {
             document.getElementById("user-input").focus();
         }
