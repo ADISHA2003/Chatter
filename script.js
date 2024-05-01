@@ -91,7 +91,7 @@ function displayResults(data, maxResults) {
                     // If there are more results, type the next one after a delay
                     setTimeout(() => {
                         typeSearchResult(results[index + 1], index + 1);
-                    }, 0); // Delay before typing the next search result
+                    }, 1000); // Delay before typing the next search result
                 }
             }
         };
