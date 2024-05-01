@@ -91,7 +91,7 @@ function displayResults(data, maxResults) {
                     // If there are more results, type the next one after a delay
                     setTimeout(() => {
                         typeSearchResult(results[index + 1], index + 1);
-                    }, 100); // Delay before typing the next search result
+                    }, 0); // Delay before typing the next search result
                 }
             }
         };
@@ -322,19 +322,18 @@ function addBotMessage(message) { var chatBox = document.getElementById("chat-bo
 function startTypingAnimation() {
     var botMessages = document.querySelectorAll(".bot-message");
     var lastBotMessage = botMessages[botMessages.length - 1];
-    var message = lastBotMessage.textContent.trim().split(" ");
+    var message = lastBotMessage.textContent.trim();
     lastBotMessage.textContent = "";
 
     setTimeout(function() {
-        var i = 0;
         var typingInterval = setInterval(function() {
-            if (i < message.length) {
-                lastBotMessage.textContent += message[i] + " ";
-                i++;
+            if (message.length>0) {
+                lastBotMessage.textContent += message.charAt(0);
+                message = message.substring(1);
             } else {
                 clearInterval(typingInterval);
             }
-        }, 50); // Adjust the typing speed as needed
+        }, 5);
     }, 700);
 }
      window.onload = function() {
