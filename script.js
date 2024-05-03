@@ -79,11 +79,11 @@ function displayResults(data, maxResults) {
                     typeText();
                 }, typingSpeed);
             } else {
-                // After typing the snippet, add "Know More" link
+                // After typing the snippet, add "Read More" link
                 const linkElement = document.createElement("a");
                 linkElement.href = result.link;
                 linkElement.target = "_blank";
-                linkElement.textContent = "read more";
+                linkElement.textContent = "Read More";
                 linkElement.style.color = "deepskyblue";
                 messageElement.appendChild(linkElement);
 
@@ -233,7 +233,7 @@ function generateBotResponse(userInput) {
 "cyber physical system": "Cyber-physical systems (CPS) are interconnected networks of computational algorithms, sensors, actuators, and physical components that interact with the physical world to monitor, control, and optimize complex systems. CPS applications include smart grid systems, autonomous vehicles, industrial automation, smart healthcare systems, and smart infrastructure.",
 "nanotechnology": "Nanotechnology is the manipulation of matter at the nanoscale, typically ranging from 1 to 100 nanometers, to create materials, devices, and systems with unique properties and functionalities. Nanotechnology has applications in various fields, including electronics, medicine, energy, materials science, and environmental remediation, offering potential breakthroughs in areas such as drug delivery, renewable energy, and nanoelectronics.",
 "genetic engineering": "Genetic engineering is a biotechnological process that involves modifying the genetic material of organisms, such as DNA or RNA, to introduce desired traits or characteristics. Genetic engineering techniques, such as gene editing and recombinant DNA technology, enable scientists to manipulate genes, create genetically modified organisms (GMOs), and develop novel therapies, vaccines, and agricultural crops.",        
-"default": "I'm sorry, I didn't understand that. Could you please rephrase your question? or utilize the internet for more information."
+"default": "I'm sorry, I didn't understand that. Could you please rephrase your question? or utilize internet browsing for more information."
     };
 
     for (var key in botResponses) {
@@ -349,23 +349,6 @@ document.getElementById("user-input").addEventListener("keyup", function(event) 
         sendMessage();
     }
 })
-
-document.getElementById("about-btn").addEventListener("click", function() {
-    window.location.href = "about.html";
-})
-
-document.getElementById("aboutbot-btn").addEventListener("click", function() {
-    window.location.href = "aboutbot.html";
-})
-
-function hideLogoOnSearch() {
-    var logo = document.getElementById("logo");
-    if (logo) {
-        logo.style.opacity = 0;
-    }
-}
-
-document.getElementById("search-btn").addEventListener("click", hideLogoOnSearch);
 
 const questions = [
     "What is Blockchain?",
