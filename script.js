@@ -321,9 +321,6 @@ function addBotMessage(message) { var chatBox = document.getElementById("chat-bo
 
 function startTypingAnimation() {
     var botMessages = document.querySelectorAll(".bot-message");
-    var lastBotMessage = botMessages[botMessages.length - 1];
-    var message = lastBotMessage.textContent.trim();
-    lastBotMessage.textContent = "";
 
     var initialDelay = 700; // Initial delay before typing starts
     var typingSpeedMin = 5; // Minimum typing speed (milliseconds per character)
@@ -348,13 +345,14 @@ function startTypingAnimation() {
         }
 
         function typeCharacters(message, element) {
+            var index = 0;
             var typingInterval = setInterval(function() {
-                if (message.length > 0) {
+                if (index < message.length) {
                     // Randomize typing speed between min and max
                     var typingSpeed = Math.floor(Math.random() * (typingSpeedMax - typingSpeedMin + 1)) + typingSpeedMin;
 
-                    element.textContent += message.charAt(0);
-                    message = message.substring(1);
+                    element.textContent += message[index];
+                    index++;
                     typingSoundEffect.play(); // Play typing sound effect
                 } else {
                     clearInterval(typingInterval);
@@ -365,10 +363,9 @@ function startTypingAnimation() {
 
         typeMessage(); // Start typing the first message
     }, initialDelay);
-}
+}    
 
-     window.onload = function() {
-            document.getElementById("user-input").focus();
+     window.onload = function() {document.getElementById("user-input").focus();
         }
 
 document.getElementById('send-btn').addEventListener('touchstart', function() {
