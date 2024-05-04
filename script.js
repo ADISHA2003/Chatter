@@ -321,49 +321,21 @@ function addBotMessage(message) { var chatBox = document.getElementById("chat-bo
 
 function startTypingAnimation() {
     var botMessages = document.querySelectorAll(".bot-message");
-
-    var initialDelay = 700; // Initial delay before typing starts
-    var typingSpeedMin = 5; // Minimum typing speed (milliseconds per character)
-    var typingSpeedMax = 10; // Maximum typing speed (milliseconds per character)
-    var messagePause = 1000; // Pause between messages (milliseconds)
-
-    var typingSoundEffect = new Audio('typing_sound.mp3'); // Typing sound effect
+    var lastBotMessage = botMessages[botMessages.length - 1];
+    var message = lastBotMessage.textContent.trim();
+    lastBotMessage.textContent = "";
 
     setTimeout(function() {
-        var messageIndex = 0;
-
-        function typeMessage() {
-            if (messageIndex < botMessages.length) {
-                var currentMessage = botMessages[messageIndex].textContent.trim();
-                botMessages[messageIndex].textContent = "";
-
-                setTimeout(function() {
-                    typeCharacters(currentMessage, botMessages[messageIndex]);
-                    messageIndex++;
-                }, messagePause);
+        var typingInterval = setInterval(function() {
+            if (message.length>0) {
+                lastBotMessage.textContent += message.charAt(0);
+                message = message.substring(1);
+            } else {
+                clearInterval(typingInterval);
             }
-        }
-
-        function typeCharacters(message, element) {
-            var index = 0;
-            var typingInterval = setInterval(function() {
-                if (index < message.length) {
-                    // Randomize typing speed between min and max
-                    var typingSpeed = Math.floor(Math.random() * (typingSpeedMax - typingSpeedMin + 1)) + typingSpeedMin;
-
-                    element.textContent += message[index];
-                    index++;
-                    typingSoundEffect.play(); // Play typing sound effect
-                } else {
-                    clearInterval(typingInterval);
-                    typeMessage(); // Move to the next message
-                }
-            }, typingSpeed);
-        }
-
-        typeMessage(); // Start typing the first message
-    }, initialDelay);
-}    
+        }, 5);
+    }, 700);
+}
 
      window.onload = function() {document.getElementById("user-input").focus();
         }
