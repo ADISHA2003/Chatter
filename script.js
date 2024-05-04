@@ -47,7 +47,7 @@ function displayResults(data, maxResults) {
 
     results = results.slice(0, maxResults);
 
-    const typingSpeed = 50;
+    const typingSpeed = 0.1;
     const chatbox = document.getElementById("chat-box");
 
     if (!chatbox) {
@@ -333,7 +333,7 @@ function startTypingAnimation() {
             } else {
                 clearInterval(typingInterval);
             }
-        }, 50);
+        }, 0.1);
     }, 700);
 }
      window.onload = function() {
