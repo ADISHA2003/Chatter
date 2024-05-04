@@ -404,7 +404,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (headerStrong) {
         function type() {
-            headerStrong.textContent += text[index];
+            // Reverse the text and get the character at the current index
+            headerStrong.textContent += text.split('').reverse()[index];
             index++;
             if (index < text.length) {
                 setTimeout(type, typingSpeed);
