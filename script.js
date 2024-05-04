@@ -398,20 +398,29 @@ displayKeywords();
 
 document.addEventListener('DOMContentLoaded', function() {
     const text = "Chatter (Model-1.0)";
-    const typingSpeed = 70;
+    const initialDelay = 0; // 1 second delay before typing starts
     let index = 0;
+    const typingSpeedMin = 50; // Minimum typing speed (milliseconds per character)
+    const typingSpeedMax = 100; // Maximum typing speed (milliseconds per character)
     const headerStrong = document.querySelector('header');
 
     if (headerStrong) {
         function type() {
-            // Reverse the text and get the character at the current index
-            headerStrong.textContent += text.split('').reverse()[index];
+            // Randomize typing speed between min and max
+            const typingSpeed = Math.floor(Math.random() * (typingSpeedMax - typingSpeedMin + 1)) + typingSpeedMin;
+            
+            // Append the current character
+            headerStrong.textContent += text[index];
             index++;
+
+            // Check if there are more characters to type
             if (index < text.length) {
-                setTimeout(type, typingSpeed);
+                setTimeout(type, typingSpeed); // Continue typing
             }
         }
-        type();
+        
+        // Start typing after initial delay
+        setTimeout(type, initialDelay);
     } else {
         console.error("Header strong element not found.");
     }
