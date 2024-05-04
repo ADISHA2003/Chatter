@@ -400,8 +400,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const text = "Chatter (Model-1.0)";
     const initialDelay = 0; // 1 second delay before typing starts
     let index = 0;
-    const typingSpeedMin = 5; // Minimum typing speed (milliseconds per character)
-    const typingSpeedMax = 10; // Maximum typing speed (milliseconds per character)
+    const typingSpeedMin = 70; // Minimum typing speed (milliseconds per character)
+    const typingSpeedMax = 100; // Maximum typing speed (milliseconds per character)
     const headerStrong = document.querySelector('header');
 
     if (headerStrong) {
