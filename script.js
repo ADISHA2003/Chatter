@@ -85,7 +85,8 @@ function displayResults(data, maxResults) {
                 linkElement.target = "_blank";
                 linkElement.textContent = "Read More";
                 linkElement.style.color = "deepskyblue";
-                messageElement.appendChild(linkElement);
+ linkElement.style.textDecoration = "none";
+ messageElement.appendChild(linkElement);
 
                 if (index < results.length - 1) {
                     // If there are more results, type the next one after a delay
