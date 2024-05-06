@@ -138,7 +138,7 @@ body {
 }
 
 .input-container {
-    background-color: #ffffff; 
+    background-color: #363636; 
     max-width: 100%;
     float: none;
     position: relative;
@@ -153,8 +153,8 @@ body {
 }
 
 input[type="text"] {
-    background-color: white;
-    color: black;
+    background-color: #363636;
+    color: white;
     justify-self: center;
     font-size: 16px;
     border-radius: 0px;
@@ -173,7 +173,7 @@ input::placeholder {
 }
 
 .input-container button {
-    background-color: #fff;
+    background-color: #363636;
     border-radius: 50px;
     border: none;
     cursor: pointer;
