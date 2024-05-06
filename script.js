@@ -131,7 +131,7 @@ function generateBotResponse(userInput) {
         "capital of france": "The capital of France is Paris.",
         "capital of india": "The capital of India is Delhi.",
         "what can you do": "I can answer your questions, tell jokes, provide information on various topics, and even perform simple calculations. Feel free to ask me anything!",
-        "limitations": "While I strive to be helpful, I may not always understand complex questions or provide accurate information. Additionally, I cannot access real-time data.",
+        "limitations": "While I strive to be helpful, I may not always understand complex questions or provide accurate information.",
         "who are you": "I am a chatbot designed to assist you with various tasks and provide information.",
         "hobbies": "I don't have hobbies in the same way humans do, but I enjoy helping users like you!",
         "feelings": "No, I don't have feelings like humans do. I'm just a program designed to respond to your queries.",
