@@ -4,10 +4,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #363636;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 }
 
 .header {
@@ -20,19 +16,6 @@ body {
     font-family: monospace;
     justify-content: center;
     text-align: center;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflow characters */
-    position: relative;
-}
-
-.circle {
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 #floating-window {
