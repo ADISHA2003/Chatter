@@ -398,48 +398,30 @@ function displayKeywords() {
 displayKeywords();
 
 document.addEventListener('DOMContentLoaded', function() {
-    const textToType = "Chatter (Model-1.0)";
-    const initialDelay = 1000; // 1 second delay before typing starts
+    const text = "Chatter (Model-1.0)";
+    const initialDelay = 0; // 1 second delay before typing starts
     let index = 0;
     const typingSpeedMin = 50; // Minimum typing speed (milliseconds per character)
     const typingSpeedMax = 70; // Maximum typing speed (milliseconds per character)
-    const headerStrong = document.querySelector('header strong');
+    const headerStrong = document.querySelector('header');
 
     if (headerStrong) {
-        const circle = document.createElement('div');
-        circle.style.width = '30px';
-        circle.style.height = '30px';
-        circle.style.backgroundColor = 'white';
-        circle.style.borderRadius = '50%';
-        circle.style.position = 'absolute';
-        circle.style.transform = 'translateY(-50%)';
-        document.body.appendChild(circle);
-
         function type() {
             // Randomize typing speed between min and max
             const typingSpeed = Math.floor(Math.random() * (typingSpeedMax - typingSpeedMin + 1)) + typingSpeedMin;
 
             // Append the current character
-            headerStrong.textContent += textToType[index];
+            headerStrong.textContent += text[index];
             index++;
 
             // Check if there are more characters to type
-            if (index < textToType.length) {
+            if (index < text.length) {
                 setTimeout(type, typingSpeed); // Continue typing
-            } else {
-                // Typing has finished, move the black circle
-                moveCircleToEnd();
             }
         }
 
         // Start typing after initial delay
         setTimeout(type, initialDelay);
-
-        function moveCircleToEnd() {
-            const textWidth = headerStrong.offsetWidth;
-            const circleWidth = circle.offsetWidth;
-            circle.style.left = `${textWidth - circleWidth}px`;
-        }
     } else {
         console.error("Header strong element not found.");
     }
