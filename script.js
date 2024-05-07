@@ -406,6 +406,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerStrong = document.querySelector('header strong');
 
     if (headerStrong) {
+        const circle = document.createElement('div');
+        circle.style.width = '30px';
+        circle.style.height = '30px';
+        circle.style.backgroundColor = 'white';
+        circle.style.borderRadius = '50%';
+        circle.style.position = 'absolute';
+        circle.style.transform = 'translateY(-50%)';
+        document.body.appendChild(circle);
+
         function type() {
             // Randomize typing speed between min and max
             const typingSpeed = Math.floor(Math.random() * (typingSpeedMax - typingSpeedMin + 1)) + typingSpeedMin;
@@ -428,7 +437,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function moveCircleToEnd() {
             const textWidth = headerStrong.offsetWidth;
-            const circle = document.getElementById('circle');
             const circleWidth = circle.offsetWidth;
             circle.style.left = `${textWidth - circleWidth}px`;
         }
