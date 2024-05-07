@@ -405,6 +405,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingSpeedMax = 70; // Maximum typing speed (milliseconds per character)
     const headerStrong = document.querySelector('header');
 
+    // Function to type the circle along with the text
+    function typeCircle() {
+        const circle = document.createElement('div');
+        circle.className = 'circle';
+        headerStrong.appendChild(circle);
+        let position = 0;
+
+        function moveCircle() {
+            position += 1;
+            circle.style.left = position + 'px';
+
+            if (position < headerStrong.offsetWidth) {
+                requestAnimationFrame(moveCircle);
+            }
+        }
+
+        moveCircle();
+    }
+
     if (headerStrong) {
         function type() {
             // Randomize typing speed between min and max
@@ -417,6 +436,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // Check if there are more characters to type
             if (index < text.length) {
                 setTimeout(type, typingSpeed); // Continue typing
+            } else {
+                // Start typing circle when text typing is complete
+                typeCircle();
             }
         }
 
