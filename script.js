@@ -28,7 +28,7 @@ function performSearch(query) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            const resultNumber = getRandomNumber(1, 10); // Generate a random number between 1 and 10
+            const resultNumber = getRandomNumber(1,5); // Generate a random number between 1 and 10
             displayResults(data, resultNumber);
         })
         .catch(error => console.log('Error:', error));
