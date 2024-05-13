@@ -52,12 +52,12 @@ body {
     border-top: 0px solid #17202A;
     border-radius: 0px;
     overflow: hidden;
-    height: 80vh;
+    height: 81vh;
     z-index: 1;
 }
 
 .chat-box {
-    height: 80vh;
+    height: 81vh;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -211,6 +211,7 @@ input::placeholder {
     text-align: center;
     font-size: 14px;
     color: white;
+    text-decoration: none;
 }
 
 .about-btn {
