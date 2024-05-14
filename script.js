@@ -71,7 +71,7 @@ function displayResults(data, maxResults) {
             if (i < result.snippet.length) {
                // Add bullet at the start of the snippet
             if (i === 0) {
-                typingAnimationSpan.innerHTML += "•";
+                typingAnimationSpan.innerHTML += "•   ";
             } typingAnimationSpan.innerHTML += result.snippet.charAt(i);
                 chatbox.scrollTop = chatbox.scrollHeight;
                 setTimeout(() => {
