@@ -383,7 +383,7 @@ function displayKeywords() {
 
   const shuffledQuestions = shuffle(questions);
 
-  for (let i = 0; i < shuffledQuestions.length; i++) {
+  for (let i = 0; i < 3; i++) {
     const keyword = shuffledQuestions[i];
     const keywordElement = document.createElement('div');
     keywordElement.classList.add('keyword');
