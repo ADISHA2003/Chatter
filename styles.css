@@ -189,7 +189,7 @@ input::placeholder {
 #send-btn img {
     width: 40px;
     height: 40px;
-    border-radius: 50px 0px 0px 50px:
+    border-radius: 50px 0px 0px 50px;
 }
 
 #search-btn {
@@ -201,7 +201,7 @@ input::placeholder {
 #search-btn img {
     width: 40px;
     height: 40px;
-    border-radius: 0px 50px 50px 0px:
+    border-radius: 0px 50px 50px 0px;
 }
 
 .footer {
