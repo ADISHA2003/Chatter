@@ -105,35 +105,38 @@ body {
 
 .user-message,
 .bot-message {
-    padding: 2px;
     border-radius: 5px;
     max-width: 100%;
     word-wrap: break-word;
 }
 
 .user-message {
-    color: white;
-    padding: 3px;
-    font-size: 18px;
-    font-weight: bolder;
-    float: left;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px 0px 10px 10px;
+    padding: 6px;
+    font-size: 15px;
+    font-weight: none;
+    float: right;
     clear: both;
-    margin-top: 5px;
-    margin-bottom: 3px;
-    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
 }
 
 .bot-message {
-    font-family: monospace;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    background-color: #363636;
-    color: white;
+    padding: 6px;
+    background-color: #fff;
+    color: #000;
     border: 0px solid #000;
-    border-radius: 5px;
+    border-radius: 0px 10px 10px 10px;
     float: left;
     clear: both;
     margin: 7px;
     margin-left: 0px;
+    margin-right: 50px;
     line-height: 1.5;
 }
 
