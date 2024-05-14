@@ -113,7 +113,7 @@ body {
 .user-message {
     background-color: #fff;
     color: #000;
-    border-radius: 10px 0px 10px 10px;
+    border-radius: 20px 0px 20px 20px;
     padding: 6px;
     font-size: 15px;
     font-weight: none;
@@ -131,7 +131,7 @@ body {
     background-color: #fff;
     color: #000;
     border: 0px solid #000;
-    border-radius: 0px 10px 10px 10px;
+    border-radius: 0px 20px 20px 20px;
     float: left;
     clear: both;
     margin: 7px;
