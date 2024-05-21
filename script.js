@@ -461,8 +461,8 @@ function startTypingAnimation(chatBox, message) {
             } else {
                 chatBox.innerHTML += message.charAt(i);
             }
+         i++;
             chatBox.scrollTop = chatBox.scrollHeight;
-            i++;
             setTimeout(type, 1); // Adjust typing speed here
         }
     }
