@@ -71,7 +71,7 @@ function displayResults(data, maxResults) {
             if (i < result.snippet.length) {
                // Add bullet at the start of the snippet
             if (i === 0) {
-                typingAnimationSpan.innerHTML += "•   ";
+                typingAnimationSpan.innerHTML += "*";
             } typingAnimationSpan.innerHTML += result.snippet.charAt(i);
                 chatbox.scrollTop = chatbox.scrollHeight;
                 setTimeout(() => {
@@ -309,35 +309,6 @@ function performCalculation(input) {
     return result;
 }
 
-function addUserMessage(message) {
-    var chatBox = document.getElementById("chat-box");
-    var userDiv = document.createElement("div");
-    userDiv.className = "user-message";
-    userDiv.textContent = message;
-    chatBox.appendChild(userDiv);
-    chatBox.scrollTop = chatBox.scrollHeight;
-}
-
-function addBotMessage(message) { var chatBox = document.getElementById("chat-box"); var botDiv = document.createElement("div"); botDiv.className = "bot-message"; botDiv.innerHTML = message; chatBox.appendChild(botDiv); chatBox.scrollTop = chatBox.scrollHeight;}
-
-function startTypingAnimation() {
-    var botMessages = document.querySelectorAll(".bot-message");
-    var lastBotMessage = botMessages[botMessages.length - 1];
-    var message = lastBotMessage.textContent.trim();
-    lastBotMessage.textContent = "";
-
-    setTimeout(function() {
-        var typingInterval = setInterval(function() {
-            if (message.length>0) {
-                lastBotMessage.textContent += message.charAt(0);
-                message = message.substring(1);
-            } else {
-                clearInterval(typingInterval);
-            }
-        }, 5);
-    }, 700);
-}
-
      window.onload = function() {document.getElementById("user-input").focus();
         }
 
@@ -383,7 +354,7 @@ function displayKeywords() {
 
   const shuffledQuestions = shuffle(questions);
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 15; i++) {
     const keyword = shuffledQuestions[i];
     const keywordElement = document.createElement('div');
     keywordElement.classList.add('keyword');
@@ -437,4 +408,83 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById('close-button').addEventListener('click', function() {
   document.getElementById('floating-window').style.display = 'none';
+})
+
+document.getElementById('msg-btn').addEventListener('click', function(event) {
+    event.preventDefault();
+    
+    const prompt = document.getElementById('user-input').value;
+    const apiKey = 'AIzaSyCgM0vxDVUTFNZ5QMuTJa_oa8k6hLmN8QI'; // Replace with your actual API key
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
+    const data = {
+        contents: [
+            {
+                parts: [
+                    { text: prompt }
+                ]
+            }
+        ]
+    };
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        const textContent = data.candidates[0].content.parts[0].text;
+        addBotMessage(textContent);
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
 });
+
+function startTypingAnimation(chatBox, message) {
+    chatBox.textContent = "";
+    
+    let i = 0;
+    
+    function type() {
+        if (i < message.length) {
+            if (message.charAt(i) === '\n') {
+                // Check if the next character is not another line break
+                if (message.charAt(i + 1) !== '\n') {
+                    chatBox.innerHTML += '<br>';
+                }
+            } else if (message.charAt(i) === '*') {
+                // Skip the bullet point
+                i++;
+            } else {
+                chatBox.innerHTML += message.charAt(i);
+            }
+            chatBox.scrollTop = chatBox.scrollHeight;
+            i++;
+            setTimeout(type, 1); // Adjust typing speed here
+        }
+    }
+    
+    type();
+}
+
+function addUserMessage(message) {
+    var chatBox = document.getElementById("chat-box");
+    var userDiv = document.createElement("div");
+    userDiv.className = "user-message";
+    userDiv.textContent = message;
+    chatBox.appendChild(userDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function addBotMessage(message) {
+    var chatBox = document.getElementById("chat-box");
+    var botDiv = document.createElement("div");
+    botDiv.className = "bot-message";
+    chatBox.appendChild(botDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+    // Start the typing animation after the message is added to the DOM
+    startTypingAnimation(botDiv, message);
+}
