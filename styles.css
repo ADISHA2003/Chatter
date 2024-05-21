@@ -73,6 +73,20 @@ body {
     }
 }
 
+.chat-box:typing-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #fff;
+    padding: 6px;
+    border-radius: 0px 20px 20px 20px;
+    float: left;
+    clear: both;
+    margin: 7px;
+    margin-left: 0px;
+    margin-right: 0px;
+    line-height: 0px;
+}
+
 .keyword-box {
     display: inline-block;
     position: relative;
@@ -83,6 +97,7 @@ body {
     margin-bottom: 0px;
     display: flex;
     white-space: nowrap;
+    justify-content: left;
 }
 
 .keyword {
@@ -94,7 +109,7 @@ body {
     cursor: pointer;
     margin-right: 5px;
     font-size: 1rem;
-    text-align: center;
+    text-align: left;
     position: relative;
 }
 
@@ -136,8 +151,10 @@ body {
     clear: both;
     margin: 7px;
     margin-left: 0px;
-    margin-right: 50px;
+    margin-right: 0px;
     line-height: 1.5;
+    white-space: pre-wrap; /* Allows text to wrap inside the pre element */
+    word-wrap: break-word;
 }
 
 .input-container {
@@ -151,8 +168,8 @@ body {
     border: 2px solid white;
     border-radius: 50px;
     margin-top: 4px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 input[type="text"] {
@@ -186,13 +203,25 @@ input::placeholder {
 
 #send-btn {
     background-color: #ffffff;
-    margin-right: 1px;
+    margin-right: 0px;
 }
   
 #send-btn img {
     width: 40px;
     height: 40px;
-    border-radius: 50px 0px 0px 50px;
+    border-radius: 50px;
+}
+#msg-btn {
+    background-color: #fff;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+#msg-btn img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0px;
+    border-radius: 50px;
 }
 
 #search-btn {
@@ -204,7 +233,7 @@ input::placeholder {
 #search-btn img {
     width: 40px;
     height: 40px;
-    border-radius: 0px 50px 50px 0px;
+    border-radius: 50px;
 }
 
 .footer {
