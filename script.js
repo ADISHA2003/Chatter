@@ -443,8 +443,8 @@ document.getElementById('msg-btn').addEventListener('click', function(event) {
     });
 });
 
-function startTypingAnimation(chatBox, message) {
-    chatBox.textContent = "";
+function startTypingAnimation(chatbox, message) {
+    chatbox.textContent = "";
     
     let i = 0;
     
@@ -453,16 +453,16 @@ function startTypingAnimation(chatBox, message) {
             if (message.charAt(i) === '\n') {
                 // Check if the next character is not another line break
                 if (message.charAt(i + 1) !== '\n') {
-                    chatBox.innerHTML += '<br>';
+                    chatbox.innerHTML += '<br>';
                 }
             } else if (message.charAt(i) === '*') {
                 // Skip the bullet point
                 i++;
             } else {
-                chatBox.innerHTML += message.charAt(i);
+                chatbox.innerHTML += message.charAt(i);
             }
          i++;
-            chatBox.scrollTop = chatBox.scrollHeight;
+            chatbox.scrollTop = chatbox.scrollHeight;
             setTimeout(type, 1); // Adjust typing speed here
         }
     }
@@ -471,20 +471,20 @@ function startTypingAnimation(chatBox, message) {
 }
 
 function addUserMessage(message) {
-    var chatBox = document.getElementById("chat-box");
+    var chatbox = document.getElementById("chat-box");
     var userDiv = document.createElement("div");
     userDiv.className = "user-message";
     userDiv.textContent = message;
-    chatBox.appendChild(userDiv);
-    chatBox.scrollTop = chatBox.scrollHeight;
+    chatbox.appendChild(userDiv);
+    chatbox.scrollTop = chatbox.scrollHeight;
 }
 
 function addBotMessage(message) {
-    var chatBox = document.getElementById("chat-box");
+    var chatbox = document.getElementById("chat-box");
     var botDiv = document.createElement("div");
     botDiv.className = "bot-message";
-    chatBox.appendChild(botDiv);
-    chatBox.scrollTop = chatBox.scrollHeight;
+    chatbox.appendChild(botDiv);
+    chatbox.scrollTop = chatbox.scrollHeight;
     // Start the typing animation after the message is added to the DOM
     startTypingAnimation(botDiv, message);
 }
