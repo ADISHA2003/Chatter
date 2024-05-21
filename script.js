@@ -84,7 +84,7 @@ function displayResults(data, maxResults) {
                 linkElement.href = result.link;
                 linkElement.target = "_blank";
                 linkElement.textContent = "Read More";
-                linkElement.style.color = "#0000ff";
+                linkElement.style.color = "#00BFFF";
  linkElement.style.textDecoration = "none";
  messageElement.appendChild(linkElement);
 
