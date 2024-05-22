@@ -3,11 +3,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #363636;
+    background-color: #212121;
 }
 
 .header {
-    background-color: #363636;
+    background-color: #212121;
     color: white;
     padding: 5px;
     display: flex;
@@ -225,7 +225,7 @@ input::placeholder {
 .footer {
     padding: 1px;
     margin-top: 2px;
-    background-color: #363636;
+    background-color: #212121;
     text-align: center;
     font-size: 14px;
     color: white;
@@ -235,7 +235,7 @@ input::placeholder {
 .about-btn {
     top: 10px;
     left: 10px;
-    background-color: #363636;
+    background-color: #212121;
     color: #fff;
     width: 0px;
     height: 0px;
@@ -248,7 +248,7 @@ input::placeholder {
 .aboutbot-btn {
     top: 10px;
     left: 10px;
-    background-color: #363636;
+    background-color: #212121;
     color: #fff;
     width: 0px;
     height: 0px;
