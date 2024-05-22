@@ -486,5 +486,7 @@ function addBotMessage(message) {
     var botDiv = document.createElement("div");
     botDiv.className = "bot-message";
     chatbox.appendChild(botDiv);
-    startTypingAnimation(botDiv, message);
+    setTimeout(function() {
+        startTypingAnimation(botDiv, message);
+    }, 800);
 }
