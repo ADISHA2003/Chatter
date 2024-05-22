@@ -447,9 +447,9 @@ document.getElementById('msg-btn').addEventListener('click', function(event) {
 
 function startTypingAnimation(chatbox, message) {
     chatbox.textContent = "";
-    
+    const chatBoxContainer = document.getElementById("chat-box");
     let i = 0;
-    
+
     function type() {
         if (i < message.length) {
             if (message.charAt(i) === '\n') {
@@ -464,7 +464,7 @@ function startTypingAnimation(chatbox, message) {
                 chatbox.innerHTML += message.charAt(i);
             }
             i++;
-            chatbox.scrollTop = chatbox.scrollHeight;
+            chatBoxContainer.scrollTop = chatBoxContainer.scrollHeight; // Ensure the chatbox scrolls to the bottom
             setTimeout(type, 0.1); // Adjust typing speed here
         }
     }
@@ -486,6 +486,5 @@ function addBotMessage(message) {
     var botDiv = document.createElement("div");
     botDiv.className = "bot-message";
     chatbox.appendChild(botDiv);
-    chatbox.scrollTop = chatbox.scrollHeight;
     startTypingAnimation(botDiv, message);
 }
