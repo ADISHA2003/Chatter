@@ -414,6 +414,8 @@ document.getElementById('msg-btn').addEventListener('click', function(event) {
     event.preventDefault();
     
     const prompt = document.getElementById('user-input').value;
+    addUserMessage(prompt);
+    
     const apiKey = 'AIzaSyCgM0vxDVUTFNZ5QMuTJa_oa8k6hLmN8QI'; // Replace with your actual API key
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
     const data = {
@@ -461,9 +463,9 @@ function startTypingAnimation(chatbox, message) {
             } else {
                 chatbox.innerHTML += message.charAt(i);
             }
-         i++;
+            i++;
             chatbox.scrollTop = chatbox.scrollHeight;
-            setTimeout(type, 1); // Adjust typing speed here
+            setTimeout(type, 0.1); // Adjust typing speed here
         }
     }
     
@@ -485,6 +487,5 @@ function addBotMessage(message) {
     botDiv.className = "bot-message";
     chatbox.appendChild(botDiv);
     chatbox.scrollTop = chatbox.scrollHeight;
-    // Start the typing animation after the message is added to the DOM
     startTypingAnimation(botDiv, message);
 }
