@@ -73,20 +73,6 @@ body {
     }
 }
 
-.chat-box:typing-text {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: #fff;
-    padding: 6px;
-    border-radius: 0px 20px 20px 20px;
-    float: left;
-    clear: both;
-    margin: 7px;
-    margin-left: 0px;
-    margin-right: 0px;
-    line-height: 0px;
-}
-
 .keyword-box {
     display: inline-block;
     position: relative;
