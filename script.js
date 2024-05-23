@@ -446,29 +446,34 @@ document.getElementById('msg-btn').addEventListener('click', function(event) {
 });
 
 function startTypingAnimation(chatbox, message) {
-    chatbox.textContent = "";
+    chatbox.innerHTML = "";
     const chatBoxContainer = document.getElementById("chat-box");
     let i = 0;
+    let isBold = false; // Flag to track if we are inside bold markers
 
     function type() {
         if (i < message.length) {
-            if (message.charAt(i) === '\n') {
-                // Check if the next character is not another line break
-                if (message.charAt(i + 1) !== '\n') {
-                    chatbox.innerHTML += '<br>';
+            if (message.substring(i, i + 2) === '**') {
+                // Toggle bold flag and skip the asterisks
+                isBold = !isBold;
+                i += 2;
+
+                if (isBold) {
+                    chatbox.innerHTML += '<strong>';
+                } else {
+                    chatbox.innerHTML += '</strong>';
                 }
-            } else if (message.charAt(i) === '*') {
-                // Skip the bullet point
+            } else if (message.charAt(i) === '\n') {
+                chatbox.innerHTML += '<br>';
                 i++;
             } else {
                 chatbox.innerHTML += message.charAt(i);
+                i++;
             }
-            i++;
             chatBoxContainer.scrollTop = chatBoxContainer.scrollHeight; // Ensure the chatbox scrolls to the bottom
-            setTimeout(type, 0.1); // Adjust typing speed here
+            setTimeout(type, 0.1); // Adjust typing speed here (50ms for a more readable speed)
         }
     }
-    
     type();
 }
 
