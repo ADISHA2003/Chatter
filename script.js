@@ -73,7 +73,6 @@ function displayResults(data, maxResults) {
             if (i === 0) {
                 typingAnimationSpan.innerHTML += "*";
             } typingAnimationSpan.innerHTML += result.snippet.charAt(i);
-                chatbox.scrollTop = chatbox.scrollHeight;
                 setTimeout(() => {
                     i++;
                     typeText();
@@ -470,7 +469,6 @@ function startTypingAnimation(chatbox, message) {
                 chatbox.innerHTML += message.charAt(i);
                 i++;
             }
-            chatBoxContainer.scrollTop = chatBoxContainer.scrollHeight; // Ensure the chatbox scrolls to the bottom
             setTimeout(type, 0.1); // Adjust typing speed here (50ms for a more readable speed)
         }
     }
@@ -483,7 +481,6 @@ function addUserMessage(message) {
     userDiv.className = "user-message";
     userDiv.textContent = message;
     chatbox.appendChild(userDiv);
-    chatbox.scrollTop = chatbox.scrollHeight;
 }
 
 function addBotMessage(message) {
