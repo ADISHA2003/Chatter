@@ -21,7 +21,12 @@ function search() {
 }
 
 function performSearch(query) {
-    var apiKey = "AIzaSyBn-1DwSjXpqV5nteGRxbiW-LvxS7pDz-Q";
+    var apiKey = [
+        "AIzaSyBn-1DwSjXpqV5nteGRxbiW-LvxS7pDz-Q",
+        "AIzaSyAtQtO2RDaXU1dr3OB8xAFK1uXOmgmfPes",
+        "AIzaSyAnBflOjGSET7ZQHK4iNeZ0jqAj7bXtbMw",
+        // Add more API keys as needed
+    ];
     var cx = "73ecbbd20d97b4289";
     var url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
     
