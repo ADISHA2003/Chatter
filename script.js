@@ -21,7 +21,7 @@ function search() {
 }
 
 function performSearch(query) {
-    var apiKey = "AIzaSyAtQtO2RDaXU1dr3OB8xAFK1uXOmgmfPes";
+    var apiKey = "AIzaSyAnBflOjGSET7ZQHK4iNeZ0jqAj7bXtbMw";
     var cx = "73ecbbd20d97b4289";
     var url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
     
