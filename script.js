@@ -64,6 +64,7 @@ function displayResults(data, maxResults) {
         typingAnimationSpan.classList.add("typing-animation");
         messageElement.appendChild(typingAnimationSpan);
         chatbox.appendChild(messageElement);
+chatbox.scrollTop = chatbox.scrollHeight;
 
         let i = 0;
 
@@ -469,6 +470,7 @@ function startTypingAnimation(chatbox, message) {
                 chatbox.innerHTML += message.charAt(i);
                 i++;
             }
+                chatbox.scrollTop = chatbox.scrollHeight;
             setTimeout(type, 0.1); // Adjust typing speed here (50ms for a more readable speed)
         }
     }
