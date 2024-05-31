@@ -481,6 +481,7 @@ function addUserMessage(message) {
     userDiv.className = "user-message";
     userDiv.textContent = message;
     chatbox.appendChild(userDiv);
+    chatbox.scrollTop = chatbox.scrollHeight;
 }
 
 function addBotMessage(message) {
