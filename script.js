@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const text = "Chatter - Beta";
     const initialDelay = 0; // 1 second delay before typing starts
     let index = 0;
-    const typingSpeedMin = 80; // Minimum typing speed (milliseconds per character)
+    const typingSpeedMin = 70; // Minimum typing speed (milliseconds per character)
     const typingSpeedMax = 100; // Maximum typing speed (milliseconds per character)
     const headerStrong = document.querySelector('header');
 
