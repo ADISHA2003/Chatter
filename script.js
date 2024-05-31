@@ -369,7 +369,7 @@ function displayKeywords() {
 displayKeywords();
 
 document.addEventListener('DOMContentLoaded', function() {
-    const text = "Chatter - Beta";
+    const text = "Chatter (Beta)";
     const initialDelay = 0; // 1 second delay before typing starts
     let index = 0;
     const typingSpeedMin = 70; // Minimum typing speed (milliseconds per character)
