@@ -234,7 +234,7 @@ function generateBotResponse(userInput) {
 "cyber physical system": "Cyber-physical systems (CPS) are interconnected networks of computational algorithms, sensors, actuators, and physical components that interact with the physical world to monitor, control, and optimize complex systems. CPS applications include smart grid systems, autonomous vehicles, industrial automation, smart healthcare systems, and smart infrastructure.",
 "nanotechnology": "Nanotechnology is the manipulation of matter at the nanoscale, typically ranging from 1 to 100 nanometers, to create materials, devices, and systems with unique properties and functionalities. Nanotechnology has applications in various fields, including electronics, medicine, energy, materials science, and environmental remediation, offering potential breakthroughs in areas such as drug delivery, renewable energy, and nanoelectronics.",
 "genetic engineering": "Genetic engineering is a biotechnological process that involves modifying the genetic material of organisms, such as DNA or RNA, to introduce desired traits or characteristics. Genetic engineering techniques, such as gene editing and recombinant DNA technology, enable scientists to manipulate genes, create genetically modified organisms (GMOs), and develop novel therapies, vaccines, and agricultural crops.",        
-"default": "I'm sorry, I didn't understand that. Could you please rephrase your question? or browse internet for more information."
+"default": "I'm sorry, I didn't understand that. Could you please rephrase your question?, browse internet or ask Gemini for more information."
     };
 
     for (var key in botResponses) {
