@@ -9,16 +9,80 @@ body {
 .header {
     background-color: #212121;
     color: white;
-    padding: 5px;
+    padding: 20px;
     display: flex;
-    border-bottom: 0px solid #fff;
+    border-bottom: 2px solid #363636;
     font-size: 1.5rem;
     font-family: Arial, sans-serif;
     justify-content: center;
     text-align: center;
+    align-items: center;
+    padding-left: 0px;
     position: relative; /* Ensure z-index takes effect */
-    z-index: 10; /* Position over other elements */
-    box-shadow: 0px 10px 20px #000; /* Stronger shadow */
+    z-index: 1001; /* Position over other elements */
+    box-shadow: 0px 0px 0px #000; /* Stronger shadow */
+}
+
+.sidebar-icon {
+    position: fixed;
+    left: 10px; /* Adjust as needed */
+    top: 10px;
+    width: 20px; /* Adjust as needed */
+    height: auto;
+    cursor: pointer;
+    margin-top: 0px;
+    z-index: 1000;
+}
+
+.sidebar {
+    position: fixed;
+    left: -300px; /* Width of the sidebar */
+    top: 0;
+    width: 300px; /* Adjust as needed */
+    height: 100%;
+    background-color: #212121; /* Adjust as needed */
+    transition: left 0.5s ease;
+    z-index: 1000; /* Make sure it's above other content */
+    border-right: 2px solid #363636;
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding for inner content */
+    box-sizing: border-box;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-logo img {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    margin-top: 30px;
+    margin-right: 20px; /* Space between logo and info */
+}
+
+.sidebar-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.sidebar-info ul {
+    width: 100%;
+    list-style: none;
+    padding-left: 0;
+    margin-left: 10px; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    box-sizing: border-box;
+}
+
+body.sidebar-open {
+    overflow: hidden; /* Prevent scrolling when sidebar is open */
 }
 
 #floating-window {
@@ -55,12 +119,12 @@ body {
     border-top: 0px solid #17202A;
     border-radius: 0px;
     overflow: hidden;
-    height: 81vh;
+    height: 85vh;
     z-index: 1;
 }
 
 .chat-box {
-    height: 81vh;
+    height: 85vh;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -229,40 +293,4 @@ input::placeholder {
     width: 40px;
     height: 40px;
     border-radius: 50px;
-}
-
-.footer {
-    padding: 1px;
-    margin-top: 2px;
-    background-color: #212121;
-    text-align: center;
-    font-size: 14px;
-    color: white;
-    text-decoration: none;
-}
-
-.about-btn {
-    top: 10px;
-    left: 10px;
-    background-color: #212121;
-    color: #fff;
-    width: 0px;
-    height: 0px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-.aboutbot-btn {
-    top: 10px;
-    left: 10px;
-    background-color: #212121;
-    color: #fff;
-    width: 0px;
-    height: 0px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
