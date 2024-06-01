@@ -366,37 +366,7 @@ function displayKeywords() {
   }
 }
 
-displayKeywords();
-
-document.addEventListener('DOMContentLoaded', function() {
-    const text = "Chatter (Beta)";
-    const initialDelay = 0; // 1 second delay before typing starts
-    let index = 0;
-    const typingSpeedMin = 70; // Minimum typing speed (milliseconds per character)
-    const typingSpeedMax = 100; // Maximum typing speed (milliseconds per character)
-    const headerStrong = document.querySelector('header');
-
-    if (headerStrong) {
-        function type() {
-            // Randomize typing speed between min and max
-            const typingSpeed = Math.floor(Math.random() * (typingSpeedMax - typingSpeedMin + 1)) + typingSpeedMin;
-
-            // Append the current character
-            headerStrong.textContent += text[index];
-            index++;
-
-            // Check if there are more characters to type
-            if (index < text.length) {
-                setTimeout(type, typingSpeed); // Continue typing
-            }
-        }
-
-        // Start typing after initial delay
-        setTimeout(type, initialDelay);
-    } else {
-        console.error("Header strong element not found.");
-    }
-});   
+displayKeywords();   
 
 document.addEventListener('DOMContentLoaded', function() {
   
@@ -508,4 +478,16 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'F12') {
         e.preventDefault();
     }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebarToggle = document.querySelector('.sidebar-icon');
+    const sidebar = document.getElementById('sidebar');
+    const body = document.body;
+
+    sidebarToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        sidebar.classList.toggle('active');
+        body.classList.toggle('sidebar-open');
+    });
 });
