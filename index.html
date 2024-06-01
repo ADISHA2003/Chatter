@@ -8,11 +8,23 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<header class="header">
-        <button id="about-btn" class="about-btn"><i class="fas fa-info-circle"></i></button>
-        <strong></strong>
-        <button id="aboutbot-btn" class="aboutbot-btn"><i class="fas fa-info-circle"></i></button>
+    <header class="header">
+        <a href="#" class="sidebar-toggle"></a>
+            <img src="sidebar.svg" alt="Sidebar Icon" class="sidebar-icon">
+        </a>
     </header>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-logo">
+                <img src="Chatter (2).png" alt="Logo">
+            </div>
+            <div class="sidebar-info">
+                <ul>
+                    Chatter can make mistakes. Consider checking important information <a href="about.html" style="color: deepskyblue; text-decoration: none">here</a>.
+                </ul>
+            </div>
+        </div>
+    </div>    
     <div class="chat-container" id="chat-container">
         <div id="floating-window">
     <div id="close-button">&times;</div>
@@ -40,9 +52,6 @@
             </button>
         </div>
     </div>
-    <footer class="footer">
-        Consider checking important information <a href="about.html" style="color: deepskyblue; text-decoration: none">here</a>.
-    </footer>
 
     <script src="script.js"></script>
 </body>
