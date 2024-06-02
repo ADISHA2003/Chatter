@@ -415,7 +415,7 @@ document.getElementById('msg-btn').addEventListener('click', function(event) {
     });
 });
 
-function startTypingAnimation(chatbox, message) {
+function startTypingAnimation(chatbox, message, searchbox) {
     chatbox.innerHTML = "";
     const chatBoxContainer = document.getElementById("chat-box");
     let i = 0;
@@ -490,4 +490,113 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.classList.toggle('active');
         body.classList.toggle('sidebar-open');
     });
+});
+
+async function fetchCustomSearchResults(query) {
+    const apiKeysCustomSearch = [
+        "AIzaSyBn-1DwSjXpqV5nteGRxbiW-LvxS7pDz-Q",
+        "AIzaSyAtQtO2RDaXU1dr3OB8xAFK1uXOmgmfPes",
+        "AIzaSyAnBflOjGSET7ZQHK4iNeZ0jqAj7bXtbMw",
+        // Add more API keys as needed
+    ];
+    const cx = "73ecbbd20d97b4289"; // Replace with your search engine ID
+    const numResults = 10; // Set to the maximum number of results
+
+    async function search(apiKey) {
+        const urlCustomSearch = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}&num=${numResults}`;
+        const response = await fetch(urlCustomSearch);
+        if (response.status === 403) {
+            const errorData = await response.json();
+            if (errorData.error.errors[0].reason === 'quotaExceeded') {
+                throw new Error('Quota exceeded');
+            }
+        }
+        return response.json();
+    }
+
+    for (const apiKey of apiKeysCustomSearch) {
+        try {
+            const data = await search(apiKey);
+            return data.items || [];
+        } catch (error) {
+            if (error.message === 'Quota exceeded') {
+                console.warn(`API key ${apiKey} quota exceeded, trying next key...`);
+            } else {
+                console.error("Error fetching custom search results:", error);
+                return [];
+            }
+        }
+    }
+
+    throw new Error('All API keys have exceeded their quota limits');
+}
+
+async function fetchGeminiContent(prompt) {
+    const apiKeyGemini = "AIzaSyCgM0vxDVUTFNZ5QMuTJa_oa8k6hLmN8QI"; // Replace with your Gemini API key
+    const urlGemini = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKeyGemini}`;
+    const data = {
+        contents: [
+            {
+                parts: [
+                    { text: prompt }
+                ]
+            }
+        ]
+    };
+
+    try {
+        const response = await fetch(urlGemini, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        const result = await response.json();
+        if (result.candidates && result.candidates[0].content.parts && result.candidates[0].content.parts.length > 0) {
+            return result.candidates[0].content.parts[0].text.trim();
+        } else {
+            console.error("Invalid response format:", result);
+            return "Error: Invalid response format.";
+        }
+    } catch (error) {
+        console.error("Error fetching Gemini content:", error);
+        return "Error: Could not fetch content.";
+    }
+}
+
+async function getResponse(query) {
+    const searchResults = await fetchCustomSearchResults(query);
+    const formattedResults = searchResults.map(item => item.title + ": " + item.snippet).join("\n");
+    const geminiPrompt = `Based on these search results, generate a response that also includes your own knowledge, give latest and accurate information:\n\n${formattedResults}`;
+
+    const geminiResponse = await fetchGeminiContent(geminiPrompt);
+    return geminiResponse;
+}
+
+document.getElementById('searchButton').addEventListener('click', async () => {
+    const query = document.getElementById('searchQuery').value;
+    const searchResultsContainer = document.getElementById('searchResults');
+    const searchbox = document.getElementById('search-box');
+    const loadingIndicator = document.getElementById('loading');
+
+    searchResultsContainer.innerHTML = "";
+    searchbox.innerHTML = "";
+    loadingIndicator.classList.remove('hidden');
+
+    try {
+        const searchResults = await fetchCustomSearchResults(query);
+
+        loadingIndicator.classList.add('hidden');
+        searchResultsContainer.innerHTML = searchResults.map(item =>
+            `<p><strong><a href="${item.link}" target="_blank">${item.title}</a></strong>: ${item.snippet}</p>`
+        ).join("");
+
+        const geminiResponse = await getResponse(query);
+        startTypingAnimation(searchbox, geminiResponse);
+    } catch (error) {
+        loadingIndicator.classList.add('hidden');
+        searchResultsContainer.innerHTML = `<p>Error fetching search results: ${error.message}</p>`;
+        searchbox.innerHTML = `<p>Error: ${error.message}</p>`;
+    }
 });
