@@ -36,9 +36,9 @@ body {
 
 .sidebar {
     position: fixed;
-    left: -300px; /* Width of the sidebar */
+    left: -100%; /* Width of the sidebar */
     top: 0;
-    width: 300px; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
     height: 100%;
     background-color: #212121; /* Adjust as needed */
     transition: left 0.5s ease;
