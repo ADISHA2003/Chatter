@@ -76,9 +76,10 @@ body {
     width: 100%;
     list-style: none;
     padding-left: 0;
-    margin-left: 10px; /* Remove any default margin */
+    bottom: 0; /* Remove any default margin */
     padding: 0; /* Remove any default padding */
     box-sizing: border-box;
+    border-top: 1px solid #ccc;
 }
 
 body.sidebar-open {
@@ -119,12 +120,12 @@ body.sidebar-open {
     border-top: 0px solid #17202A;
     border-radius: 0px;
     overflow: hidden;
-    height: 85vh;
+    height: 82vh;
     z-index: 1;
 }
 
 .chat-box {
-    height: 85vh;
+    height: 82vh;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -293,4 +294,105 @@ input::placeholder {
     width: 40px;
     height: 40px;
     border-radius: 50px;
+}
+
+.container {
+    text-align: center;
+    background: #212121;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 0px;
+    width: 100%;
+}
+
+#logo {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    margin-top: 0; /* No space above the logo */
+    margin-bottom: 0px; /* Add some space between the logo and the input */
+}
+
+.query-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 0px;
+}
+
+input[type="query"] {
+    flex: 1;
+    padding: 10px; /* Specify border width */
+    border-radius: 50px; /* Adjust the border radius as needed */
+    background-color: #212121;
+    color: #fff;
+    margin-right: 3px;
+    border: 2px solid #ccc;
+}
+
+input[type="query"]::placeholder{
+    color: #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    background-color: #212121;
+    color: white;
+    cursor: pointer;
+    margin-right: 3px;
+}
+
+button:hover {
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+#searchResults, #search-box {
+    margin-top: 10px;
+    text-align: left;
+}
+
+#searchResults a {
+    color: #212121; /* Change this color to whatever you prefer */
+    text-decoration: none;
+}
+
+#searchResults p {
+    color: #212121; /* Change this color to whatever you prefer */
+    text-decoration: none;
+}
+  
+#search-box{
+    width: 100%;
+    height: 500px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #212121;
+    color: white;
+    border: 0px solid #ccc;
+    margin-top: 5px;
+    line-height: 1.5;
+    scrollbar-width:auto;
+}  
+
+#loading {
+    margin-top: 20px;
+    color: #212121;
+}
+
+.hidden {
+    display: none;
+}
+
+footer{
+    text-align: center;
+    color: #fff;
 }
