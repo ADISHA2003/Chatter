@@ -15,26 +15,27 @@
     </header>
     <div class="sidebar" id="sidebar">
         <div class="sidebar-content">
-            <div class="sidebar-logo">
-                <img src="Chatter (2).png" alt="Logo">
-            </div>
-            <div class="sidebar-info">
-                <ul>
-                    Chatter can make mistakes. Consider checking important information <a href="about.html" style="color: deepskyblue; text-decoration: none">here</a>.
-                </ul>
+            <div class="container">
+                <div class="query-container">
+                <input type="query" id="searchQuery" placeholder="AI powered search...">
+                <button id="searchButton">Search</button>
+                </div>
+                <div id="search-box"></div>
+                <div id="searchResults"></div>
+                <div id="loading" class="hidden">Loading...</div>
             </div>
         </div>
     </div>    
     <div class="chat-container" id="chat-container">
         <div id="floating-window">
-    <div id="close-button">&times;</div>
-    <div id="content">
+            <div id="close-button">&times;</div>
+            <div id="content">
       <h2>How to Use Chatter</h2>
       <p>Interacting with chatter is as simple as typing your queries or messages in the chat input field and clicking 'Send icon' to submit. For real-time information access, utilize the 'Search icon' button.</p>
       <h2>Interesting Update</h2>
       <p>Now chat with <strong>Gemini AI</strong> by Google</p>
     </div>
-  </div>
+</div>
         <div class="chat-box" id="chat-box"></div>
         <div class="keyword-box-container">
             <div class="keyword-box" id="keyword-box"></div>
@@ -52,7 +53,11 @@
             </button>
         </div>
     </div>
-
+    
+    <footer>
+        Consider checking important information <a href="about.html" style="color: deepskyblue; text-decoration: none">here</a>.
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
