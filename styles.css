@@ -218,7 +218,7 @@ body.sidebar-open {
 }
 
 .input-container {
-    background-color: #212121; 
+    background-color: #fff; 
     max-width: 100%;
     float: none;
     position: relative;
@@ -233,8 +233,8 @@ body.sidebar-open {
 }
 
 input[type="text"] {
-    background-color: #212121;
-    color: white;
+    background-color: #fff;
+    color: #000;
     justify-self: center;
     font-size: 16px;
     border-radius: 0px;
