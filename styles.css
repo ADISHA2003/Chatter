@@ -352,7 +352,6 @@ button {
 
 button:hover {
     background-color: #000;
-    transform: scale(1.05);
 }
 
 #searchResults, #search-box {
