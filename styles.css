@@ -400,6 +400,7 @@ footer{
 
 .loading-wave-container {
     display: flex;
+    justify-self: center;
     justify-content: center;
     align-items: center;
     height: 10px; /* Adjust based on your requirement */
@@ -411,7 +412,6 @@ footer{
     margin-top: 5px;
     margin-left: 0px;
     display: flex;
-    justify-self: center;
     justify-content: center;
     align-items: flex-end;
   }
