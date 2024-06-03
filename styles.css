@@ -378,7 +378,7 @@ button:hover {
     background-color: #212121;
     color: white;
     border: 0px solid #ccc;
-    margin-top: 5px;
+    margin-top: 10px;
     line-height: 1.5;
     scrollbar-width:auto;
 }  
