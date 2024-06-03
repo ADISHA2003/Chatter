@@ -415,7 +415,7 @@ document.getElementById('msg-btn').addEventListener('click', function(event) {
     });
 });
 
-function startTypingAnimation(chatbox, message, searchbox) {
+function startTypingAnimation(chatbox, message) {
     chatbox.innerHTML = "";
     const chatBoxContainer = document.getElementById("chat-box");
     let i = 0;
@@ -494,9 +494,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function fetchCustomSearchResults(query) {
     const apiKeysCustomSearch = [
-        "AIzaSyBn-1DwSjXpqV5nteGRxbiW-LvxS7pDz-Q",
-        "AIzaSyAtQtO2RDaXU1dr3OB8xAFK1uXOmgmfPes",
-        "AIzaSyAnBflOjGSET7ZQHK4iNeZ0jqAj7bXtbMw",
+"AIzaSyAnBflOjGSET7ZQHK4iNeZ0jqAj7bXtbMw"
         // Add more API keys as needed
     ];
     const cx = "73ecbbd20d97b4289"; // Replace with your search engine ID
