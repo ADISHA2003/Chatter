@@ -494,8 +494,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function fetchCustomSearchResults(query) {
     const apiKeysCustomSearch = [
-"AIzaSyAnBflOjGSET7ZQHK4iNeZ0jqAj7bXtbMw"
-        // Add more API keys as needed
+"AIzaSyAnBflOjGSET7ZQHK4iNeZ0jqAj7bXtbMw",
+
+"AIzaSyBn-1DwSjXpqV5nteGRxbiW-LvxS7pDz-Q",
+        "AIzaSyAtQtO2RDaXU1dr3OB8xAFK1uXOmgmfPes"
     ];
     const cx = "73ecbbd20d97b4289"; // Replace with your search engine ID
     const numResults = 10; // Set to the maximum number of results
