@@ -47,7 +47,7 @@ body {
     color: #fff; /* Text color */
     padding: 20px; /* Padding for inner content */
     box-sizing: border-box;
-opacity: 0.9;
+opacity: 1;
 }
 
 .sidebar.active {
@@ -218,7 +218,7 @@ body.sidebar-open {
 }
 
 .input-container {
-    background-color: #ffffff; 
+    background-color: #212121; 
     max-width: 100%;
     float: none;
     position: relative;
@@ -233,8 +233,8 @@ body.sidebar-open {
 }
 
 input[type="text"] {
-    background-color: #ffffff;
-    color: black;
+    background-color: #212121;
+    color: white;
     justify-self: center;
     font-size: 16px;
     border-radius: 0px;
