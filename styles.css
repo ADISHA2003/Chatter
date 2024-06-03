@@ -47,6 +47,7 @@ body {
     color: #fff; /* Text color */
     padding: 20px; /* Padding for inner content */
     box-sizing: border-box;
+opacity: 0.5;
 }
 
 .sidebar.active {
