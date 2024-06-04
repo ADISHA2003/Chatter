@@ -95,7 +95,7 @@ body.sidebar-open {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 300px;
-  height: 300px;
+  height: auto;
   background-color: #f9f9f9; /* Default background color */
   border: 1px solid #ccc;
   border-radius: 5px;
