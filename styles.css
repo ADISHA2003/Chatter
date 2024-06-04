@@ -9,7 +9,7 @@ body {
 .header {
     background-color: #212121;
     color: white;
-    padding: 15px;
+    padding: 10px;
     display: flex;
     border-bottom: 2px solid #363636;
     font-size: 1.5rem;
@@ -404,8 +404,8 @@ footer{
     justify-content: center;
     align-items: center;
     height: 10px; /* Adjust based on your requirement */
-    margin-top: 5px;
-    margin-left: 30px;
+    margin-top: 15px;
+    margin-left: 10px;
   }
 
 .loading-wave {
