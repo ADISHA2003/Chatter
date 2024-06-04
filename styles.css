@@ -90,7 +90,7 @@ body.sidebar-open {
 
 #floating-window {
   display: none;
-  position: absolute;
+  position: fixed; /* Change from absolute to fixed */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -101,11 +101,7 @@ body.sidebar-open {
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#floating-window.show {
-  display: block; /* Show the window */
-  background-color: #f9f9f9; /* Change the background color to blue */
+  z-index: 9999; /* Set a high z-index to ensure it appears above other elements */
 }
 
 #close-button {
