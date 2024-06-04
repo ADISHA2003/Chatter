@@ -95,12 +95,12 @@ body.sidebar-open {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 300px;
-  height: auto;
+  height: 400px;
   background-color: #f9f9f9; /* Default background color */
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   z-index: 9999; /* Set a high z-index to ensure it appears above other elements */
 }
 
