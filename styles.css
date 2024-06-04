@@ -156,7 +156,6 @@ body.sidebar-open {
     justify-content: left;
     position: relative; /* Ensure z-index takes effect */
     z-index: 10; /* Position over other elements */
-    box-shadow: 0px -10px 20px #000; /* Stronger shadow */
 }
 
 .keyword {
