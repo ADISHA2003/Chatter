@@ -466,19 +466,9 @@ function addBotMessage(message) {
     }, 1000);
 }
 
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
+// Disable inspect element document.addEventListener("keydown", function (e) { if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { e.preventDefault(); }
 
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) {
-        e.preventDefault();
-    }
-
-    if (e.key === 'F12') {
-        e.preventDefault();
-    }
-});
+}, false);
 
 document.addEventListener('DOMContentLoaded', function() {
     const sidebarToggle = document.querySelector('.sidebar-icon');
