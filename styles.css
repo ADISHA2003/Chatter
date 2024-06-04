@@ -396,6 +396,7 @@ button:hover {
 footer{
     text-align: center;
     color: #fff;
+    margin-top: 5px;
 }
 
 .loading-wave-container {
