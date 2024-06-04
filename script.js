@@ -441,7 +441,7 @@ function startTypingAnimation(chatbox, message) {
                 i++;
             }
             chatBoxContainer.scrollTop = chatBoxContainer.scrollHeight;
-            setTimeout(type, 0.1); // Adjust typing speed here (50ms for a more readable speed)
+            setTimeout(type, 1); // Adjust typing speed here (50ms for a more readable speed)
         }
     }
     type();
@@ -463,7 +463,7 @@ function addBotMessage(message) {
     chatbox.appendChild(botDiv);
     setTimeout(function() {
         startTypingAnimation(botDiv, message);
-    }, 800);
+    }, 1000);
 }
 
 document.addEventListener('contextmenu', function(e) {
@@ -598,5 +598,17 @@ document.getElementById('searchButton').addEventListener('click', async () => {
         loadingIndicator.classList.add('hidden');
         searchResultsContainer.innerHTML = `<p>Error fetching search results: ${error.message}</p>`;
         searchbox.innerHTML = `<p>Error: ${error.message}</p>`;
+    }
+});
+
+document.addEventListener('keydown', function(event) {
+    // Check if the Shift and Esc keys are pressed simultaneously
+    if (event.shiftKey && event.key === 'Escape') {
+        // Focus on the element with id "user-input"
+        var userInput = document.getElementById('user-input');
+        if (userInput) {
+            userInput.focus();
+            event.preventDefault(); // Prevent default behavior of the browser for this key combination
+        }
     }
 });
