@@ -371,7 +371,7 @@ button:hover {
   
 #search-box{
     width: 100%;
-    height: 1000px;
+    height: 600px;
     overflow-y: auto;
     padding: 0px;
     border-radius: 10px;
