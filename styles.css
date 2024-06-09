@@ -446,8 +446,6 @@ footer{
   .loading-bar:nth-child(7) {
     animation-delay: 0.6s;
   }
-
-Make this animation slow
   
   @keyframes loading-wave-animation {
     0% {
