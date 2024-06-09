@@ -115,14 +115,15 @@ body.sidebar-open {
   padding: 10px;
 }
 
+/* General Styles */
 .chat-container {
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    margin: 0px auto;
+    margin: 0 auto;
     position: relative;
-    border-top: 0px solid #17202A;
-    border-radius: 0px;
+    border-top: 0 solid #17202A;
+    border-radius: 0;
     overflow: hidden;
     height: 80vh;
     z-index: 1;
@@ -135,10 +136,34 @@ body.sidebar-open {
     -ms-overflow-style: none;
     padding: 2px;
     background-color: #212121;
-    border: 0px solid #ccc;
+    border: 0 solid #ccc;
 }
 
-@media (min-width: 700px) {
+/* Remove scrollbar for Webkit browsers */
+.chat-box::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsive Design */
+
+/* For small devices (phones) */
+@media (max-width: 699px) {
+    .chat-box {
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
+
+/* For medium devices (tablets) */
+@media (min-width: 700px) and (max-width: 1023px) {
+    .chat-box {
+        margin-left: 10%;
+        max-width: 80%;
+    }
+}
+
+/* For large devices (desktops) */
+@media (min-width: 1024px) {
     .chat-box {
         margin-left: 20%;
         max-width: 60%;
