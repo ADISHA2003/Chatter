@@ -422,6 +422,7 @@ footer{
     width: 15px;
     margin: 0 5px;
     background-color: #fff;
+    border: 1px solid #fff;
     border-radius: 50px;
     animation: loading-wave-animation 1s ease-in-out infinite;
   }
