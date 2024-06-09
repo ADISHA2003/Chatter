@@ -77,12 +77,12 @@
             font-size: 20px;
             text-decoration: none;
             transition: background 0.3s;
-            border: 2px solid #000;
+            border: 2px solid #fff;
         }
         
         .back-button:hover {
             background: #fff;
             color: black;
-            border: 2px solid #000;
+            border: 0px solid #000;
             text-decoration: none;
         }
