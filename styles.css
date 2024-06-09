@@ -423,7 +423,7 @@ footer{
     margin: 0 5px;
     background-color: #fff;
     border-radius: 50px;
-    animation: loading-wave-animation 1s ease-in-out infinite;
+    animation: loading-wave-animation 2s ease-in-out infinite;
   }
   
   .loading-bar:nth-child(2) {
@@ -453,7 +453,7 @@ footer{
     }
   
     50% {
-      height: 12px;
+      height: 15px;
     }
   
     100% {
