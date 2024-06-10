@@ -21,8 +21,8 @@ function sendMessage() {
         }
         
 function performSearch(query) {
-    const apiKey = GOOGLE_CUSTOM_SEARCH_API_KEY_1;
-    const cx = GOOGLE_CSE_ID;
+    const apiKey = process.env.GOOGLE_CUSTOM_SEARCH_API_KEY_1;
+    const cx = process.env.GOOGLE_CSE_ID;
     const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
     
     fetch(url)
@@ -386,7 +386,7 @@ document.getElementById('msg-btn').addEventListener('click', function(event) {
     const prompt = document.getElementById('user-input').value;
     addUserMessage(prompt);
     
-    const apiKey = GOOGLE_GENERATIVE_LANGUAGE_API_KEY; // Replace with your actual API key
+    const apiKey = process.env.GOOGLE_GENERATIVE_LANGUAGE_API_KEY; // Replace with your actual API key
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
     const data = {
         contents: [
@@ -480,11 +480,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function fetchCustomSearchResults(query) {
     const apiKeysCustomSearch = [
-        GOOGLE_CUSTOM_SEARCH_API_KEY_1,
-        GOOGLE_CUSTOM_SEARCH_API_KEY_2,
-        GOOGLE_CUSTOM_SEARCH_API_KEY_3
+        process.env.GOOGLE_CUSTOM_SEARCH_API_KEY_1,
+        process.env.GOOGLE_CUSTOM_SEARCH_API_KEY_2,
+        process.env.GOOGLE_CUSTOM_SEARCH_API_KEY_3
     ];
-    const cx = GOOGLE_CSE_ID; // Replace with your search engine ID
+    const cx = process.env.GOOGLE_CSE_ID; // Replace with your search engine ID
     const numResults = 10; // Set to the maximum number of results
 
     async function search(apiKey) {
@@ -517,7 +517,7 @@ async function fetchCustomSearchResults(query) {
 }
 
 async function fetchGeminiContent(prompt) {
-    const apiKeyGemini = GOOGLE_GENERATIVE_LANGUAGE_API_KEY; // Replace with your Gemini API key
+    const apiKeyGemini = process.env.GOOGLE_GENERATIVE_LANGUAGE_API_KEY; // Replace with your Gemini API key
     const urlGemini = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKeyGemini}`;
     const data = {
         contents: [
