@@ -439,43 +439,34 @@ footer{
   }
   
   .loading-bar {
-    width: 17px;
+    width: 15px;
     margin: 0 5px;
     background-color: #fff;
-    border: 0px solid #fff;
+    border: 2px solid #fff;
     border-radius: 50px;
     animation: loading-wave-animation 1s ease-in-out infinite;
   }
   
   .loading-bar:nth-child(2) {
-  animation-delay: 0.1s;
-  background-color: #ff5733; /* Example color */
-}
+    animation-delay: 0.1s;
+  }
 
-.loading-bar:nth-child(3) {
-  animation-delay: 0.2s;
-  background-color: #33ff57; /* Example color */
-}
+  .loading-bar:nth-child(3) {
+    animation-delay: 0.2s;
+  }
 
-.loading-bar:nth-child(4) {
-  animation-delay: 0.3s;
-  background-color: #5733ff; /* Example color */
-}
-
-.loading-bar:nth-child(5) {
-  animation-delay: 0.4s;
-  background-color: #ff33c7; /* Example color */
-}
-
-.loading-bar:nth-child(6) {
-  animation-delay: 0.5s;
-  background-color: #33c7ff; /* Example color */
-}
-
-.loading-bar:nth-child(7) {
-  animation-delay: 0.6s;
-  background-color: #c7ff33; /* Example color */
-}
+  .loading-bar:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  .loading-bar:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  .loading-bar:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  .loading-bar:nth-child(7) {
+    animation-delay: 0.6s;
+  }
   
   @keyframes loading-wave-animation {
     0% {
