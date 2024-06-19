@@ -246,7 +246,7 @@ body.sidebar-open {
 
 .input-container {
     background-color: #fff; 
-    max-width: 100%;
+    max-width: 80%;
     float: none;
     position: relative;
     height: 45px;
