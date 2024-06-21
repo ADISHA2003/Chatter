@@ -5,6 +5,7 @@ const apiKeyCustomSearch = [
   ];
 const cx = "73ecbbd20d97b4289"; // Replace with your Custom Search Engine ID
 const apiKeyGemini = "AIzaSyCgM0vxDVUTFNZ5QMuTJa_oa8k6hLmN8QI"; // Replace with your actual Gemini API key
+const numResults = 5; // Number of search results to display
 
 function sendMessage() {
     var userInput = document.getElementById("user-input").value.trim();
@@ -22,14 +23,14 @@ function sendMessage() {
 }
 
 function search() {
-    var query = document.getElementById("user-input").value.trim();
+    const query = document.getElementById("user-input").value.trim();
     if (query === "") return;
 
     performSearch(query);
 }
 
 function performSearch(query) {
-    const url = `https://www.googleapis.com/customsearch/v1?key=${apiKeyCustomSearch}&cx=${cx}&q=${query}`;
+    const url = `https://www.googleapis.com/customsearch/v1?key=${apiKeyCustomSearch}&cx=${cx}&q=${query}&num=${numResults}`;
     
     fetch(url)
         .then(response => response.json())
