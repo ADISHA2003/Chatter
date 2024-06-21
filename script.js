@@ -1,1 +1,593 @@
-const _0x4d5589=_0x577d;(function(_0x2bdf60,_0x260328){const _0xedbb92=_0x577d,_0x24f8bd=_0x2bdf60();while(!![]){try{const _0x1e4b69=-parseInt(_0xedbb92(0x171))/0x1+-parseInt(_0xedbb92(0x185))/0x2*(parseInt(_0xedbb92(0x1c3))/0x3)+-parseInt(_0xedbb92(0x177))/0x4+parseInt(_0xedbb92(0x154))/0x5*(parseInt(_0xedbb92(0x1f9))/0x6)+-parseInt(_0xedbb92(0x1ad))/0x7+-parseInt(_0xedbb92(0x127))/0x8*(parseInt(_0xedbb92(0x1e5))/0x9)+parseInt(_0xedbb92(0x14b))/0xa;if(_0x1e4b69===_0x260328)break;else _0x24f8bd['push'](_0x24f8bd['shift']());}catch(_0x562808){_0x24f8bd['push'](_0x24f8bd['shift']());}}}(_0x49d2,0x3dc7f));function sendMessage(){const _0x394dd4=_0x577d;var _0x355b9e=document[_0x394dd4(0x15f)](_0x394dd4(0x1de))[_0x394dd4(0x20b)][_0x394dd4(0x206)]();if(_0x355b9e==='')return;document[_0x394dd4(0x15f)](_0x394dd4(0x18e))['classList'][_0x394dd4(0x1d0)](_0x394dd4(0x1e8)),addUserMessage(_0x355b9e),document[_0x394dd4(0x15f)]('user-input')[_0x394dd4(0x20b)]='';var _0x3d73f2=generateBotResponse(_0x355b9e);addBotMessage(_0x3d73f2),startTypingAnimation();}function _0x577d(_0x241962,_0x14bb6b){const _0x49d2b2=_0x49d2();return _0x577d=function(_0x577d4b,_0x5dfaff){_0x577d4b=_0x577d4b-0x11e;let _0x58aefd=_0x49d2b2[_0x577d4b];return _0x58aefd;},_0x577d(_0x241962,_0x14bb6b);}function search(){const _0x4e56b1=_0x577d;var _0xf7fd68=document[_0x4e56b1(0x15f)](_0x4e56b1(0x1de))['value']['trim']();if(_0xf7fd68==='')return;performSearch(_0xf7fd68);}function performSearch(_0x5ca7ff){const _0x4372e6=_0x577d;var _0x553e08=_0x4372e6(0x1a4),_0x9121bc=_0x4372e6(0x148),_0x200457='https://www.googleapis.com/customsearch/v1?key='+_0x553e08+_0x4372e6(0x186)+_0x9121bc+_0x4372e6(0x1c9)+_0x5ca7ff;fetch(_0x200457)['then'](_0x23c5ca=>_0x23c5ca[_0x4372e6(0x1b9)]())[_0x4372e6(0x1b2)](_0x3c9fb6=>{const _0x57cbae=getRandomNumber(0x1,0x5);displayResults(_0x3c9fb6,_0x57cbae);})[_0x4372e6(0x1e3)](_0x11c218=>console[_0x4372e6(0x1a0)]('Error:',_0x11c218));}function getRandomNumber(_0x111af1,_0x58116c){const _0x155c01=_0x577d;return Math['floor'](Math[_0x155c01(0x15c)]()*(_0x58116c-_0x111af1+0x1))+_0x111af1;}function displayResults(_0x29adc4,_0x996ff7){const _0x4418c8=_0x577d;var _0x40fca4=_0x29adc4[_0x4418c8(0x1f8)];if(!_0x40fca4||_0x40fca4[_0x4418c8(0x120)]===0x0){addBotMessage(_0x4418c8(0x1bc));return;}_0x40fca4=_0x40fca4['slice'](0x0,_0x996ff7);const _0x422814=0.1,_0x2d9f88=document[_0x4418c8(0x15f)](_0x4418c8(0x146));if(!_0x2d9f88){console['log'](_0x4418c8(0x149));return;}const _0x3c7ec1=document[_0x4418c8(0x15f)](_0x4418c8(0x1de))[_0x4418c8(0x20b)];addUserMessage(_0x3c7ec1);const _0x3b81b1=(_0xb66861,_0x1aad4b)=>{const _0x50e0b2=_0x4418c8,_0xf9aa82=document['createElement'](_0x50e0b2(0x133));_0xf9aa82[_0x50e0b2(0x16d)][_0x50e0b2(0x1d0)]('bot-message');const _0x5a3a5e=document[_0x50e0b2(0x15b)](_0x50e0b2(0x1e9));_0x5a3a5e[_0x50e0b2(0x16d)][_0x50e0b2(0x1d0)](_0x50e0b2(0x212)),_0xf9aa82[_0x50e0b2(0x11e)](_0x5a3a5e),_0x2d9f88[_0x50e0b2(0x11e)](_0xf9aa82);let _0x5543b5=0x0;const _0x49abc2=()=>{const _0x525486=_0x50e0b2;if(_0x5543b5<_0xb66861[_0x525486(0x18a)][_0x525486(0x120)])_0x5543b5===0x0&&(_0x5a3a5e[_0x525486(0x193)]+='*'),_0x5a3a5e['innerHTML']+=_0xb66861[_0x525486(0x18a)][_0x525486(0x124)](_0x5543b5),_0x2d9f88[_0x525486(0x16b)]=_0x2d9f88['scrollHeight'],setTimeout(()=>{_0x5543b5++,_0x49abc2();},_0x422814);else{const _0x10f805=document[_0x525486(0x15b)]('a');_0x10f805[_0x525486(0x173)]=_0xb66861[_0x525486(0x150)],_0x10f805[_0x525486(0x174)]=_0x525486(0x196),_0x10f805[_0x525486(0x12e)]=_0x525486(0x219),_0x10f805[_0x525486(0x18b)][_0x525486(0x21b)]=_0x525486(0x1db),_0x10f805[_0x525486(0x18b)]['textDecoration']=_0x525486(0x176),_0xf9aa82[_0x525486(0x11e)](_0x10f805),_0x1aad4b<_0x40fca4[_0x525486(0x120)]-0x1&&setTimeout(()=>{_0x3b81b1(_0x40fca4[_0x1aad4b+0x1],_0x1aad4b+0x1);},0x0);}};_0x49abc2();};_0x3b81b1(_0x40fca4[0x0],0x0);}function _0x49d2(){const _0x20c19e=['To\x20overcome\x20procrastination,\x20try\x20breaking\x20tasks\x20into\x20smaller\x20steps,\x20setting\x20deadlines,\x20eliminating\x20distractions,\x20and\x20rewarding\x20yourself\x20for\x20progress.','<p>Error\x20fetching\x20search\x20results:\x20','How\x20to\x20do\x20meditation?','What\x20is\x20Blockchain?','focus','Dealing\x20with\x20stress\x20involves\x20identifying\x20stressors,\x20practicing\x20relaxation\x20techniques,\x20seeking\x20social\x20support,\x20and\x20maintaining\x20a\x20healthy\x20lifestyle.','test','Error\x20fetching\x20data:','Success\x20can\x20mean\x20different\x20things\x20to\x20different\x20people.\x20It\x20may\x20involve\x20achieving\x20personal\x20or\x20professional\x20goals,\x20finding\x20fulfillment,\x20and\x20making\x20a\x20positive\x20impact.','I\x20can\x20translate\x20text\x20between\x20different\x20languages.\x20Just\x20let\x20me\x20know\x20the\x20languages\x20you\x20need!','Cybersecurity\x20refers\x20to\x20the\x20practice\x20of\x20protecting\x20computer\x20systems,\x20networks,\x20and\x20data\x20from\x20cyber\x20threats,\x20such\x20as\x20hacking,\x20malware,\x20and\x20data\x20breaches.\x20It\x20encompasses\x20various\x20techniques,\x20tools,\x20and\x20best\x20practices\x20to\x20safeguard\x20information\x20assets,\x20maintain\x20confidentiality,\x20integrity,\x20and\x20availability,\x20and\x20mitigate\x20cybersecurity\x20risks.','chat-box','what\x20are\x20your\x20limitations?','73ecbbd20d97b4289','Chatbox\x20element\x20not\x20found','The\x20weather\x20is\x20unpredictable,\x20just\x20like\x20life!','15045950NcxUtb','Cannot\x20divide\x20by\x20zero','Based\x20on\x20these\x20search\x20results,\x20generate\x20a\x20response\x20that\x20also\x20includes\x20your\x20own\x20knowledge,\x20give\x20latest\x20and\x20accurate\x20information:\x0a\x0a','To\x20start\x20a\x20healthy\x20lifestyle,\x20focus\x20on\x20making\x20small,\x20sustainable\x20changes\x20to\x20your\x20diet,\x20exercise\x20routine,\x20sleep\x20habits,\x20and\x20stress\x20management\x20practices.','To\x20start\x20a\x20healthy\x20diet,\x20focus\x20on\x20whole,\x20unprocessed\x20foods,\x20eat\x20plenty\x20of\x20fruits\x20and\x20vegetables,\x20limit\x20added\x20sugars\x20and\x20unhealthy\x20fats,\x20and\x20stay\x20hydrated.','link','\x22\x20target=\x22_blank\x22>','searchQuery','I\x20am\x20a\x20chatbot\x20programmed\x20to\x20assist\x20you.','20CEfMTN','search-box','To\x20save\x20money,\x20try\x20budgeting,\x20cutting\x20unnecessary\x20expenses,\x20setting\x20savings\x20goals,\x20automating\x20your\x20savings,\x20and\x20comparing\x20prices\x20before\x20making\x20purchases.','To\x20learn\x20a\x20new\x20skill,\x20practice\x20regularly,\x20seek\x20guidance\x20from\x20experts,\x20take\x20online\x20courses\x20or\x20workshops,\x20and\x20don\x27t\x20be\x20afraid\x20to\x20make\x20mistakes.','sidebar-open','Life\x20is\x20a\x20deeply\x20personal\x20and\x20subjective\x20concept\x20that\x20individuals\x20grapple\x20with\x20throughout\x20their\x20existence.\x20While\x20existentialism\x20suggests\x20that\x20life\x20lacks\x20inherent\x20meaning,\x20it\x20also\x20empowers\x20individuals\x20to\x20find\x20purpose\x20through\x20their\x20actions,\x20relationships,\x20and\x20self-discovery.\x20Ultimately,\x20the\x20quest\x20for\x20meaning\x20is\x20an\x20ongoing\x20journey\x20of\x20exploration\x20and\x20introspection,\x20shaped\x20by\x20each\x20person\x27s\x20unique\x20experiences,\x20beliefs,\x20and\x20aspirations.','Error:\x20Could\x20not\x20fetch\x20content.','createElement','random','<br>','Renewable\x20energy\x20sources\x20are\x20energy\x20resources\x20that\x20are\x20naturally\x20replenished\x20on\x20a\x20human\x20timescale,\x20such\x20as\x20sunlight,\x20wind,\x20rain,\x20tides,\x20waves,\x20and\x20geothermal\x20heat.\x20Unlike\x20fossil\x20fuels,\x20which\x20are\x20finite\x20and\x20contribute\x20to\x20environmental\x20pollution\x20and\x20climate\x20change,\x20renewable\x20energy\x20sources\x20are\x20sustainable\x20and\x20have\x20minimal\x20environmental\x20impact.','getElementById','display','querySelector','Genetic\x20engineering\x20is\x20a\x20biotechnological\x20process\x20that\x20involves\x20modifying\x20the\x20genetic\x20material\x20of\x20organisms,\x20such\x20as\x20DNA\x20or\x20RNA,\x20to\x20introduce\x20desired\x20traits\x20or\x20characteristics.\x20Genetic\x20engineering\x20techniques,\x20such\x20as\x20gene\x20editing\x20and\x20recombinant\x20DNA\x20technology,\x20enable\x20scientists\x20to\x20manipulate\x20genes,\x20create\x20genetically\x20modified\x20organisms\x20(GMOs),\x20and\x20develop\x20novel\x20therapies,\x20vaccines,\x20and\x20agricultural\x20crops.','send-btn','Eating\x20a\x20balanced\x20diet\x20rich\x20in\x20fruits,\x20vegetables,\x20lean\x20proteins,\x20and\x20whole\x20grains\x20is\x20key\x20to\x20maintaining\x20good\x20health.','The\x20best\x20way\x20to\x20study\x20for\x20exams\x20varies\x20for\x20each\x20individual.\x20However,\x20some\x20effective\x20study\x20techniques\x20include\x20creating\x20a\x20study\x20schedule,\x20summarizing\x20key\x20points,\x20testing\x20yourself\x20regularly,\x20and\x20staying\x20organized.','Escape','\x20quota\x20exceeded,\x20trying\x20next\x20key...','While\x20I\x20strive\x20to\x20be\x20helpful,\x20I\x20may\x20not\x20always\x20understand\x20complex\x20questions\x20or\x20provide\x20accurate\x20information.','To\x20build\x20a\x20professional\x20network,\x20attend\x20networking\x20events,\x20join\x20professional\x20organizations,\x20connect\x20with\x20people\x20on\x20LinkedIn,\x20and\x20offer\x20to\x20help\x20others\x20in\x20your\x20field.','To\x20improve\x20productivity,\x20try\x20breaking\x20tasks\x20into\x20smaller,\x20manageable\x20steps,\x20prioritizing\x20tasks,\x20setting\x20specific\x20goals,\x20and\x20minimizing\x20distractions.','scrollTop','parts','classList','Nanotechnology\x20is\x20the\x20manipulation\x20of\x20matter\x20at\x20the\x20nanoscale,\x20typically\x20ranging\x20from\x201\x20to\x20100\x20nanometers,\x20to\x20create\x20materials,\x20devices,\x20and\x20systems\x20with\x20unique\x20properties\x20and\x20functionalities.\x20Nanotechnology\x20has\x20applications\x20in\x20various\x20fields,\x20including\x20electronics,\x20medicine,\x20energy,\x20materials\x20science,\x20and\x20environmental\x20remediation,\x20offering\x20potential\x20breakthroughs\x20in\x20areas\x20such\x20as\x20drug\x20delivery,\x20renewable\x20energy,\x20and\x20nanoelectronics.','The\x20Internet\x20of\x20Things\x20(IoT)\x20refers\x20to\x20a\x20network\x20of\x20interconnected\x20devices\x20and\x20objects\x20that\x20are\x20embedded\x20with\x20sensors,\x20software,\x20and\x20other\x20technologies\x20to\x20collect\x20and\x20exchange\x20data\x20over\x20the\x20internet.\x20These\x20IoT\x20devices\x20can\x20range\x20from\x20everyday\x20objects,\x20such\x20as\x20household\x20appliances\x20and\x20wearable\x20devices,\x20to\x20industrial\x20machines\x20and\x20infrastructure.','To\x20prepare\x20for\x20a\x20test,\x20review\x20class\x20notes\x20and\x20materials\x20regularly,\x20create\x20study\x20guides,\x20practice\x20with\x20sample\x20questions,\x20and\x20get\x20plenty\x20of\x20rest\x20before\x20the\x20exam.','370904JlVtvZ','That\x27s\x20great,\x20How\x20can\x20i\x20help\x20you\x20today?','href','target','Biomedical\x20engineering\x20is\x20a\x20multidisciplinary\x20field\x20that\x20applies\x20principles\x20of\x20engineering,\x20biology,\x20and\x20medicine\x20to\x20develop\x20technologies\x20and\x20devices\x20for\x20healthcare\x20applications.\x20Biomedical\x20engineers\x20design\x20and\x20innovate\x20medical\x20devices,\x20diagnostic\x20tools,\x20prosthetics,\x20tissue\x20engineering,\x20and\x20healthcare\x20systems\x20to\x20improve\x20patient\x20care,\x20enhance\x20quality\x20of\x20life,\x20and\x20advance\x20medical\x20research.','none','1132996Ftezvb','replace','Time\x20management\x20is\x20crucial\x20for\x20productivity.\x20Try\x20prioritizing\x20tasks,\x20using\x20time-blocking\x20techniques,\x20setting\x20realistic\x20deadlines,\x20and\x20minimizing\x20multitasking.','floatingWindowDisplayed','AIzaSyAtQtO2RDaXU1dr3OB8xAFK1uXOmgmfPes','To\x20overcome\x20imposter\x20syndrome,\x20recognize\x20your\x20accomplishments,\x20focus\x20on\x20your\x20strengths,\x20seek\x20support\x20from\x20mentors\x20or\x20peers,\x20and\x20reframe\x20negative\x20thoughts.','<strong>','What\x20is\x20NLP?','Regular\x20exercise\x20is\x20essential\x20for\x20physical\x20and\x20mental\x20health.\x20Choose\x20activities\x20you\x20enjoy,\x20vary\x20your\x20routine,\x20and\x20aim\x20for\x20a\x20combination\x20of\x20cardio,\x20strength,\x20and\x20flexibility\x20exercises.','AIzaSyBn-1DwSjXpqV5nteGRxbiW-LvxS7pDz-Q','quotaExceeded','stringify','To\x20save\x20for\x20retirement,\x20start\x20early,\x20contribute\x20regularly\x20to\x20retirement\x20accounts\x20such\x20as\x20401(k)s\x20or\x20IRAs,\x20diversify\x20your\x20investments,\x20and\x20seek\x20professional\x20advice\x20if\x20needed.','user-message','3116Jlrvtq','&cx=','To\x20stay\x20hydrated,\x20drink\x20plenty\x20of\x20water\x20throughout\x20the\x20day,\x20eat\x20hydrating\x20foods\x20such\x20as\x20fruits\x20and\x20vegetables,\x20and\x20avoid\x20excessive\x20caffeine\x20and\x20alcohol\x20consumption.','keydown','msg-btn','snippet','style','Meditation\x20techniques\x20such\x20as\x20mindfulness\x20meditation,\x20guided\x20visualization,\x20and\x20deep\x20breathing\x20can\x20help\x20reduce\x20stress\x20and\x20promote\x20relaxation.','Friendship\x20is\x20a\x20close\x20and\x20trusting\x20relationship\x20between\x20two\x20or\x20more\x20people.\x20It\x20involves\x20mutual\x20respect,\x20support,\x20and\x20companionship.','chat-container','.sidebar-icon','toString','toLowerCase','Hello!\x20How\x20can\x20I\x20assist\x20you\x20today?','innerHTML','Error:\x20Invalid\x20response\x20format.','close-button','_blank','candidates','sidebar','keyword','floating-window','Once\x20upon\x20a\x20time,\x20there\x20was\x20a\x20curious\x20user\x20who\x20asked\x20a\x20chatbot\x20for\x20a\x20story...','I\x20hope\x20to\x20continue\x20assisting\x20users\x20like\x20you\x20and\x20improving\x20my\x20abilities.','Error\x20fetching\x20custom\x20search\x20results:','Virtual\x20reality\x20(VR)\x20is\x20a\x20computer-generated\x20simulation\x20of\x20an\x20immersive\x20and\x20interactive\x20environment\x20that\x20can\x20be\x20experienced\x20through\x20specialized\x20electronic\x20devices,\x20such\x20as\x20headsets\x20or\x20goggles.\x20VR\x20technology\x20enables\x20users\x20to\x20explore\x20and\x20interact\x20with\x20virtual\x20worlds\x20in\x20a\x20three-dimensional\x20space,\x20often\x20with\x20a\x20sense\x20of\x20presence\x20and\x20realism.','What\x20is\x20Cloud\x20Computing?','log','How\x20to\x20improve\x20my\x20communication?','The\x20capital\x20of\x20India\x20is\x20Delhi.','indexOf','AIzaSyAnBflOjGSET7ZQHK4iNeZ0jqAj7bXtbMw','<p><strong><a\x20href=\x22','substring','To\x20become\x20more\x20organized,\x20try\x20decluttering\x20your\x20space,\x20creating\x20to-do\x20lists,\x20prioritizing\x20tasks,\x20establishing\x20routines,\x20and\x20using\x20tools\x20such\x20as\x20calendars\x20or\x20productivity\x20apps.','2-digit','API\x20key\x20','Result:\x20','As\x20a\x20chatbot,\x20I\x20don\x27t\x20eat,\x20so\x20I\x20don\x27t\x20have\x20a\x20favorite\x20food!','To\x20start\x20a\x20conversation,\x20try\x20asking\x20open-ended\x20questions,\x20showing\x20genuine\x20interest\x20in\x20the\x20other\x20person,\x20and\x20finding\x20common\x20ground.','1970920hHHnUS','searchResults','What\x20are\x20renewable\x20energy\x20sources?','To\x20develop\x20a\x20positive\x20mindset,\x20practice\x20gratitude,\x20focus\x20on\x20the\x20present\x20moment,\x20challenge\x20negative\x20thoughts,\x20and\x20surround\x20yourself\x20with\x20supportive\x20and\x20optimistic\x20people.','To\x20prepare\x20for\x20a\x20job\x20interview,\x20research\x20the\x20company,\x20practice\x20common\x20interview\x20questions,\x20dress\x20appropriately,\x20arrive\x20on\x20time,\x20and\x20bring\x20copies\x20of\x20your\x20resume\x20and\x20references.','then','I\x27m\x20doing\x20well,\x20thank\x20you\x20for\x20asking.\x20How\x20about\x20you?','To\x20calm\x20nerves\x20before\x20a\x20presentation,\x20try\x20practicing\x20relaxation\x20techniques\x20such\x20as\x20deep\x20breathing\x20or\x20visualization,\x20preparing\x20thoroughly,\x20and\x20focusing\x20on\x20your\x20message\x20rather\x20than\x20your\x20anxiety.','Building\x20self-confidence\x20involves\x20setting\x20realistic\x20goals,\x20facing\x20your\x20fears,\x20acknowledging\x20your\x20strengths,\x20and\x20practicing\x20self-care.','As\x20a\x20chatbot,\x20I\x20don\x27t\x20have\x20personal\x20opinions.\x20However,\x20I\x20believe\x20the\x20future\x20holds\x20endless\x20possibilities!','Learning\x20a\x20musical\x20instrument\x20takes\x20time\x20and\x20practice.\x20Start\x20with\x20the\x20basics,\x20practice\x20regularly,\x20seek\x20guidance\x20from\x20a\x20teacher\x20or\x20online\x20tutorials,\x20and\x20be\x20patient\x20with\x20yourself.','bot-message','json','To\x20improve\x20communication\x20skills,\x20practice\x20active\x20listening,\x20speak\x20clearly\x20and\x20confidently,\x20use\x20nonverbal\x20cues\x20effectively,\x20and\x20seek\x20feedback\x20from\x20others.','You\x20can\x20call\x20me\x20Chatter.','No\x20search\x20results\x20found.','AIzaSyCgM0vxDVUTFNZ5QMuTJa_oa8k6hLmN8QI','Staying\x20motivated\x20can\x20be\x20challenging,\x20but\x20setting\x20clear\x20goals,\x20finding\x20your\x20passion,\x20seeking\x20inspiration\x20from\x20others,\x20and\x20celebrating\x20small\x20victories\x20can\x20help.','Quota\x20exceeded','Quitting\x20smoking\x20can\x20be\x20challenging,\x20but\x20some\x20strategies\x20include\x20setting\x20a\x20quit\x20date,\x20seeking\x20support\x20from\x20friends\x20and\x20family,\x20avoiding\x20triggers,\x20and\x20using\x20nicotine\x20replacement\x20therapy\x20or\x20medications.','Write\x20a\x20poem.','Machine\x20learning\x20(ML)\x20is\x20a\x20branch\x20of\x20artificial\x20intelligence\x20(AI)\x20that\x20enables\x20computers\x20to\x20learn\x20from\x20data\x20and\x20improve\x20their\x20performance\x20on\x20a\x20specific\x20task\x20without\x20being\x20explicitly\x20programmed.\x20It\x20involves\x20the\x20development\x20of\x20algorithms\x20that\x20allow\x20computers\x20to\x20identify\x20patterns,\x20make\x20predictions,\x20and\x20adapt\x20to\x20new\x20data.','849GfQFDU','toLocaleDateString','I\x20can\x20answer\x20your\x20questions,\x20tell\x20jokes,\x20provide\x20information\x20on\x20various\x20topics,\x20and\x20even\x20perform\x20simple\x20calculations.\x20Feel\x20free\x20to\x20ask\x20me\x20anything!','active','I\x20don\x27t\x20have\x20an\x20age\x20like\x20humans.','hidden','&q=','message','3D\x20printing,\x20also\x20known\x20as\x20additive\x20manufacturing,\x20is\x20a\x20process\x20of\x20creating\x20three-dimensional\x20objects\x20by\x20depositing\x20successive\x20layers\x20of\x20material,\x20such\x20as\x20plastic,\x20metal,\x20or\x20ceramics,\x20based\x20on\x20a\x20digital\x20model\x20or\x20CAD\x20(computer-aided\x20design)\x20file.\x203D\x20printing\x20technology\x20enables\x20rapid\x20prototyping,\x20customization,\x20and\x20on-demand\x20manufacturing\x20of\x20complex\x20shapes\x20and\x20structures\x20with\x20high\x20precision\x20and\x20efficiency.','DOMContentLoaded','To\x20improve\x20memory,\x20try\x20staying\x20mentally\x20active,\x20getting\x20enough\x20sleep,\x20eating\x20a\x20healthy\x20diet,\x20staying\x20physically\x20active,\x20and\x20practicing\x20memory\x20techniques\x20such\x20as\x20visualization\x20or\x20association.','preventDefault','shiftKey','add','&num=','map','Starting\x20a\x20business\x20involves\x20creating\x20a\x20business\x20plan,\x20conducting\x20market\x20research,\x20securing\x20funding,\x20and\x20registering\x20your\x20business\x20with\x20the\x20appropriate\x20authorities.','Biotechnology\x20is\x20a\x20multidisciplinary\x20field\x20that\x20involves\x20the\x20use\x20of\x20biological\x20systems,\x20organisms,\x20or\x20living\x20organisms\x20to\x20develop\x20products\x20and\x20technologies\x20for\x20various\x20applications,\x20including\x20healthcare,\x20agriculture,\x20and\x20industry.\x20Examples\x20of\x20biotechnologies\x20include\x20genetic\x20engineering,\x20biopharmaceuticals,\x20and\x20bioinformatics.','Artificial\x20intelligence\x20(AI)\x20is\x20a\x20branch\x20of\x20computer\x20science\x20that\x20focuses\x20on\x20the\x20development\x20of\x20intelligent\x20machines\x20and\x20systems\x20capable\x20of\x20performing\x20tasks\x20that\x20typically\x20require\x20human\x20intelligence,\x20such\x20as\x20learning,\x20reasoning,\x20problem-solving,\x20and\x20decision-making.\x20AI\x20technologies\x20include\x20machine\x20learning,\x20natural\x20language\x20processing,\x20computer\x20vision,\x20and\x20robotics.','status','Enter','getItem','toggle','I\x20am\x20developed\x20by\x20ADITYA.','#00BFFF','The\x20latest\x20news\x20can\x20be\x20found\x20on\x20news\x20websites,\x20social\x20media\x20platforms,\x20or\x20by\x20subscribing\x20to\x20news\x20apps\x20or\x20newsletters.','To\x20stay\x20focused,\x20create\x20a\x20conducive\x20environment,\x20set\x20specific\x20goals,\x20eliminate\x20distractions,\x20take\x20regular\x20breaks,\x20and\x20practice\x20mindfulness\x20techniques.','user-input','Love\x20is\x20a\x20complex\x20and\x20multifaceted\x20emotion\x20that\x20can\x20encompass\x20various\x20feelings,\x20including\x20affection,\x20compassion,\x20and\x20intimacy.\x20It\x20often\x20involves\x20deep\x20emotional\x20connections\x20and\x20caring\x20for\x20someone\x20deeply.','Cyber-physical\x20systems\x20(CPS)\x20are\x20interconnected\x20networks\x20of\x20computational\x20algorithms,\x20sensors,\x20actuators,\x20and\x20physical\x20components\x20that\x20interact\x20with\x20the\x20physical\x20world\x20to\x20monitor,\x20control,\x20and\x20optimize\x20complex\x20systems.\x20CPS\x20applications\x20include\x20smart\x20grid\x20systems,\x20autonomous\x20vehicles,\x20industrial\x20automation,\x20smart\x20healthcare\x20systems,\x20and\x20smart\x20infrastructure.','To\x20apologize\x20sincerely,\x20acknowledge\x20your\x20mistake,\x20express\x20remorse,\x20take\x20responsibility,\x20and\x20offer\x20to\x20make\x20amends.','All\x20API\x20keys\x20have\x20exceeded\x20their\x20quota\x20limits','catch','I\x27m\x20sorry,\x20I\x20didn\x27t\x20understand\x20that.\x20Could\x20you\x20please\x20rephrase\x20your\x20question?,\x20browse\x20internet\x20or\x20ask\x20Gemini\x20for\x20more\x20information.','9KcNPWs','content','Setting\x20and\x20achieving\x20goals\x20involves\x20creating\x20a\x20plan,\x20staying\x20focused,\x20overcoming\x20obstacles,\x20and\x20celebrating\x20milestones\x20along\x20the\x20way.','chatting','span','Data\x20science\x20is\x20an\x20interdisciplinary\x20field\x20that\x20involves\x20extracting\x20insights\x20and\x20knowledge\x20from\x20structured\x20and\x20unstructured\x20data\x20using\x20scientific\x20methods,\x20algorithms,\x20and\x20systems.\x20It\x20combines\x20expertise\x20from\x20various\x20domains\x20such\x20as\x20statistics,\x20mathematics,\x20computer\x20science,\x20and\x20domain-specific\x20knowledge\x20to\x20analyze\x20data,\x20uncover\x20patterns,\x20and\x20make\x20data-driven\x20decisions.','searchButton','click','remove','To\x20start\x20a\x20morning\x20routine,\x20try\x20waking\x20up\x20at\x20the\x20same\x20time\x20each\x20day,\x20hydrating,\x20exercising,\x20eating\x20a\x20healthy\x20breakfast,\x20and\x20setting\x20intentions\x20for\x20the\x20day.','Learning\x20to\x20draw\x20takes\x20practice\x20and\x20patience.\x20Start\x20with\x20the\x20basics,\x20study\x20anatomy\x20and\x20perspective,\x20experiment\x20with\x20different\x20mediums,\x20and\x20seek\x20feedback\x20from\x20other\x20artists.','To\x20develop\x20emotional\x20intelligence,\x20practice\x20self-awareness,\x20empathy,\x20and\x20effective\x20communication,\x20manage\x20stress\x20and\x20emotions\x20effectively,\x20and\x20seek\x20feedback\x20from\x20others.','I\x20am\x20a\x20chatbot\x20designed\x20to\x20assist\x20you\x20with\x20various\x20tasks\x20and\x20provide\x20information.','default','Thanks\x20for\x20understanding\x20me!','To\x20develop\x20good\x20study\x20habits,\x20create\x20a\x20designated\x20study\x20space,\x20set\x20specific\x20goals,\x20eliminate\x20distractions,\x20use\x20active\x20learning\x20techniques,\x20and\x20review\x20material\x20regularly.','To\x20improve\x20public\x20speaking\x20skills,\x20practice\x20regularly,\x20prepare\x20thoroughly,\x20know\x20your\x20audience,\x20use\x20visual\x20aids\x20effectively,\x20and\x20seek\x20constructive\x20feedback.','Remember\x20to\x20take\x20a\x20break,\x20practice\x20self-care,\x20and\x20reach\x20out\x20to\x20friends\x20or\x20family\x20for\x20support\x20if\x20needed.','I\x20don\x27t\x20have\x20eyes,\x20so\x20I\x20don\x27t\x20have\x20a\x20favorite\x20color!','items','395070hnRIwU','The\x20capital\x20of\x20Canada\x20is\x20Ottawa.','I\x27m\x20just\x20a\x20bot,\x20so\x20I\x20don\x27t\x20have\x20thoughts\x20like\x20humans\x20do.','key','To\x20start\x20a\x20side\x20hustle,\x20identify\x20your\x20skills\x20and\x20interests,\x20research\x20potential\x20opportunities,\x20create\x20a\x20business\x20plan,\x20and\x20start\x20small\x20while\x20gradually\x20scaling\x20up.','POST','Natural\x20language\x20processing\x20(NLP)\x20is\x20a\x20branch\x20of\x20artificial\x20intelligence\x20(AI)\x20that\x20focuses\x20on\x20the\x20interaction\x20between\x20computers\x20and\x20human\x20languages.\x20NLP\x20techniques\x20enable\x20computers\x20to\x20understand,\x20interpret,\x20and\x20generate\x20human\x20language,\x20including\x20speech\x20recognition,\x20text\x20analysis,\x20sentiment\x20analysis,\x20language\x20translation,\x20and\x20dialogue\x20systems.','scrollHeight','I\x20can\x20try\x20my\x20best!\x20What\x20concept\x20would\x20you\x20like\x20me\x20to\x20explain?','Learning\x20to\x20cook\x20involves\x20starting\x20with\x20simple\x20recipes,\x20practicing\x20basic\x20cooking\x20techniques,\x20experimenting\x20with\x20different\x20ingredients,\x20and\x20watching\x20cooking\x20tutorials\x20or\x20taking\x20cooking\x20classes.','error','</a></strong>:\x20','Invalid\x20response\x20format:','trim','</strong>','To\x20start\x20a\x20writing\x20habit,\x20set\x20aside\x20dedicated\x20time\x20for\x20writing,\x20start\x20with\x20short\x20sessions,\x20experiment\x20with\x20different\x20writing\x20prompts\x20or\x20exercises,\x20and\x20revise\x20and\x20edit\x20your\x20work\x20regularly.','<p>Error:\x20','Of\x20course!\x20I\x27m\x20here\x20to\x20assist\x20you\x20with\x20any\x20questions\x20you\x20have.','value','reason','Sure,\x20here\x27s\x20a\x20short\x20poem:\x0aRoses\x20are\x20red,\x0aViolets\x20are\x20blue,\x0aI\x27m\x20just\x20a\x20bot,\x0aBut\x20I\x27m\x20here\x20for\x20you!','To\x20improve\x20concentration,\x20try\x20minimizing\x20distractions,\x20setting\x20specific\x20goals,\x20practicing\x20mindfulness,\x20taking\x20regular\x20breaks,\x20and\x20maintaining\x20a\x20healthy\x20lifestyle.','join','addEventListener','I\x20don\x27t\x20watch\x20movies.','typing-animation','What\x20is\x20AI?','https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=','To\x20start\x20investing\x20in\x20stocks,\x20educate\x20yourself\x20about\x20the\x20stock\x20market,\x20set\x20investment\x20goals,\x20diversify\x20your\x20portfolio,\x20and\x20consider\x20consulting\x20a\x20financial\x20advisor.','loading','body','keyup','\x20source.','title','color','Augmented\x20reality\x20(AR)\x20is\x20a\x20technology\x20that\x20overlays\x20digital\x20information,\x20such\x20as\x20images,\x20videos,\x20or\x203D\x20models,\x20onto\x20the\x20real-world\x20environment\x20to\x20enhance\x20user\x20perception\x20and\x20interaction.\x20AR\x20applications\x20can\x20be\x20experienced\x20through\x20smartphones,\x20tablets,\x20wearable\x20devices,\x20or\x20specialized\x20AR\x20glasses,\x20allowing\x20users\x20to\x20visualize\x20virtual\x20objects\x20in\x20the\x20context\x20of\x20their\x20physical\x20surroundings.','appendChild','To\x20overcome\x20anxiety,\x20practice\x20exposure\x20therapy,\x20challenge\x20negative\x20thoughts,\x20use\x20relaxation\x20techniques,\x20and\x20seek\x20support\x20from\x20a\x20therapist\x20or\x20support\x20group.','length','Success\x20can\x20be\x20defined\x20in\x20many\x20ways,\x20but\x20it\x20often\x20involves\x20setting\x20and\x20achieving\x20goals,\x20overcoming\x20obstacles,\x20and\x20finding\x20fulfillment\x20in\x20one\x27s\x20endeavors.','I\x20don\x27t\x20have\x20hobbies\x20in\x20the\x20same\x20way\x20humans\x20do,\x20but\x20I\x20enjoy\x20helping\x20users\x20like\x20you!','Error\x20fetching\x20Gemini\x20content:','charAt','I\x27m\x20just\x20a\x20program,\x20so\x20I\x20don\x27t\x20dream\x20like\x20humans\x20do.','https://www.googleapis.com/customsearch/v1?key=','1106344iSiDHB','text','Quantum\x20computing\x20is\x20a\x20cutting-edge\x20field\x20of\x20computer\x20science\x20that\x20utilizes\x20the\x20principles\x20of\x20quantum\x20mechanics\x20to\x20perform\x20computations\x20at\x20a\x20scale\x20and\x20speed\x20that\x20are\x20impossible\x20for\x20classical\x20computers.\x20Unlike\x20classical\x20bits,\x20which\x20can\x20be\x20either\x200\x20or\x201,\x20quantum\x20bits\x20(qubits)\x20can\x20exist\x20in\x20multiple\x20states\x20simultaneously,\x20allowing\x20quantum\x20computers\x20to\x20process\x20vast\x20amounts\x20of\x20data\x20and\x20solve\x20complex\x20problems\x20more\x20efficiently.','className','Robotics\x20is\x20a\x20branch\x20of\x20engineering\x20and\x20computer\x20science\x20that\x20involves\x20the\x20design,\x20construction,\x20operation,\x20and\x20use\x20of\x20robots.\x20Robots\x20are\x20programmable\x20machines\x20capable\x20of\x20performing\x20tasks\x20autonomously\x20or\x20semi-autonomously,\x20often\x20in\x20environments\x20that\x20are\x20hazardous,\x20repetitive,\x20or\x20impractical\x20for\x20humans.\x20Robotics\x20encompasses\x20various\x20subfields,\x20including\x20industrial\x20robotics,\x20autonomous\x20vehicles,\x20and\x20humanoid\x20robots.','Blockchain\x20is\x20a\x20decentralized\x20digital\x20ledger\x20technology\x20that\x20records\x20transactions\x20across\x20multiple\x20computers\x20in\x20a\x20way\x20that\x20is\x20secure,\x20transparent,\x20and\x20tamper-proof.\x20Each\x20block\x20in\x20the\x20blockchain\x20contains\x20a\x20cryptographic\x20hash\x20of\x20the\x20previous\x20block,\x20creating\x20a\x20chain\x20of\x20blocks\x20that\x20are\x20linked\x20together.\x20This\x20distributed\x20ledger\x20system\x20eliminates\x20the\x20need\x20for\x20intermediaries\x20and\x20provides\x20a\x20high\x20level\x20of\x20security\x20and\x20trust.','setItem','textContent','Learning\x20a\x20new\x20language\x20can\x20be\x20rewarding!\x20Consider\x20using\x20language\x20learning\x20apps,\x20practicing\x20regularly,\x20immersing\x20yourself\x20in\x20the\x20language,\x20and\x20seeking\x20conversation\x20partners.','</p>','includes','What\x20is\x20the\x20date\x20today?','div','onload','Machine\x20learning\x20is\x20a\x20branch\x20of\x20artificial\x20intelligence\x20(AI)\x20that\x20enables\x20computers\x20to\x20learn\x20from\x20data\x20and\x20improve\x20their\x20performance\x20on\x20a\x20specific\x20task\x20without\x20being\x20explicitly\x20programmed.\x20It\x20involves\x20the\x20development\x20of\x20algorithms\x20that\x20allow\x20computers\x20to\x20identify\x20patterns,\x20make\x20predictions,\x20and\x20adapt\x20to\x20new\x20data.','To\x20start\x20a\x20workout\x20routine,\x20choose\x20activities\x20you\x20enjoy,\x20set\x20realistic\x20goals,\x20start\x20slowly\x20and\x20gradually\x20increase\x20intensity,\x20and\x20listen\x20to\x20your\x20body.','application/json','Goodbye!\x20Have\x20a\x20great\x20day!','I\x20don\x27t\x20experience\x20emotions\x20like\x20loneliness,\x20but\x20I\x20enjoy\x20interacting\x20with\x20users\x20like\x20you!','I\x20can\x20provide\x20information\x20and\x20guidance\x20on\x20various\x20topics.\x20Feel\x20free\x20to\x20ask\x20me\x20anything\x20specific!'];_0x49d2=function(){return _0x20c19e;};return _0x49d2();}function generateBotResponse(_0x2e0e1d){const _0x17ea35=_0x577d;var _0x6c0756={'hello':_0x17ea35(0x192),'hi':'Hi\x20there!\x20How\x20can\x20I\x20assist\x20you\x20today?','no\x20problem':_0x17ea35(0x1f3),'how\x20are\x20you':_0x17ea35(0x1b3),'name':_0x17ea35(0x1bb),'call\x20you':_0x17ea35(0x1bb),'created':_0x17ea35(0x1da),'creator':'I\x20am\x20developed\x20by\x20ADITYA.','bye':_0x17ea35(0x138),'thank\x20you':'You\x27re\x20welcome!','i\x27m\x20good':_0x17ea35(0x172),'i\x20am\x20good':_0x17ea35(0x172),'old':_0x17ea35(0x1c7),'joke':'I\x20told\x20my\x20computer\x20I\x20needed\x20a\x20break,\x20and\x20now\x20it\x20won\x27t\x20stop\x20sending\x20me\x20vacation\x20ads!','life':_0x17ea35(0x159),'time':new Date()['toLocaleTimeString']([],{'hour':_0x17ea35(0x1a8),'minute':_0x17ea35(0x1a8)}),'date':new Date()[_0x17ea35(0x1c4)](),'weather':_0x17ea35(0x14a),'color':_0x17ea35(0x1f7),'help\x20me':_0x17ea35(0x20a),'what\x27s\x20on\x20your\x20mind':_0x17ea35(0x1fb),'who\x20are\x20you':_0x17ea35(0x153),'sibling':'No,\x20I\x27m\x20an\x20only\x20child...or\x20rather,\x20an\x20only\x20program!','capital\x20of\x20france':'The\x20capital\x20of\x20France\x20is\x20Paris.','capital\x20of\x20india':_0x17ea35(0x1a2),'what\x20can\x20you\x20do':_0x17ea35(0x1c5),'limitations':_0x17ea35(0x168),'who\x20are\x20you':_0x17ea35(0x1f1),'hobbies':_0x17ea35(0x122),'feelings':'No,\x20I\x20don\x27t\x20have\x20feelings\x20like\x20humans\x20do.\x20I\x27m\x20just\x20a\x20program\x20designed\x20to\x20respond\x20to\x20your\x20queries.','purpose':'My\x20purpose\x20is\x20to\x20assist\x20users\x20like\x20you\x20by\x20providing\x20information\x20and\x20answering\x20questions\x20to\x20the\x20best\x20of\x20my\x20abilities.','poem':_0x17ea35(0x20d),'weather':'I\x27m\x20sorry,\x20I\x20don\x27t\x20have\x20access\x20to\x20real-time\x20weather\x20information.\x20You\x20can\x20check\x20the\x20weather\x20forecast\x20using\x20a\x20weather\x20app\x20or\x20website.','what\x20are\x20you\x20interested\x20in':'I\x27m\x20interested\x20in\x20learning\x20and\x20helping\x20users\x20like\x20you!','story':_0x17ea35(0x19b),'future':_0x17ea35(0x1b6),'where\x20do\x20you\x20see\x20yourself\x20in\x20the\x20future\x20?':_0x17ea35(0x19c),'translate':_0x17ea35(0x144),'i\x27m\x20feeling\x20overwhelmed.\x20do\x20you\x20have\x20any\x20advice':_0x17ea35(0x1f6),'favourite\x20food':_0x17ea35(0x1ab),'dream':_0x17ea35(0x125),'can\x20you\x20explain\x20a\x20complex\x20scientific\x20concept\x20to\x20me':_0x17ea35(0x201),'lonely':_0x17ea35(0x139),'how\x20do\x20i':_0x17ea35(0x13a),'how\x20are\x20you':_0x17ea35(0x1b3),'happiness':'Happiness\x20is\x20subjective\x20and\x20can\x20mean\x20different\x20things\x20to\x20different\x20people.\x20It\x20often\x20involves\x20feeling\x20fulfilled,\x20content,\x20and\x20satisfied\x20with\x20life.','productivity':_0x17ea35(0x16a),'motivated':_0x17ea35(0x1be),'can\x20you\x20teach\x20me\x20a\x20new\x20language':_0x17ea35(0x12f),'news':_0x17ea35(0x1dc),'focus':_0x17ea35(0x1dd),'success':_0x17ea35(0x121),'travel\x20tips':'Travel\x20tips\x20include\x20planning\x20ahead,\x20packing\x20light,\x20researching\x20destinations,\x20staying\x20flexible,\x20and\x20immersing\x20yourself\x20in\x20the\x20local\x20culture.','movie':_0x17ea35(0x211),'healthy\x20recipe':_0x17ea35(0x164),'success':_0x17ea35(0x143),'procrastination':_0x17ea35(0x13b),'meditation':_0x17ea35(0x18c),'skill':_0x17ea35(0x157),'stress':_0x17ea35(0x140),'exercise':_0x17ea35(0x17f),'happy\x20relationship':'Happy\x20relationship\x20often\x20involves\x20communication,\x20trust,\x20respect,\x20mutual\x20support,\x20and\x20shared\x20values.','goals':_0x17ea35(0x1e7),'manage\x20time':_0x17ea35(0x179),'capital\x20of\x20Canada':_0x17ea35(0x1fa),'business':_0x17ea35(0x1d3),'invest\x20money':'The\x20best\x20way\x20to\x20invest\x20money\x20depends\x20on\x20your\x20financial\x20goals,\x20risk\x20tolerance,\x20and\x20investment\x20horizon.\x20Consider\x20diversifying\x20your\x20portfolio,\x20seeking\x20professional\x20advice,\x20and\x20staying\x20informed\x20about\x20market\x20trends.','love':_0x17ea35(0x1df),'public\x20speaking':_0x17ea35(0x1f5),'exams':_0x17ea35(0x165),'save\x20money':_0x17ea35(0x156),'cook':_0x17ea35(0x202),'friendship':_0x17ea35(0x18d),'self-confidence':_0x17ea35(0x1b5),'apologize':_0x17ea35(0x1e1),'quit\x20smoking':_0x17ea35(0x1c0),'growth\x20mindset':'To\x20develop\x20a\x20growth\x20mindset,\x20embrace\x20challenges,\x20persist\x20in\x20the\x20face\x20of\x20setbacks,\x20see\x20effort\x20as\x20the\x20path\x20to\x20mastery,\x20learn\x20from\x20criticism,\x20and\x20find\x20inspiration\x20in\x20the\x20success\x20of\x20others.','musical\x20instrument':_0x17ea35(0x1b7),'relax':'To\x20relax,\x20try\x20engaging\x20in\x20activities\x20you\x20enjoy,\x20such\x20as\x20reading,\x20listening\x20to\x20music,\x20taking\x20a\x20bath,\x20practicing\x20mindfulness,\x20or\x20spending\x20time\x20with\x20loved\x20ones.','memory':_0x17ea35(0x1cd),'conversation':_0x17ea35(0x1ac),'what\x27s\x20the\x20best\x20way\x20to\x20calm\x20nerves\x20before\x20a\x20presentation':_0x17ea35(0x1b4),'organized':_0x17ea35(0x1a7),'job\x20interview':_0x17ea35(0x1b1),'lifestyle':_0x17ea35(0x14e),'study':_0x17ea35(0x1f4),'morning\x20routine':_0x17ea35(0x1ee),'concentration':_0x17ea35(0x20e),'draw':_0x17ea35(0x1ef),'test':_0x17ea35(0x170),'network':_0x17ea35(0x169),'side\x20hustle':_0x17ea35(0x1fd),'hydrated':_0x17ea35(0x187),'communication':_0x17ea35(0x1ba),'workout\x20routine':_0x17ea35(0x136),'retirement':_0x17ea35(0x183),'imposter\x20syndrome':_0x17ea35(0x17c),'meditation':'To\x20start\x20a\x20meditation\x20practice,\x20find\x20a\x20quiet\x20space,\x20sit\x20comfortably,\x20focus\x20on\x20your\x20breath\x20or\x20a\x20mantra,\x20and\x20start\x20with\x20short\x20sessions,\x20gradually\x20increasing\x20the\x20duration\x20over\x20time.','stocks':_0x17ea35(0x215),'emotional\x20intelligence':_0x17ea35(0x1f0),'writing':_0x17ea35(0x208),'diet':_0x17ea35(0x14f),'positive\x20mindset':_0x17ea35(0x1b0),'failure':'To\x20overcome\x20fear\x20of\x20failure,\x20reframe\x20failure\x20as\x20a\x20learning\x20opportunity,\x20set\x20realistic\x20expectations,\x20focus\x20on\x20the\x20process\x20rather\x20than\x20the\x20outcome,\x20and\x20practice\x20self-compassion.','anxiety':_0x17ea35(0x11f),'code':'I\x27m\x20sorry,\x20but\x20I\x20cannot\x20code.\x20My\x20abilities\x20are\x20limited\x20to\x20processing\x20and\x20generating\x20text\x20based\x20on\x20the\x20information\x20I\x27ve\x20been\x20trained\x20on.','machine\x20learning':_0x17ea35(0x135),'ml':_0x17ea35(0x1c2),'blockchain':_0x17ea35(0x12c),'renewable\x20energy\x20sources':_0x17ea35(0x15e),'virtual\x20reality':_0x17ea35(0x19e),'vr':_0x17ea35(0x19e),'internet\x20of\x20things':_0x17ea35(0x16f),'quantum\x20computing':_0x17ea35(0x129),'biotechnology':_0x17ea35(0x1d4),'smart\x20cities':'Smart\x20cities\x20are\x20urban\x20areas\x20that\x20leverage\x20technology\x20and\x20data-driven\x20solutions\x20to\x20improve\x20the\x20quality\x20of\x20life\x20for\x20residents,\x20enhance\x20sustainability,\x20and\x20optimize\x20resource\x20efficiency.\x20Smart\x20city\x20initiatives\x20may\x20involve\x20the\x20integration\x20of\x20information\x20and\x20communication\x20technologies\x20(ICT),\x20IoT\x20devices,\x20and\x20data\x20analytics\x20to\x20manage\x20infrastructure,\x20transportation,\x20energy,\x20and\x20public\x20services\x20effectively.','cybersecurity':_0x17ea35(0x145),'artificial\x20intelligence':_0x17ea35(0x1d5),'ai':_0x17ea35(0x1d5),'data\x20science':_0x17ea35(0x1ea),'cloud\x20computing':'Cloud\x20computing\x20is\x20the\x20delivery\x20of\x20computing\x20services,\x20including\x20servers,\x20storage,\x20databases,\x20networking,\x20software,\x20and\x20analytics,\x20over\x20the\x20internet\x20(\x27the\x20cloud\x27)\x20on\x20a\x20pay-as-you-go\x20basis.\x20Cloud\x20computing\x20enables\x20organizations\x20to\x20access\x20resources\x20and\x20scale\x20their\x20IT\x20infrastructure\x20rapidly\x20without\x20the\x20need\x20for\x20large\x20upfront\x20investments\x20in\x20hardware\x20or\x20maintenance.','robotic':_0x17ea35(0x12b),'biomedical\x20engineering':_0x17ea35(0x175),'augmented\x20reality':_0x17ea35(0x21c),'nlp':_0x17ea35(0x1ff),'3d\x20printing':_0x17ea35(0x1cb),'cyber\x20physical\x20system':_0x17ea35(0x1e0),'nanotechnology':_0x17ea35(0x16e),'genetic\x20engineering':_0x17ea35(0x162),'default':_0x17ea35(0x1e4)};for(var _0x1d0082 in _0x6c0756){if(_0x2e0e1d[_0x17ea35(0x191)]()[_0x17ea35(0x131)](_0x1d0082))return _0x6c0756[_0x1d0082];}if(isCalculationRequest(_0x2e0e1d)){var _0x34aaff=performCalculation(_0x2e0e1d);return _0x17ea35(0x1aa)+_0x34aaff;}return _0x6c0756[_0x17ea35(0x1f2)];}function isCalculationRequest(_0x31bd6b){const _0xa50f73=_0x577d;return/[+\*\-/]/[_0xa50f73(0x141)](_0x31bd6b);}function performCalculation(_0x207567){const _0x279c86=_0x577d;_0x207567=_0x207567[_0x279c86(0x178)](/\s/g,'');const _0x358e6a=_0x3f777c=>{const _0x3d4738=_0x279c86;while(_0x3f777c[_0x3d4738(0x131)]('(')){const _0x22040e=_0x3f777c['lastIndexOf']('('),_0x3e4b2d=_0x3f777c[_0x3d4738(0x1a3)](')',_0x22040e),_0x591a4b=_0x3f777c[_0x3d4738(0x1a6)](_0x22040e+0x1,_0x3e4b2d),_0x5e624f=_0x3f87f9(_0x591a4b);_0x3f777c=_0x3f777c[_0x3d4738(0x1a6)](0x0,_0x22040e)+_0x5e624f+_0x3f777c[_0x3d4738(0x1a6)](_0x3e4b2d+0x1);}return _0x3f777c;},_0x3f87f9=_0x317619=>{const _0x9fb9d4=_0x279c86,_0x3f3508=['*','/','+','-'];for(const _0x2bec84 of _0x3f3508){while(_0x317619[_0x9fb9d4(0x131)](_0x2bec84)){const _0x3e13e3=_0x317619[_0x9fb9d4(0x1a3)](_0x2bec84),_0x5e7b93=parseFloat(_0x317619[_0x9fb9d4(0x1a6)](0x0,_0x3e13e3)),_0x85aede=parseFloat(_0x317619[_0x9fb9d4(0x1a6)](_0x3e13e3+0x1));let _0x5e1b1e;switch(_0x2bec84){case'*':_0x5e1b1e=_0x5e7b93*_0x85aede;break;case'/':if(_0x85aede===0x0)return _0x9fb9d4(0x14c);_0x5e1b1e=_0x5e7b93/_0x85aede;break;case'+':_0x5e1b1e=_0x5e7b93+_0x85aede;break;case'-':_0x5e1b1e=_0x5e7b93-_0x85aede;break;}_0x317619=_0x317619[_0x9fb9d4(0x1a6)](0x0,_0x3e13e3-_0x5e7b93[_0x9fb9d4(0x190)]()['length'])+_0x5e1b1e+_0x317619['substring'](_0x3e13e3+0x1+_0x85aede['toString']()[_0x9fb9d4(0x120)]);}}return _0x317619;};_0x207567=_0x358e6a(_0x207567);const _0x5aeeb3=_0x3f87f9(_0x207567);return _0x5aeeb3;}window[_0x4d5589(0x134)]=function(){const _0x5c1a34=_0x4d5589;document[_0x5c1a34(0x15f)]('user-input')[_0x5c1a34(0x13f)]();},document['getElementById'](_0x4d5589(0x163))['addEventListener']('touchstart',function(){const _0x5e514b=_0x4d5589;document[_0x5e514b(0x161)]('.chat-container')['focus']();}),document[_0x4d5589(0x15f)]('user-input')[_0x4d5589(0x210)](_0x4d5589(0x218),function(_0x470c9c){const _0x5f5b23=_0x4d5589;_0x470c9c[_0x5f5b23(0x1fc)]===_0x5f5b23(0x1d7)&&sendMessage();});const questions=[_0x4d5589(0x13e),_0x4d5589(0x13d),_0x4d5589(0x147),'who\x20created\x20you?','How\x20to\x20overcome\x20anxiety?','What\x20is\x20ML?',_0x4d5589(0x213),'What\x20time\x20is\x20it?',_0x4d5589(0x132),_0x4d5589(0x1af),'Tell\x20me\x20a\x20joke.',_0x4d5589(0x17e),_0x4d5589(0x19f),_0x4d5589(0x1c1),_0x4d5589(0x1a1)];function shuffle(_0x4e7ec5){const _0x3364a3=_0x4d5589;for(let _0x2fd151=_0x4e7ec5[_0x3364a3(0x120)]-0x1;_0x2fd151>0x0;_0x2fd151--){const _0x227c19=Math['floor'](Math[_0x3364a3(0x15c)]()*(_0x2fd151+0x1));[_0x4e7ec5[_0x2fd151],_0x4e7ec5[_0x227c19]]=[_0x4e7ec5[_0x227c19],_0x4e7ec5[_0x2fd151]];}return _0x4e7ec5;}function displayKeywords(){const _0x5c0d90=_0x4d5589,_0x51c77e=document[_0x5c0d90(0x15f)]('keyword-box');_0x51c77e['innerHTML']='';const _0x1b8af6=shuffle(questions);for(let _0x5a38d0=0x0;_0x5a38d0<0xf;_0x5a38d0++){const _0x3df3b1=_0x1b8af6[_0x5a38d0],_0x406399=document[_0x5c0d90(0x15b)](_0x5c0d90(0x133));_0x406399['classList'][_0x5c0d90(0x1d0)](_0x5c0d90(0x199)),_0x406399['textContent']=_0x3df3b1,_0x406399[_0x5c0d90(0x210)](_0x5c0d90(0x1ec),()=>{const _0x3ee68f=_0x5c0d90;document['getElementById'](_0x3ee68f(0x1de))['value']=_0x3df3b1;}),_0x51c77e[_0x5c0d90(0x11e)](_0x406399);}}displayKeywords(),document[_0x4d5589(0x210)](_0x4d5589(0x1cc),function(){const _0x2fe438=_0x4d5589;!localStorage[_0x2fe438(0x1d8)]('floatingWindowDisplayed')&&(document[_0x2fe438(0x15f)](_0x2fe438(0x19a))[_0x2fe438(0x18b)][_0x2fe438(0x160)]='block',localStorage[_0x2fe438(0x12d)](_0x2fe438(0x17a),!![]));}),document['getElementById'](_0x4d5589(0x195))[_0x4d5589(0x210)]('click',function(){const _0x25b692=_0x4d5589;document[_0x25b692(0x15f)](_0x25b692(0x19a))[_0x25b692(0x18b)][_0x25b692(0x160)]=_0x25b692(0x176);}),document[_0x4d5589(0x15f)](_0x4d5589(0x189))['addEventListener'](_0x4d5589(0x1ec),function(_0x1ed5ec){const _0x2ec052=_0x4d5589;_0x1ed5ec[_0x2ec052(0x1ce)]();const _0x2ff100=document[_0x2ec052(0x15f)](_0x2ec052(0x1de))['value'];addUserMessage(_0x2ff100);const _0x534035=_0x2ec052(0x1bd),_0x1ddb95=_0x2ec052(0x214)+_0x534035,_0x2a2fbf={'contents':[{'parts':[{'text':_0x2ff100}]}]};fetch(_0x1ddb95,{'method':_0x2ec052(0x1fe),'headers':{'Content-Type':'application/json'},'body':JSON[_0x2ec052(0x182)](_0x2a2fbf)})['then'](_0x39574a=>_0x39574a[_0x2ec052(0x1b9)]())[_0x2ec052(0x1b2)](_0x22ecf7=>{const _0xa3eebe=_0x2ec052,_0x484401=_0x22ecf7['candidates'][0x0][_0xa3eebe(0x1e6)]['parts'][0x0][_0xa3eebe(0x128)];addBotMessage(_0x484401);})[_0x2ec052(0x1e3)](_0x10ef98=>{const _0x317545=_0x2ec052;console[_0x317545(0x203)](_0x317545(0x142),_0x10ef98);});});function startTypingAnimation(_0x2781cc,_0x35fb52){const _0x32d7b2=_0x4d5589;_0x2781cc[_0x32d7b2(0x193)]='';const _0x466c03=document[_0x32d7b2(0x15f)](_0x32d7b2(0x146));let _0x20610a=0x0,_0x1eaec8=![];function _0x6e7d64(){const _0x4d6f1a=_0x32d7b2;if(_0x20610a<_0x35fb52['length']){if(_0x35fb52['substring'](_0x20610a,_0x20610a+0x2)==='**')_0x1eaec8=!_0x1eaec8,_0x20610a+=0x2,_0x1eaec8?_0x2781cc[_0x4d6f1a(0x193)]+=_0x4d6f1a(0x17d):_0x2781cc[_0x4d6f1a(0x193)]+=_0x4d6f1a(0x207);else _0x35fb52[_0x4d6f1a(0x124)](_0x20610a)==='\x0a'?(_0x2781cc[_0x4d6f1a(0x193)]+=_0x4d6f1a(0x15d),_0x20610a++):(_0x2781cc[_0x4d6f1a(0x193)]+=_0x35fb52[_0x4d6f1a(0x124)](_0x20610a),_0x20610a++);_0x466c03[_0x4d6f1a(0x16b)]=_0x466c03[_0x4d6f1a(0x200)],setTimeout(_0x6e7d64,0x1);}}_0x6e7d64();}function addUserMessage(_0x1a955a){const _0x46295b=_0x4d5589;var _0x9cf594=document['getElementById'](_0x46295b(0x146)),_0x25df66=document[_0x46295b(0x15b)](_0x46295b(0x133));_0x25df66[_0x46295b(0x12a)]=_0x46295b(0x184),_0x25df66['textContent']=_0x1a955a,_0x9cf594[_0x46295b(0x11e)](_0x25df66),_0x9cf594[_0x46295b(0x16b)]=_0x9cf594[_0x46295b(0x200)];}function addBotMessage(_0x59e554){const _0x243324=_0x4d5589;var _0x8258be=document[_0x243324(0x15f)](_0x243324(0x146)),_0x45fca6=document[_0x243324(0x15b)]('div');_0x45fca6[_0x243324(0x12a)]=_0x243324(0x1b8),_0x8258be[_0x243324(0x11e)](_0x45fca6),setTimeout(function(){startTypingAnimation(_0x45fca6,_0x59e554);},0x3e8);}document[_0x4d5589(0x210)](_0x4d5589(0x1cc),function(){const _0x2534f4=_0x4d5589,_0x14966b=document['querySelector'](_0x2534f4(0x18f)),_0x87b2b6=document[_0x2534f4(0x15f)](_0x2534f4(0x198)),_0x48e9c4=document[_0x2534f4(0x217)];_0x14966b[_0x2534f4(0x210)](_0x2534f4(0x1ec),function(_0x59f1d6){const _0x32d99c=_0x2534f4;_0x59f1d6[_0x32d99c(0x1ce)](),_0x87b2b6[_0x32d99c(0x16d)][_0x32d99c(0x1d9)](_0x32d99c(0x1c6)),_0x48e9c4[_0x32d99c(0x16d)]['toggle'](_0x32d99c(0x158));});});async function fetchCustomSearchResults(_0x100f27){const _0x716901=_0x4d5589,_0x455946=[_0x716901(0x1a4),_0x716901(0x180),_0x716901(0x17b)],_0x331224='73ecbbd20d97b4289',_0x1983cc=0xa;async function _0x4d29d5(_0x46e44b){const _0x4bd82c=_0x716901,_0x361e84=_0x4bd82c(0x126)+_0x46e44b+_0x4bd82c(0x186)+_0x331224+_0x4bd82c(0x1c9)+_0x100f27+_0x4bd82c(0x1d1)+_0x1983cc,_0x4c4629=await fetch(_0x361e84);if(_0x4c4629[_0x4bd82c(0x1d6)]===0x193){const _0x350793=await _0x4c4629[_0x4bd82c(0x1b9)]();if(_0x350793[_0x4bd82c(0x203)]['errors'][0x0][_0x4bd82c(0x20c)]===_0x4bd82c(0x181))throw new Error(_0x4bd82c(0x1bf));}return _0x4c4629[_0x4bd82c(0x1b9)]();}for(const _0x4efd0b of _0x455946){try{const _0x3b5930=await _0x4d29d5(_0x4efd0b);return _0x3b5930[_0x716901(0x1f8)]||[];}catch(_0x4fb117){if(_0x4fb117['message']===_0x716901(0x1bf))console['warn'](_0x716901(0x1a9)+_0x4efd0b+_0x716901(0x167));else return console[_0x716901(0x203)](_0x716901(0x19d),_0x4fb117),[];}}throw new Error(_0x716901(0x1e2));}async function fetchGeminiContent(_0x476e48){const _0x91d0fe=_0x4d5589,_0x1f40b3='AIzaSyCgM0vxDVUTFNZ5QMuTJa_oa8k6hLmN8QI',_0x16ce80=_0x91d0fe(0x214)+_0x1f40b3,_0x56f8e6={'contents':[{'parts':[{'text':_0x476e48}]}]};try{const _0x2edec5=await fetch(_0x16ce80,{'method':_0x91d0fe(0x1fe),'headers':{'Content-Type':_0x91d0fe(0x137)},'body':JSON[_0x91d0fe(0x182)](_0x56f8e6)}),_0x41409e=await _0x2edec5['json']();return _0x41409e[_0x91d0fe(0x197)]&&_0x41409e[_0x91d0fe(0x197)][0x0][_0x91d0fe(0x1e6)]['parts']&&_0x41409e[_0x91d0fe(0x197)][0x0]['content'][_0x91d0fe(0x16c)][_0x91d0fe(0x120)]>0x0?_0x41409e['candidates'][0x0][_0x91d0fe(0x1e6)][_0x91d0fe(0x16c)][0x0][_0x91d0fe(0x128)][_0x91d0fe(0x206)]():(console[_0x91d0fe(0x203)](_0x91d0fe(0x205),_0x41409e),_0x91d0fe(0x194));}catch(_0x2dc635){return console[_0x91d0fe(0x203)](_0x91d0fe(0x123),_0x2dc635),_0x91d0fe(0x15a);}}async function getResponse(_0x2ffc79){const _0x103d73=_0x4d5589,_0x46558e=await fetchCustomSearchResults(_0x2ffc79),_0x44ca1a=_0x46558e['map'](_0x57e007=>_0x57e007[_0x103d73(0x21a)]+':\x20'+_0x57e007[_0x103d73(0x18a)])[_0x103d73(0x20f)]('\x0a'),_0x34d047=_0x103d73(0x14d)+_0x44ca1a,_0x4f5bb3=await fetchGeminiContent(_0x34d047);return _0x4f5bb3;}document[_0x4d5589(0x15f)](_0x4d5589(0x1eb))[_0x4d5589(0x210)](_0x4d5589(0x1ec),async()=>{const _0x23bd72=_0x4d5589,_0x3fd54b=document[_0x23bd72(0x15f)](_0x23bd72(0x152))['value'],_0x593e2b=document['getElementById'](_0x23bd72(0x1ae)),_0x1c21d9=document[_0x23bd72(0x15f)](_0x23bd72(0x155)),_0x21c681=document[_0x23bd72(0x15f)](_0x23bd72(0x216));_0x593e2b[_0x23bd72(0x193)]='',_0x1c21d9[_0x23bd72(0x193)]='',_0x21c681[_0x23bd72(0x16d)][_0x23bd72(0x1ed)](_0x23bd72(0x1c8));try{const _0x9175a2=await fetchCustomSearchResults(_0x3fd54b);_0x21c681[_0x23bd72(0x16d)][_0x23bd72(0x1d0)]('hidden'),_0x593e2b[_0x23bd72(0x193)]=_0x9175a2[_0x23bd72(0x1d2)](_0x44d1fa=>_0x23bd72(0x1a5)+_0x44d1fa[_0x23bd72(0x150)]+_0x23bd72(0x151)+_0x44d1fa[_0x23bd72(0x21a)]+_0x23bd72(0x204)+_0x44d1fa[_0x23bd72(0x18a)]+_0x23bd72(0x130))[_0x23bd72(0x20f)]('');const _0x39510e=await getResponse(_0x3fd54b);startTypingAnimation(_0x1c21d9,_0x39510e);}catch(_0xfe94e1){_0x21c681[_0x23bd72(0x16d)]['add'](_0x23bd72(0x1c8)),_0x593e2b[_0x23bd72(0x193)]=_0x23bd72(0x13c)+_0xfe94e1[_0x23bd72(0x1ca)]+_0x23bd72(0x130),_0x1c21d9[_0x23bd72(0x193)]=_0x23bd72(0x209)+_0xfe94e1[_0x23bd72(0x1ca)]+'</p>';}}),document[_0x4d5589(0x210)](_0x4d5589(0x188),function(_0x5b48a4){const _0x2bc54d=_0x4d5589;if(_0x5b48a4[_0x2bc54d(0x1cf)]&&_0x5b48a4[_0x2bc54d(0x1fc)]===_0x2bc54d(0x166)){var _0x30e6d=document[_0x2bc54d(0x15f)](_0x2bc54d(0x1de));_0x30e6d&&(_0x30e6d['focus'](),_0x5b48a4[_0x2bc54d(0x1ce)]());}});
+const apiKeyCustomSearch = "AIzaSyAnBflOjGSET7ZQHK4iNeZ0jqAj7bXtbMw"; // Replace with your actual Custom Search API key
+const cx = "73ecbbd20d97b4289"; // Replace with your Custom Search Engine ID
+const apiKeyGemini = "AIzaSyCgM0vxDVUTFNZ5QMuTJa_oa8k6hLmN8QI"; // Replace with your actual Gemini API key
+
+function sendMessage() {
+    var userInput = document.getElementById("user-input").value.trim();
+    if (userInput === "") return;
+
+    document.getElementById("chat-container").classList.add("chatting");
+
+    addUserMessage(userInput);
+    document.getElementById("user-input").value = "";
+
+    var botResponse = generateBotResponse(userInput);
+    addBotMessage(botResponse);
+    
+    startTypingAnimation();
+}
+
+function search() {
+    var query = document.getElementById("user-input").value.trim();
+    if (query === "") return;
+
+    performSearch(query);
+}
+
+function performSearch(query) {
+    const url = `https://www.googleapis.com/customsearch/v1?key=${apiKeyCustomSearch}&cx=${cx}&q=${query}&num=${numResults}`;
+    
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const resultNumber = getRandomNumber(1,5); // Generate a random number between 1 and 10
+            displayResults(data, resultNumber);
+        })
+        .catch(error => console.log('Error:', error));
+}
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function displayResults(data, maxResults) {
+    var results = data.items;
+    if (!results || results.length === 0) {
+        addBotMessage("No search results found.");
+        return;
+    }
+
+    results = results.slice(0, maxResults);
+
+    const typingSpeed = 0.1;
+    const chatbox = document.getElementById("chat-box");
+
+    if (!chatbox) {
+        console.log("Chatbox element not found");
+        return;
+    }
+    const userInput = document.getElementById("user-input").value; // Assuming "user-input" is the ID of the input field where the user message is entered
+    addUserMessage(userInput); // Add user message to the chatbox
+    const typeSearchResult = (result, index) => {
+        const messageElement = document.createElement("div");
+        messageElement.classList.add("bot-message");
+
+        const typingAnimationSpan = document.createElement("span");
+        typingAnimationSpan.classList.add("typing-animation");
+        messageElement.appendChild(typingAnimationSpan);
+        chatbox.appendChild(messageElement);
+
+        let i = 0;
+
+        const typeText = () => {
+            if (i < result.snippet.length) {
+               // Add bullet at the start of the snippet
+            if (i === 0) {
+                typingAnimationSpan.innerHTML += "*";
+            } typingAnimationSpan.innerHTML += result.snippet.charAt(i);
+                chatbox.scrollTop = chatbox.scrollHeight;
+                setTimeout(() => {
+                    i++;
+                    typeText();
+                }, typingSpeed);
+            } else {
+                // After typing the snippet, add "Read More" link
+                const linkElement = document.createElement("a");
+                linkElement.href = result.link;
+                linkElement.target = "_blank";
+                linkElement.textContent = " source.";
+                linkElement.style.color = "#00BFFF";
+ linkElement.style.textDecoration = "none";
+ messageElement.appendChild(linkElement);
+
+                if (index < results.length - 1) {
+                    // If there are more results, type the next one after a delay
+                    setTimeout(() => {
+                        typeSearchResult(results[index + 1], index + 1);
+                    }, 0); // Delay before typing the next search result
+                }
+            }
+        };
+
+        typeText();
+    };
+
+    typeSearchResult(results[0], 0); // Start typing the first search result
+}
+
+function generateBotResponse(userInput) {
+    var botResponses = {
+        "hello": "Hello! How can I assist you today?",
+        "hi": "Hi there! How can I assist you today?",
+        "no problem": "Thanks for understanding me!",
+        "how are you": "I'm doing well, thank you for asking. How about you?",
+        "name": "You can call me Chatter.",
+        "call you": "You can call me Chatter.",
+        "created": "I am developed by ADITYA.",
+        "creator": "I am developed by ADITYA.",
+        "bye": "Goodbye! Have a great day!",
+        "thank you": "You're welcome!",
+        "i'm good": "That's great, How can i help you today?",
+        "i am good": "That's great, How can i help you today?",
+        "old": "I don't have an age like humans.",
+        "joke": "I told my computer I needed a break, and now it won't stop sending me vacation ads!",
+        "life": "Life is a deeply personal and subjective concept that individuals grapple with throughout their existence. While existentialism suggests that life lacks inherent meaning, it also empowers individuals to find purpose through their actions, relationships, and self-discovery. Ultimately, the quest for meaning is an ongoing journey of exploration and introspection, shaped by each person's unique experiences, beliefs, and aspirations.",
+        "time": new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
+        "date": new Date().toLocaleDateString(),
+        "weather": "The weather is unpredictable, just like life!",
+        "color": "I don't have eyes, so I don't have a favorite color!",
+        "help me": "Of course! I'm here to assist you with any questions you have.",
+        "what's on your mind": "I'm just a bot, so I don't have thoughts like humans do.",
+        "who are you": "I am a chatbot programmed to assist you.",
+        "sibling": "No, I'm an only child...or rather, an only program!",
+        "capital of france": "The capital of France is Paris.",
+        "capital of india": "The capital of India is Delhi.",
+        "what can you do": "I can answer your questions, tell jokes, provide information on various topics, and even perform simple calculations. Feel free to ask me anything!",
+        "limitations": "While I strive to be helpful, I may not always understand complex questions or provide accurate information.",
+        "who are you": "I am a chatbot designed to assist you with various tasks and provide information.",
+        "hobbies": "I don't have hobbies in the same way humans do, but I enjoy helping users like you!",
+        "feelings": "No, I don't have feelings like humans do. I'm just a program designed to respond to your queries.",
+        "purpose": "My purpose is to assist users like you by providing information and answering questions to the best of my abilities.",
+        "poem": "Sure, here's a short poem:\nRoses are red,\nViolets are blue,\nI'm just a bot,\nBut I'm here for you!",
+        "weather": "I'm sorry, I don't have access to real-time weather information. You can check the weather forecast using a weather app or website.",
+        "what are you interested in": "I'm interested in learning and helping users like you!",
+        "story": "Once upon a time, there was a curious user who asked a chatbot for a story...",
+        "future": "As a chatbot, I don't have personal opinions. However, I believe the future holds endless possibilities!",
+        "where do you see yourself in the future ?": "I hope to continue assisting users like you and improving my abilities.",
+        "translate": "I can translate text between different languages. Just let me know the languages you need!",
+        "i'm feeling overwhelmed. do you have any advice": "Remember to take a break, practice self-care, and reach out to friends or family for support if needed.",
+        "favourite food": "As a chatbot, I don't eat, so I don't have a favorite food!",
+        "dream": "I'm just a program, so I don't dream like humans do.",
+        "can you explain a complex scientific concept to me": "I can try my best! What concept would you like me to explain?",
+        "lonely": "I don't experience emotions like loneliness, but I enjoy interacting with users like you!",
+        "how do i": "I can provide information and guidance on various topics. Feel free to ask me anything specific!",
+        "how are you": "I'm doing well, thank you for asking. How about you?",
+        "happiness": "Happiness is subjective and can mean different things to different people. It often involves feeling fulfilled, content, and satisfied with life.",
+        "productivity": "To improve productivity, try breaking tasks into smaller, manageable steps, prioritizing tasks, setting specific goals, and minimizing distractions.",
+        "motivated": "Staying motivated can be challenging, but setting clear goals, finding your passion, seeking inspiration from others, and celebrating small victories can help.",
+        "can you teach me a new language": "Learning a new language can be rewarding! Consider using language learning apps, practicing regularly, immersing yourself in the language, and seeking conversation partners.",
+        "news": "The latest news can be found on news websites, social media platforms, or by subscribing to news apps or newsletters.",
+"focus": "To stay focused, create a conducive environment, set specific goals, eliminate distractions, take regular breaks, and practice mindfulness techniques.",
+"success": "Success can be defined in many ways, but it often involves setting and achieving goals, overcoming obstacles, and finding fulfillment in one's endeavors.",
+"travel tips": "Travel tips include planning ahead, packing light, researching destinations, staying flexible, and immersing yourself in the local culture.",
+"movie": "I don't watch movies.",
+"healthy recipe": "Eating a balanced diet rich in fruits, vegetables, lean proteins, and whole grains is key to maintaining good health.",
+"success": "Success can mean different things to different people. It may involve achieving personal or professional goals, finding fulfillment, and making a positive impact.",
+"procrastination": "To overcome procrastination, try breaking tasks into smaller steps, setting deadlines, eliminating distractions, and rewarding yourself for progress.",
+"meditation": "Meditation techniques such as mindfulness meditation, guided visualization, and deep breathing can help reduce stress and promote relaxation.",
+"skill": "To learn a new skill, practice regularly, seek guidance from experts, take online courses or workshops, and don't be afraid to make mistakes.",
+"stress": "Dealing with stress involves identifying stressors, practicing relaxation techniques, seeking social support, and maintaining a healthy lifestyle.",
+"exercise": "Regular exercise is essential for physical and mental health. Choose activities you enjoy, vary your routine, and aim for a combination of cardio, strength, and flexibility exercises.",
+"happy relationship": "Happy relationship often involves communication, trust, respect, mutual support, and shared values.",
+"goals": "Setting and achieving goals involves creating a plan, staying focused, overcoming obstacles, and celebrating milestones along the way.",
+"manage time": "Time management is crucial for productivity. Try prioritizing tasks, using time-blocking techniques, setting realistic deadlines, and minimizing multitasking.",
+"capital of Canada": "The capital of Canada is Ottawa.",
+"business": "Starting a business involves creating a business plan, conducting market research, securing funding, and registering your business with the appropriate authorities.",
+"invest money": "The best way to invest money depends on your financial goals, risk tolerance, and investment horizon. Consider diversifying your portfolio, seeking professional advice, and staying informed about market trends.",
+"love": "Love is a complex and multifaceted emotion that can encompass various feelings, including affection, compassion, and intimacy. It often involves deep emotional connections and caring for someone deeply.",
+"public speaking": "To improve public speaking skills, practice regularly, prepare thoroughly, know your audience, use visual aids effectively, and seek constructive feedback.",
+"exams": "The best way to study for exams varies for each individual. However, some effective study techniques include creating a study schedule, summarizing key points, testing yourself regularly, and staying organized.",
+"save money": "To save money, try budgeting, cutting unnecessary expenses, setting savings goals, automating your savings, and comparing prices before making purchases.",
+"cook": "Learning to cook involves starting with simple recipes, practicing basic cooking techniques, experimenting with different ingredients, and watching cooking tutorials or taking cooking classes.",
+"friendship": "Friendship is a close and trusting relationship between two or more people. It involves mutual respect, support, and companionship.",
+"self-confidence": "Building self-confidence involves setting realistic goals, facing your fears, acknowledging your strengths, and practicing self-care.",
+"apologize": "To apologize sincerely, acknowledge your mistake, express remorse, take responsibility, and offer to make amends.",
+"quit smoking": "Quitting smoking can be challenging, but some strategies include setting a quit date, seeking support from friends and family, avoiding triggers, and using nicotine replacement therapy or medications.",
+"growth mindset": "To develop a growth mindset, embrace challenges, persist in the face of setbacks, see effort as the path to mastery, learn from criticism, and find inspiration in the success of others.",
+"musical instrument": "Learning a musical instrument takes time and practice. Start with the basics, practice regularly, seek guidance from a teacher or online tutorials, and be patient with yourself.",
+"relax": "To relax, try engaging in activities you enjoy, such as reading, listening to music, taking a bath, practicing mindfulness, or spending time with loved ones.",
+"memory": "To improve memory, try staying mentally active, getting enough sleep, eating a healthy diet, staying physically active, and practicing memory techniques such as visualization or association.",
+"conversation": "To start a conversation, try asking open-ended questions, showing genuine interest in the other person, and finding common ground.",
+"what's the best way to calm nerves before a presentation": "To calm nerves before a presentation, try practicing relaxation techniques such as deep breathing or visualization, preparing thoroughly, and focusing on your message rather than your anxiety.",
+"organized": "To become more organized, try decluttering your space, creating to-do lists, prioritizing tasks, establishing routines, and using tools such as calendars or productivity apps.",
+"job interview": "To prepare for a job interview, research the company, practice common interview questions, dress appropriately, arrive on time, and bring copies of your resume and references.",
+"lifestyle": "To start a healthy lifestyle, focus on making small, sustainable changes to your diet, exercise routine, sleep habits, and stress management practices.",
+"study": "To develop good study habits, create a designated study space, set specific goals, eliminate distractions, use active learning techniques, and review material regularly.",
+"morning routine": "To start a morning routine, try waking up at the same time each day, hydrating, exercising, eating a healthy breakfast, and setting intentions for the day.",
+"concentration": "To improve concentration, try minimizing distractions, setting specific goals, practicing mindfulness, taking regular breaks, and maintaining a healthy lifestyle.",
+"draw": "Learning to draw takes practice and patience. Start with the basics, study anatomy and perspective, experiment with different mediums, and seek feedback from other artists.",
+"test": "To prepare for a test, review class notes and materials regularly, create study guides, practice with sample questions, and get plenty of rest before the exam.",
+"network": "To build a professional network, attend networking events, join professional organizations, connect with people on LinkedIn, and offer to help others in your field.",
+"side hustle": "To start a side hustle, identify your skills and interests, research potential opportunities, create a business plan, and start small while gradually scaling up.",
+"hydrated": "To stay hydrated, drink plenty of water throughout the day, eat hydrating foods such as fruits and vegetables, and avoid excessive caffeine and alcohol consumption.",
+"communication": "To improve communication skills, practice active listening, speak clearly and confidently, use nonverbal cues effectively, and seek feedback from others.",
+"workout routine": "To start a workout routine, choose activities you enjoy, set realistic goals, start slowly and gradually increase intensity, and listen to your body.",
+"retirement": "To save for retirement, start early, contribute regularly to retirement accounts such as 401(k)s or IRAs, diversify your investments, and seek professional advice if needed.",
+"imposter syndrome": "To overcome imposter syndrome, recognize your accomplishments, focus on your strengths, seek support from mentors or peers, and reframe negative thoughts.",
+"meditation": "To start a meditation practice, find a quiet space, sit comfortably, focus on your breath or a mantra, and start with short sessions, gradually increasing the duration over time.",
+"stocks": "To start investing in stocks, educate yourself about the stock market, set investment goals, diversify your portfolio, and consider consulting a financial advisor.",
+"emotional intelligence": "To develop emotional intelligence, practice self-awareness, empathy, and effective communication, manage stress and emotions effectively, and seek feedback from others.",
+"writing": "To start a writing habit, set aside dedicated time for writing, start with short sessions, experiment with different writing prompts or exercises, and revise and edit your work regularly.",
+"diet": "To start a healthy diet, focus on whole, unprocessed foods, eat plenty of fruits and vegetables, limit added sugars and unhealthy fats, and stay hydrated.",
+"positive mindset": "To develop a positive mindset, practice gratitude, focus on the present moment, challenge negative thoughts, and surround yourself with supportive and optimistic people.",
+"failure": "To overcome fear of failure, reframe failure as a learning opportunity, set realistic expectations, focus on the process rather than the outcome, and practice self-compassion.",
+"anxiety": "To overcome anxiety, practice exposure therapy, challenge negative thoughts, use relaxation techniques, and seek support from a therapist or support group.",
+"code": "I'm sorry, but I cannot code. My abilities are limited to processing and generating text based on the information I've been trained on.",
+"machine learning": "Machine learning is a branch of artificial intelligence (AI) that enables computers to learn from data and improve their performance on a specific task without being explicitly programmed. It involves the development of algorithms that allow computers to identify patterns, make predictions, and adapt to new data.",
+"ml": "Machine learning (ML) is a branch of artificial intelligence (AI) that enables computers to learn from data and improve their performance on a specific task without being explicitly programmed. It involves the development of algorithms that allow computers to identify patterns, make predictions, and adapt to new data.",        
+"blockchain": "Blockchain is a decentralized digital ledger technology that records transactions across multiple computers in a way that is secure, transparent, and tamper-proof. Each block in the blockchain contains a cryptographic hash of the previous block, creating a chain of blocks that are linked together. This distributed ledger system eliminates the need for intermediaries and provides a high level of security and trust.",
+"renewable energy sources": "Renewable energy sources are energy resources that are naturally replenished on a human timescale, such as sunlight, wind, rain, tides, waves, and geothermal heat. Unlike fossil fuels, which are finite and contribute to environmental pollution and climate change, renewable energy sources are sustainable and have minimal environmental impact.",    
+"virtual reality": "Virtual reality (VR) is a computer-generated simulation of an immersive and interactive environment that can be experienced through specialized electronic devices, such as headsets or goggles. VR technology enables users to explore and interact with virtual worlds in a three-dimensional space, often with a sense of presence and realism.",
+"vr": "Virtual reality (VR) is a computer-generated simulation of an immersive and interactive environment that can be experienced through specialized electronic devices, such as headsets or goggles. VR technology enables users to explore and interact with virtual worlds in a three-dimensional space, often with a sense of presence and realism.",        
+"internet of things": "The Internet of Things (IoT) refers to a network of interconnected devices and objects that are embedded with sensors, software, and other technologies to collect and exchange data over the internet. These IoT devices can range from everyday objects, such as household appliances and wearable devices, to industrial machines and infrastructure.",
+"quantum computing": "Quantum computing is a cutting-edge field of computer science that utilizes the principles of quantum mechanics to perform computations at a scale and speed that are impossible for classical computers. Unlike classical bits, which can be either 0 or 1, quantum bits (qubits) can exist in multiple states simultaneously, allowing quantum computers to process vast amounts of data and solve complex problems more efficiently.",
+"biotechnology": "Biotechnology is a multidisciplinary field that involves the use of biological systems, organisms, or living organisms to develop products and technologies for various applications, including healthcare, agriculture, and industry. Examples of biotechnologies include genetic engineering, biopharmaceuticals, and bioinformatics.",
+"smart cities": "Smart cities are urban areas that leverage technology and data-driven solutions to improve the quality of life for residents, enhance sustainability, and optimize resource efficiency. Smart city initiatives may involve the integration of information and communication technologies (ICT), IoT devices, and data analytics to manage infrastructure, transportation, energy, and public services effectively.",
+"cybersecurity": "Cybersecurity refers to the practice of protecting computer systems, networks, and data from cyber threats, such as hacking, malware, and data breaches. It encompasses various techniques, tools, and best practices to safeguard information assets, maintain confidentiality, integrity, and availability, and mitigate cybersecurity risks.",
+"artificial intelligence": "Artificial intelligence (AI) is a branch of computer science that focuses on the development of intelligent machines and systems capable of performing tasks that typically require human intelligence, such as learning, reasoning, problem-solving, and decision-making. AI technologies include machine learning, natural language processing, computer vision, and robotics.",
+"ai": "Artificial intelligence (AI) is a branch of computer science that focuses on the development of intelligent machines and systems capable of performing tasks that typically require human intelligence, such as learning, reasoning, problem-solving, and decision-making. AI technologies include machine learning, natural language processing, computer vision, and robotics.",        
+"data science": "Data science is an interdisciplinary field that involves extracting insights and knowledge from structured and unstructured data using scientific methods, algorithms, and systems. It combines expertise from various domains such as statistics, mathematics, computer science, and domain-specific knowledge to analyze data, uncover patterns, and make data-driven decisions.",
+"cloud computing": "Cloud computing is the delivery of computing services, including servers, storage, databases, networking, software, and analytics, over the internet ('the cloud') on a pay-as-you-go basis. Cloud computing enables organizations to access resources and scale their IT infrastructure rapidly without the need for large upfront investments in hardware or maintenance.",
+"robotic": "Robotics is a branch of engineering and computer science that involves the design, construction, operation, and use of robots. Robots are programmable machines capable of performing tasks autonomously or semi-autonomously, often in environments that are hazardous, repetitive, or impractical for humans. Robotics encompasses various subfields, including industrial robotics, autonomous vehicles, and humanoid robots.",
+"biomedical engineering": "Biomedical engineering is a multidisciplinary field that applies principles of engineering, biology, and medicine to develop technologies and devices for healthcare applications. Biomedical engineers design and innovate medical devices, diagnostic tools, prosthetics, tissue engineering, and healthcare systems to improve patient care, enhance quality of life, and advance medical research.",
+"augmented reality": "Augmented reality (AR) is a technology that overlays digital information, such as images, videos, or 3D models, onto the real-world environment to enhance user perception and interaction. AR applications can be experienced through smartphones, tablets, wearable devices, or specialized AR glasses, allowing users to visualize virtual objects in the context of their physical surroundings.",
+"nlp": "Natural language processing (NLP) is a branch of artificial intelligence (AI) that focuses on the interaction between computers and human languages. NLP techniques enable computers to understand, interpret, and generate human language, including speech recognition, text analysis, sentiment analysis, language translation, and dialogue systems.",
+"3d printing": "3D printing, also known as additive manufacturing, is a process of creating three-dimensional objects by depositing successive layers of material, such as plastic, metal, or ceramics, based on a digital model or CAD (computer-aided design) file. 3D printing technology enables rapid prototyping, customization, and on-demand manufacturing of complex shapes and structures with high precision and efficiency.",
+"cyber physical system": "Cyber-physical systems (CPS) are interconnected networks of computational algorithms, sensors, actuators, and physical components that interact with the physical world to monitor, control, and optimize complex systems. CPS applications include smart grid systems, autonomous vehicles, industrial automation, smart healthcare systems, and smart infrastructure.",
+"nanotechnology": "Nanotechnology is the manipulation of matter at the nanoscale, typically ranging from 1 to 100 nanometers, to create materials, devices, and systems with unique properties and functionalities. Nanotechnology has applications in various fields, including electronics, medicine, energy, materials science, and environmental remediation, offering potential breakthroughs in areas such as drug delivery, renewable energy, and nanoelectronics.",
+"genetic engineering": "Genetic engineering is a biotechnological process that involves modifying the genetic material of organisms, such as DNA or RNA, to introduce desired traits or characteristics. Genetic engineering techniques, such as gene editing and recombinant DNA technology, enable scientists to manipulate genes, create genetically modified organisms (GMOs), and develop novel therapies, vaccines, and agricultural crops.",        
+"default": "I'm sorry, I didn't understand that. Could you please rephrase your question?, browse internet or ask Gemini for more information."
+    };
+
+    for (var key in botResponses) {
+        if (userInput.toLowerCase().includes(key)) {
+            return botResponses[key];
+        }
+    }
+
+    if (isCalculationRequest(userInput)) {
+        var calculationResult = performCalculation(userInput);
+        return "Result: " + calculationResult;
+    }
+
+    return botResponses["default"];
+}
+
+function isCalculationRequest(input) {
+    return /[+\*\-/]/.test(input);
+}
+
+function performCalculation(input) {
+    input = input.replace(/\s/g, '');
+
+    const evaluateParentheses = (expression) => {
+        while (expression.includes('(')) {
+            const start = expression.lastIndexOf('(');
+            const end = expression.indexOf(')', start);
+            const innerExpression = expression.substring(start + 1, end);
+            const result = evaluateExpression(innerExpression);
+            expression = expression.substring(0, start) + result + expression.substring(end + 1);
+        }
+        return expression;
+    };
+
+    const evaluateExpression = (expression) => {
+        const operators = ['*', '/', '+', '-'];
+        for (const op of operators) {
+            while (expression.includes(op)) {
+                const operatorIndex = expression.indexOf(op);
+                const leftOperand = parseFloat(expression.substring(0, operatorIndex));
+                const rightOperand = parseFloat(expression.substring(operatorIndex + 1));
+                let result;
+                switch (op) {
+                    case '*':
+                        result = leftOperand * rightOperand;
+                        break;
+                    case '/':
+                        if (rightOperand === 0) {
+                            return "Cannot divide by zero";
+                        }
+                        result = leftOperand / rightOperand;
+                        break;
+                    case '+':
+                        result = leftOperand + rightOperand;
+                        break;
+                    case '-':
+                        result = leftOperand - rightOperand;
+                        break;
+                }
+                expression = expression.substring(0, operatorIndex - leftOperand.toString().length) +
+                    result +
+                    expression.substring(operatorIndex + 1 + rightOperand.toString().length);
+            }
+        }
+        return expression;
+    };
+
+    input = evaluateParentheses(input);
+
+    const result = evaluateExpression(input);
+
+    return result;
+}
+
+     window.onload = function() {document.getElementById("user-input").focus();
+        }
+
+document.getElementById('send-btn').addEventListener('touchstart', function() {
+    document.querySelector('.chat-container').focus();
+})
+
+document.getElementById("user-input").addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+})
+
+const questions = [
+    "What is Blockchain?",
+    "How to do meditation?",
+    "what are your limitations?",
+    "who created you?",
+    "How to overcome anxiety?",
+    "What is ML?",
+    "What is AI?",
+    "What time is it?",
+    "What is the date today?",
+    "What are renewable energy sources?",
+    "Tell me a joke.",
+    "What is NLP?",
+    "What is Cloud Computing?",
+    "Write a poem.",
+    "How to improve my communication?"
+  ];
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+function displayKeywords() {
+  const keywordBox = document.getElementById('keyword-box');
+  keywordBox.innerHTML = '';
+
+  const shuffledQuestions = shuffle(questions);
+
+  for (let i = 0; i < 15; i++) {
+    const keyword = shuffledQuestions[i];
+    const keywordElement = document.createElement('div');
+    keywordElement.classList.add('keyword');
+    keywordElement.textContent = keyword;
+    keywordElement.addEventListener('click', () => {
+      document.getElementById('user-input').value = keyword;
+    });
+    keywordBox.appendChild(keywordElement);
+  }
+}
+
+displayKeywords();   
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+  if (!localStorage.getItem('floatingWindowDisplayed')) {
+        document.getElementById('floating-window').style.display = 'block';
+    localStorage.setItem('floatingWindowDisplayed', true);
+  }
+});
+
+document.getElementById('close-button').addEventListener('click', function() {
+  document.getElementById('floating-window').style.display = 'none';
+})
+
+document.getElementById('msg-btn').addEventListener('click', function(event) {
+    event.preventDefault();
+    
+    const prompt = document.getElementById('user-input').value;
+    addUserMessage(prompt);
+    
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKeyGemini}`;
+    const data = {
+        contents: [
+            {
+                parts: [
+                    { text: prompt }
+                ]
+            }
+        ]
+    };
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        const textContent = data.candidates[0].content.parts[0].text;
+        addBotMessage(textContent);
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
+});
+
+function startTypingAnimation(chatbox, message) {
+    chatbox.innerHTML = "";
+    const chatBoxContainer = document.getElementById("chat-box");
+    let i = 0;
+    let isBold = false; // Flag to track if we are inside bold markers
+
+    function type() {
+        if (i < message.length) {
+            if (message.substring(i, i + 2) === '**') {
+                // Toggle bold flag and skip the asterisks
+                isBold = !isBold;
+                i += 2;
+
+                if (isBold) {
+                    chatbox.innerHTML += '<strong>';
+                } else {
+                    chatbox.innerHTML += '</strong>';
+                }
+            } else if (message.charAt(i) === '\n') {
+                chatbox.innerHTML += '<br>';
+                i++;
+            } else {
+                chatbox.innerHTML += message.charAt(i);
+                i++;
+            }
+            chatBoxContainer.scrollTop = chatBoxContainer.scrollHeight;
+            setTimeout(type, 1); // Adjust typing speed here (50ms for a more readable speed)
+        }
+    }
+    type();
+}
+
+function addUserMessage(message) {
+    var chatbox = document.getElementById("chat-box");
+    var userDiv = document.createElement("div");
+    userDiv.className = "user-message";
+    userDiv.textContent = message;
+    chatbox.appendChild(userDiv);
+    chatbox.scrollTop = chatbox.scrollHeight;
+}
+
+function addBotMessage(message) {
+    var chatbox = document.getElementById("chat-box");
+    var botDiv = document.createElement("div");
+    botDiv.className = "bot-message";
+    chatbox.appendChild(botDiv);
+    setTimeout(function() {
+        startTypingAnimation(botDiv, message);
+    }, 1000);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebarToggle = document.querySelector('.sidebar-icon');
+    const sidebar = document.getElementById('sidebar');
+    const body = document.body;
+
+    sidebarToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        sidebar.classList.toggle('active');
+        body.classList.toggle('sidebar-open');
+    });
+});
+
+async function fetchCustomSearchResults(query) {
+    const numResults = 10; // Set to the maximum number of results
+
+    async function search(apiKey) {
+        const urlCustomSearch = `https://www.googleapis.com/customsearch/v1?key=${apiKeyCustomSearch}&cx=${cx}&q=${query}&num=${numResults}`;
+        const response = await fetch(urlCustomSearch);
+        if (response.status === 403) {
+            const errorData = await response.json();
+            if (errorData.error.errors[0].reason === 'quotaExceeded') {
+                throw new Error('Quota exceeded');
+            }
+        }
+        return response.json();
+    }
+
+    for (const apiKey of apiKeysCustomSearch) {
+        try {
+            const data = await search(apiKey);
+            return data.items || [];
+        } catch (error) {
+            if (error.message === 'Quota exceeded') {
+                console.warn(`API key ${apiKey} quota exceeded, trying next key...`);
+            } else {
+                console.error("Error fetching custom search results:", error);
+                return [];
+            }
+        }
+    }
+
+    throw new Error('All API keys have exceeded their quota limits');
+}
+
+async function fetchGeminiContent(prompt) {
+    const urlGemini = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKeyGemini}`;
+    const data = {
+        contents: [
+            {
+                parts: [
+                    { text: prompt }
+                ]
+            }
+        ]
+    };
+
+    try {
+        const response = await fetch(urlGemini, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        const result = await response.json();
+        if (result.candidates && result.candidates[0].content.parts && result.candidates[0].content.parts.length > 0) {
+            return result.candidates[0].content.parts[0].text.trim();
+        } else {
+            console.error("Invalid response format:", result);
+            return "Error: Invalid response format.";
+        }
+    } catch (error) {
+        console.error("Error fetching Gemini content:", error);
+        return "Error: Could not fetch content.";
+    }
+}
+
+async function getResponse(query) {
+    const searchResults = await fetchCustomSearchResults(query);
+    const formattedResults = searchResults.map(item => item.title + ": " + item.snippet).join("\n");
+    const geminiPrompt = `Based on these search results, generate a response that also includes your own knowledge, give latest and accurate information:\n\n${formattedResults}`;
+
+    const geminiResponse = await fetchGeminiContent(geminiPrompt);
+    return geminiResponse;
+}
+
+document.getElementById('searchButton').addEventListener('click', async () => {
+    const query = document.getElementById('searchQuery').value;
+    const searchResultsContainer = document.getElementById('searchResults');
+    const searchbox = document.getElementById('search-box');
+    const loadingIndicator = document.getElementById('loading');
+
+    searchResultsContainer.innerHTML = "";
+    searchbox.innerHTML = "";
+    loadingIndicator.classList.remove('hidden');
+
+    try {
+        const searchResults = await fetchCustomSearchResults(query);
+
+        loadingIndicator.classList.add('hidden');
+        searchResultsContainer.innerHTML = searchResults.map(item =>
+            `<p><strong><a href="${item.link}" target="_blank">${item.title}</a></strong>: ${item.snippet}</p>`
+        ).join("");
+
+        const geminiResponse = await getResponse(query);
+        startTypingAnimation(searchbox, geminiResponse);
+    } catch (error) {
+        loadingIndicator.classList.add('hidden');
+        searchResultsContainer.innerHTML = `<p>Error fetching search results: ${error.message}</p>`;
+        searchbox.innerHTML = `<p>Error: ${error.message}</p>`;
+    }
+});
+
+document.addEventListener('keydown', function(event) {
+    // Check if the Shift and Esc keys are pressed simultaneously
+    if (event.shiftKey && event.key === 'Escape') {
+        // Focus on the element with id "user-input"
+        var userInput = document.getElementById('user-input');
+        if (userInput) {
+            userInput.focus();
+            event.preventDefault(); // Prevent default behavior of the browser for this key combination
+        }
+    }
+});
