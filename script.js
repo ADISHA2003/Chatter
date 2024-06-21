@@ -25,7 +25,7 @@ function search() {
 }
 
 function performSearch(query) {
-    const url = `https://www.googleapis.com/customsearch/v1?key=${apiKeyCustomSearch}&cx=${cx}&q=${query}&num=${numResults}`;
+    const url = `https://www.googleapis.com/customsearch/v1?key=<span class="math-inline">\{apiKeyCustomSearch\}&cx\=</span>{cx}&q=${query}`;
     
     fetch(url)
         .then(response => response.json())
