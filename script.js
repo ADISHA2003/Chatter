@@ -1,8 +1,4 @@
-const apiKeyCustomSearch = [
-    "AIzaSyAnBflOjGSET7ZQHK4iNeZ0jqAj7bXtbMw",
-    "AIzaSyBn-1DwSjXpqV5nteGRxbiW-LvxS7pDz-Q",
-    "AIzaSyAtQtO2RDaXU1dr3OB8xAFK1uXOmgmfPes"
-  ];
+const apiKeyCustomSearch = "AIzaSyAnBflOjGSET7ZQHK4iNeZ0jqAj7bXtbMw";
 const cx = "73ecbbd20d97b4289"; // Replace with your Custom Search Engine ID
 const apiKeyGemini = "AIzaSyCgM0vxDVUTFNZ5QMuTJa_oa8k6hLmN8QI"; // Replace with your actual Gemini API key
 const numResults = 5; // Number of search results to display
