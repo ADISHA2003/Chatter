@@ -5,6 +5,7 @@ const apiKeyCustomSearch = [
   ];
 const cx = "73ecbbd20d97b4289"; // Replace with your Custom Search Engine ID
 const apiKeyGemini = "AIzaSyCgM0vxDVUTFNZ5QMuTJa_oa8k6hLmN8QI"; // Replace with your actual Gemini API key
+const numResults = 5; // Number of search results to display
 
 function sendMessage() {
     var userInput = document.getElementById("user-input").value.trim();
@@ -28,8 +29,8 @@ function search() {
     performSearch(query);
 }
 
-function performSearch(query) {
-    const apiKey = apiKeyCustomSearch[2]; // Choose the first API key from the array
+function performSearch(apiKeyCustomSearch, cx, query, numResults) {
+    const apiKey = apiKeyCustomSearch[0]; // Choose the first API key from the array
     const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}&num=${numResults}`;
 
     fetch(url)
