@@ -5,7 +5,6 @@ const apiKeyCustomSearch = [
   ];
 const cx = "73ecbbd20d97b4289"; // Replace with your Custom Search Engine ID
 const apiKeyGemini = "AIzaSyCgM0vxDVUTFNZ5QMuTJa_oa8k6hLmN8QI"; // Replace with your actual Gemini API key
-const numResults = 5; // Number of search results to display
 
 function sendMessage() {
     var userInput = document.getElementById("user-input").value.trim();
@@ -30,12 +29,13 @@ function search() {
 }
 
 function performSearch(query) {
-    const url = `https://www.googleapis.com/customsearch/v1?key=${apiKeyCustomSearch}&cx=${cx}&q=${query}&num=${numResults}`;
-    
+    const apiKey = apiKeyCustomSearch[0]; // Choose the first API key from the array
+    const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}&num=${numResults}`;
+
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            const resultNumber = getRandomNumber(1,5); // Generate a random number between 1 and 10
+            const resultNumber = getRandomNumber(1, 5); // Generate a random number between 1 and 5
             displayResults(data, resultNumber);
         })
         .catch(error => console.log('Error:', error));
@@ -54,7 +54,7 @@ function displayResults(data, maxResults) {
 
     results = results.slice(0, maxResults);
 
-    const typingSpeed = 0.1;
+    const typingSpeed = 1;
     const chatbox = document.getElementById("chat-box");
 
     if (!chatbox) {
