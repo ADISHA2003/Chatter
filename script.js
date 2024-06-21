@@ -29,7 +29,7 @@ function search() {
 }
 
 function performSearch(query) {
-    const url = `https://www.googleapis.com/customsearch/v1?key=<span class="math-inline">\{apiKeyCustomSearch\}&cx\=</span>{cx}&q=${query}`;
+    const url = `https://www.googleapis.com/customsearch/v1?key=${apiKeyCustomSearch}&cx=${cx}&q=${query}`;
     
     fetch(url)
         .then(response => response.json())
@@ -498,7 +498,7 @@ async function fetchCustomSearchResults(query) {
         return response.json();
     }
 
-    for (const apiKey of apiKeysCustomSearch) {
+    for (const apiKey of apiKeyCustomSearch) {
         try {
             const data = await search(apiKey);
             return data.items || [];
