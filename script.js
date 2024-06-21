@@ -29,7 +29,7 @@ function search() {
 }
 
 function performSearch(query) {
-    const apiKey = apiKeyCustomSearch[0]; // Choose the first API key from the array
+    const apiKey = apiKeyCustomSearch[2]; // Choose the first API key from the array
     const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}&num=${numResults}`;
 
     fetch(url)
