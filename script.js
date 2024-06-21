@@ -1,4 +1,8 @@
-const apiKeyCustomSearch = "AIzaSyAnBflOjGSET7ZQHK4iNeZ0jqAj7bXtbMw"; // Replace with your actual Custom Search API key
+const apiKeyCustomSearch = [
+    "AIzaSyAnBflOjGSET7ZQHK4iNeZ0jqAj7bXtbMw",
+    "AIzaSyBn-1DwSjXpqV5nteGRxbiW-LvxS7pDz-Q",
+    "AIzaSyAtQtO2RDaXU1dr3OB8xAFK1uXOmgmfPes"
+  ];
 const cx = "73ecbbd20d97b4289"; // Replace with your Custom Search Engine ID
 const apiKeyGemini = "AIzaSyCgM0vxDVUTFNZ5QMuTJa_oa8k6hLmN8QI"; // Replace with your actual Gemini API key
 
@@ -482,7 +486,7 @@ document.addEventListener('DOMContentLoaded', function() {
 async function fetchCustomSearchResults(query) {
     const numResults = 10; // Set to the maximum number of results
 
-    async function search(apiKey) {
+    async function search(apiKeyCustomSearch) {
         const urlCustomSearch = `https://www.googleapis.com/customsearch/v1?key=${apiKeyCustomSearch}&cx=${cx}&q=${query}&num=${numResults}`;
         const response = await fetch(urlCustomSearch);
         if (response.status === 403) {
