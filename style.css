@@ -73,7 +73,7 @@
         }
         
         .back-button:hover {
-            background: #fff;
+            background: #ccc;
             color: black;
             border: 0px solid #000;
             text-decoration: none;
