@@ -100,9 +100,8 @@ body.sidebar-open {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.3);
   z-index: 10000;
-  pointer-events: none;
 }
 
 #close-button {
