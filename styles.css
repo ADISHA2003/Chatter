@@ -101,7 +101,8 @@ body.sidebar-open {
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  z-index: 9999; /* Set a high z-index to ensure it appears above other elements */
+  z-index: 10000;
+  pointer-events: none;
 }
 
 #close-button {
