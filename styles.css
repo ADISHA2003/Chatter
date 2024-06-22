@@ -12,7 +12,7 @@ body {
     padding: 10px;
     display: flex;
     border-bottom: 0px solid #363636;
-    font-size: 12px;
+    font-size: 14px;
     font-family: Arial, sans-serif;
     justify-content: center;
     text-align: center;
@@ -193,7 +193,7 @@ body.sidebar-open {
     border-radius: 5px;
     cursor: pointer;
     margin-right: 5px;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
     position: relative;
 }
@@ -215,7 +215,7 @@ body.sidebar-open {
     border-radius: 20px 0px 20px 20px;
     border: 0px solid #fff;
     padding: 10px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: none;
     float: right;
     clear: both;
@@ -227,7 +227,7 @@ body.sidebar-open {
 
 .bot-message {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     padding: 10px;
     background-color: #363636;
     color: #fff;
@@ -264,7 +264,7 @@ input[type="text"] {
     background-color: #fff;
     color: #000;
     justify-self: center;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 0px;
     border: none;
     margin: 0px;
