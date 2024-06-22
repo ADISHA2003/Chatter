@@ -63,7 +63,7 @@
 
         .back-button {
             background: #212121;
-            color: white;
+            color: #fff;
             padding: 10px 20px;
             border-radius: 10px;
             font-size: 20px;
@@ -74,7 +74,7 @@
         
         .back-button:hover {
             background: #ccc;
-            color: black;
+            color: #fff;
             border: 0px solid #000;
             text-decoration: none;
         }
