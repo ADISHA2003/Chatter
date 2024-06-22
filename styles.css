@@ -12,7 +12,7 @@ body {
     padding: 10px;
     display: flex;
     border-bottom: 0px solid #363636;
-    font-size: 1.5rem;
+    font-size: 12px;
     font-family: Arial, sans-serif;
     justify-content: center;
     text-align: center;
@@ -193,7 +193,7 @@ body.sidebar-open {
     border-radius: 5px;
     cursor: pointer;
     margin-right: 5px;
-    font-size: 1rem;
+    font-size: 12px;
     text-align: left;
     position: relative;
 }
@@ -215,7 +215,7 @@ body.sidebar-open {
     border-radius: 20px 0px 20px 20px;
     border: 0px solid #fff;
     padding: 10px;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: none;
     float: right;
     clear: both;
@@ -227,7 +227,7 @@ body.sidebar-open {
 
 .bot-message {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     padding: 10px;
     background-color: #363636;
     color: #fff;
@@ -337,13 +337,6 @@ input::placeholder {
     margin-top: 20px;
     border-radius: 0px;
     width: 100%;
-}
-
-#logo {
-    width: 150px; /* Adjust the size as needed */
-    height: auto;
-    margin-top: 0; /* No space above the logo */
-    margin-bottom: 0px; /* Add some space between the logo and the input */
 }
 
 .query-container {
