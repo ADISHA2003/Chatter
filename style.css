@@ -62,14 +62,14 @@
         }
 
         .back-button {
-            background: #000;
+            background: #212121;
             color: white;
             padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 10px;
             font-size: 20px;
             text-decoration: none;
             transition: background 0.3s;
-            border: 2px solid #fff;
+            border: 0px solid #fff;
         }
         
         .back-button:hover {
