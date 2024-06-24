@@ -362,7 +362,7 @@ input[type="query"]::placeholder{
 }
 
 button {
-    padding: 10px 20px;
+    padding: 5px 10px;
     border: 2px solid #ccc;
     border-radius: 50px;
     background-color: #212121;
