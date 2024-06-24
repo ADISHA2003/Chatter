@@ -372,7 +372,8 @@ button {
 }
 
 button:hover {
-    background-color: #000;
+    background-color: #fff;
+    color: #000;
 }
 
 #searchResults, #search-box {
