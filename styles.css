@@ -246,7 +246,7 @@ body.sidebar-open {
 
 .input-container {
     background-color: #fff; 
-    max-width: 800px;
+    width: 100%;
     float: none;
     position: relative;
     height: 45px;
@@ -269,7 +269,7 @@ input[type="text"] {
     border: none;
     margin: 0px;
     float: none;
-    max-width: 100%;
+    width: 100%;
     overflow-y: scroll;
     flex: 1;
     margin-right: 0px;
