@@ -42,7 +42,7 @@ body {
     width: 100%; /* Adjust as needed */
     height: 100%;
     background-color: #212121; /* Adjust as needed */
-    transition: left 0.8s ease;
+    transition: left 0.5s ease;
     z-index: 1000; /* Make sure it's above other content */
     border-right: 0px solid #363636;
     color: #fff; /* Text color */
