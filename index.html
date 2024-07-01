@@ -10,8 +10,8 @@
 <body>
     <header class="header">
         <a href="#" class="sidebar-toggle"></a>
-<img src="sidebar.svg" alt="Sidebar Icon"
-class="sidebar-icon">
+            <img src="sidebar.svg" alt="Sidebar Icon" class="sidebar-icon">
+        </a>
 
         <div class="loading-wave-container">
             <div class="loading-wave">
@@ -50,6 +50,9 @@ class="sidebar-icon">
     </div>
 </div>
         <div class="chat-box" id="chat-box"></div>
+        <div class="keyword-box-container">
+            <div class="keyword-box" id="keyword-box"></div>
+        </div>
         <div class="input-container">
             <input type="text" id="user-input" placeholder="Send your query">
             <button id="send-btn" onclick="sendMessage()">
