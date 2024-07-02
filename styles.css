@@ -187,8 +187,8 @@ body.sidebar-open {
 
 .keyword {
     padding: 1vh 3vh;
-    background-color: #000000;
-    color: white;
+    background-color: transparent;
+    color: transparent;
     border: 2px solid #fff;
     border-radius: 5px;
     cursor: pointer;
