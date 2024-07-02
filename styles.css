@@ -212,7 +212,7 @@ body.sidebar-open {
     border-radius: 20px 20px 20px 20px;
     border: 0px solid #fff;
     padding: 10px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: none;
     float: right;
     clear: both;
@@ -222,9 +222,15 @@ body.sidebar-open {
     margin-right: 10px;
 }
 
+@media (max-width: 768px) {
+  .user-message {
+    font-size: 14px;
+  }
+}
+
 .bot-message {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px;
     background-color: #212121;
     color: #fff;
@@ -239,6 +245,12 @@ body.sidebar-open {
     line-height: 1.5;
     white-space: pre-wrap; /* Allows text to wrap inside the pre element */
     word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .bot-message {
+    font-size: 14px;
+  }
 }
 
 .input-container {
