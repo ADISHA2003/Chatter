@@ -115,7 +115,6 @@ body.sidebar-open {
   padding: 10px;
 }
 
-/* General Styles */
 .chat-container {
     display: flex;
     flex-direction: column;
@@ -125,12 +124,12 @@ body.sidebar-open {
     border-top: 0 solid #17202A;
     border-radius: 0;
     overflow: hidden;
-    height: 81vh;
-    z-index: 1;
+    height: 100vh; /* Set container height to full viewport height */
 }
 
+/* Chat Box */
 .chat-box {
-    height: 81vh;
+    flex: 1; /* Fill remaining height of the container */
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -144,9 +143,6 @@ body.sidebar-open {
     display: none;
 }
 
-/* Responsive Design */
-
-/* For small devices (phones) */
 @media (max-width: 699px) {
     .chat-box {
         margin-left: 0;
@@ -415,12 +411,16 @@ button:hover {
     display: none;
 }
 
-footer{
+footer {
     text-align: center;
     color: #ccc;
     margin-top: 10px;
     font-size: 13px;
+    position: sticky;
     bottom: 0;
+    background-color: #212121; /* Match chat box background */
+    padding: 10px;
+    z-index: 2; /* Ensure footer stays above chat box */
 }
 
 .loading-wave-container {
