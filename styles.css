@@ -124,12 +124,12 @@ body.sidebar-open {
     border-top: 0 solid #17202A;
     border-radius: 0;
     overflow: hidden;
-    height: 81vh;
+    height: 83vh;
     z-index: 1;
 }
 
 .chat-box {
-    height: 81vh;
+    height: 83vh;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -410,16 +410,12 @@ button:hover {
     display: none;
 }
 
-footer {
+footer{
     text-align: center;
     color: #ccc;
     margin-top: 10px;
     font-size: 13px;
-    position: sticky;
     bottom: 0;
-    background-color: #212121; /* Match chat box background */
-    padding: 10px;
-    z-index: 2; /* Ensure footer stays above chat box */
 }
 
 .loading-wave-container {
