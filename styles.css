@@ -176,7 +176,7 @@ body.sidebar-open {
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    margin-top: 4px;
+    margin-top: 0px;
     margin-bottom: 0px;
     background-color: transparent;
     display: flex;
@@ -187,7 +187,7 @@ body.sidebar-open {
 }
 
 .keyword {
-    padding: 1vh 3vh;
+    padding: 0vh 0vh;
     background-color: transparent;
     color: transparent;
     border: 0px solid #fff;
