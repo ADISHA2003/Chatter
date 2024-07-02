@@ -124,12 +124,12 @@ body.sidebar-open {
     border-top: 0 solid #17202A;
     border-radius: 0;
     overflow: hidden;
-    height: 83vh;
+    height: 85vh;
     z-index: 1;
 }
 
 .chat-box {
-    height: 83vh;
+    height: 85vh;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
