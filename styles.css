@@ -166,7 +166,7 @@ body.sidebar-open {
 }
 
 .keyword-box {
-    display: inline-block;
+    display: none;
     position: relative;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -192,6 +192,7 @@ body.sidebar-open {
     font-size: 14px;
     text-align: left;
     position: relative;
+    display: none;
 }
 
 @keyframes scroll {
