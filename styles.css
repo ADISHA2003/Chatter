@@ -178,6 +178,7 @@ body.sidebar-open {
     -ms-overflow-style: none;
     margin-top: 4px;
     margin-bottom: 0px;
+    background-color: transparent;
     display: flex;
     white-space: nowrap;
     justify-content: left;
@@ -189,7 +190,7 @@ body.sidebar-open {
     padding: 1vh 3vh;
     background-color: transparent;
     color: transparent;
-    border: 2px solid #fff;
+    border: 0px solid #fff;
     border-radius: 5px;
     cursor: pointer;
     margin-right: 5px;
