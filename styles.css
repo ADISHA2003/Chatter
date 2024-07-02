@@ -254,9 +254,9 @@ body.sidebar-open {
     display: flex;
     align-self: center;
     align-items: center;
-    border: 2px solid white;
+    border: 0px solid white;
     border-radius: 50px;
-    margin-top: 4px;
+    margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
 }
