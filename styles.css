@@ -115,19 +115,6 @@ body.sidebar-open {
   padding: 10px;
 }
 
-.chat-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    margin: 0 auto;
-    position: relative;
-    border-top: 0 solid #17202A;
-    border-radius: 0;
-    overflow: hidden;
-    height: 100vh; /* Set container height to full viewport height */
-}
-
-/* Chat Box */
 .chat-box {
     flex: 1; /* Fill remaining height of the container */
     overflow-y: scroll;
