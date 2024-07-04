@@ -1,1 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatter | Home</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font */
+            background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjN5ZGZjNWs4cGdqamZocG0wOGVhZGN5eG10NmswdDVxdjJkOGliZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lnfzT3k8g7wpG/giphy.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            overflow-x: hidden;
+            background-blend-mode: multiply;
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5em; /* Increased font size */
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em; /* Increased font size */
+            margin: 20px 0;
+            line-height: 1.6; /* Added line height for better readability */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px; /* Increased padding */
+            font-size: 1.2em; /* Increased font size */
+            font-weight: none;
+            color: #000;
+            background-color: #fff;
+            text-decoration: none;
+            border-radius: 10px; /* Rounded corners */
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+        }
+
+        .btn:hover {
+            background-color: #ccc;
+        }
+
+        .section {
+            background-color: none;
+            padding: 30px; /* Increased padding */
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em; /* Increased font size */
+        }
+
+        .section p {
+            font-size: 1.1em; /* Increased font size */
+            margin-bottom: 20px;
+            line-height: 1.6; /* Added line height for better readability */
+        }
+
+        .contact ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .contact li {
+            margin: 15px 0;
+        }
+
+        .contact a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em; /* Increased font size */
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px; /* Increased padding */
+            font-size: 1.1em; /* Increased font size */
+            color: #000;
+            background-color: #fff;
+            border: none;
+            border-radius: 10px; /* Rounded corners */
+            cursor: pointer;
+            display: none;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #ccc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: none;
+            font-size: 1em; /* Increased font size */
+        }
+
+        /* Responsive Styles for Mobile */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em; /* Adjusted font size for mobile */
+            }
+
+            header p {
+                font-size: 1em; /* Adjusted font size for mobile */
+            }
+
+            .btn {
+                padding: 10px 18px; /* Adjusted padding for mobile */
+                font-size: 1em; /* Adjusted font size for mobile */
+            }
+
+            .section h2 {
+                font-size: 1.5em; /* Adjusted font size for mobile */
+            }
+
+            .section p {
+                font-size: 1em; /* Adjusted font size for mobile */
+            }
+
+            footer {
+                font-size: 0.9em; /* Adjusted font size for mobile */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header id="home">
+            <h1>Chatter (Beta)</h1>
+            <p>Your professional virtual assistant, designed to assist with various communication tasks. It's equipped with preprogrammed responses for common queries and has internet connectivity to access up-to-date information. Whether you need help finding information online, or streamlining your communication, Chatter is there to help.</p>
+
+            <p>• Now chat with Gemini AI by Google</p>
+
+            <p>• Get AI-powered search results within the interface. Click on the sidebar icon to open the AI search engine.</p>
+
+            <p>• Chatter can make mistakes.</p>
+            <a href="chatter chatbot.html" class="btn">Try Chatter</a>
+        </header>
+        <section class="section" id="features">
+            <h2>Features</h2>
+            <p>Chatter offers a wide range of features including real-time responses, integration with various APIs, and support for multiple languages.</p>
+            <p>Our AI is constantly learning and improving to provide you with the best possible experience.</p>
+        </section>
+        <section class="section" id="about">
+            <h2>About the Developer</h2>
+            <div class="content">
+                <p id="developer-name">Aditya Sharma</p>
+                <p id="developer-bio">A passionate software developer with a strong interest in artificial intelligence and web development. With extensive experience in creating responsive and user-friendly web applications, I aim to enhance digital interactions through innovative solutions.</p>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/aditya-sharma-334528296" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/adisha2003" target="_blank">GitHub</a></li>
+                <li><a href="mailto: adityasharma56697@gmail.com">Email</a></li>
+                <li><a href="https://x.com/AdityaS47782205" target="_blank">X</a></li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 Chatter. All rights reserved.
+    </footer>
+    <button id="scrollTopBtn" onclick="scrollToTop()">top</button>
+
+    <script>
+        // Show the button when the user scrolls down 20px from the top
+        window.onscroll = function() {
+            const scrollTopBtn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to the top of the document
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
 
