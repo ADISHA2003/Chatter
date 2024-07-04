@@ -90,13 +90,13 @@ body.sidebar-open {
 
 .back-button {
   position: absolute;
-  top: 10px;
+  top: 5px;
   right: 10px;
 }
 
 .back-button a {
   display: inline-block;
-  background-color: #f0f0f0;
+  background-color: #212121;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-decoration: none;
