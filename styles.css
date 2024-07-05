@@ -286,7 +286,7 @@ body.sidebar-open {
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 @media (max-width: 768px) {
@@ -446,7 +446,7 @@ button:hover {
 footer{
     text-align: center;
     color: #ccc;
-    margin-top: 3px;
+    margin-top: 2px;
     font-size: 14px;
     bottom: 0;
 }
