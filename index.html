@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatter | Home</title>
     <link rel="icon" type="image/png" href="chatter(1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <style>
         html {
             scroll-behavior: smooth;
@@ -108,21 +109,17 @@
             position: fixed;
             bottom: 10px;
             right: 10px;
-            padding: 10px 15px; /* Increased padding */
+            padding: 10px 10px; /* Increased padding */
             font-size: 1.5em; /* Increased font size */
             font-weight: bold;
             color: #000;
             background-color: #fff;
             border: none;
-            border-radius: 10px; /* Rounded corners */
+            border-radius: 50px; /* Rounded corners */
             cursor: pointer;
             display: none;
             transition: background-color 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
-        }
-
-        #scrollTopBtn:hover {
-            background-color: #ccc;
         }
 
         footer {
@@ -145,34 +142,72 @@
                 padding: 10px 18px; /* Adjusted padding for mobile */
                 font-size: 1em; /* Adjusted font size for mobile */
             }
-
+            
             .section h2 {
                 font-size: 1.5em; /* Adjusted font size for mobile */
             }
-
+            
             .section p {
                 font-size: 1em; /* Adjusted font size for mobile */
             }
-
+            
             footer {
                 font-size: 0.9em; /* Adjusted font size for mobile */
             }
         }
+        
+        .popup {
+            display: none;
+            position: fixed;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #363636;
+            padding: 20px;
+            border-radius: 10px;
+            border: 0px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            max-width: 500px;
+            width: 80%; /* Adjust width for responsiveness */
+        }
 
+        .popup h2 {
+            margin-bottom: 10px;
+        }
+
+        .popup p {
+            margin-bottom: 15px;
+        }
+
+        .popup button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .popup button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header id="home">
-            <h1>Chatter (Beta)</h1>
+            <h1>Chatter</h1>
             <p>Your professional virtual assistant, designed to assist with various communication tasks. It's equipped with preprogrammed responses for common queries and has internet connectivity to access up-to-date information. Whether you need help finding information online, or streamlining your communication, Chatter is there to help.</p>
-
+            
             <p>• Now chat with Gemini AI by Google</p>
-
+            
             <p>• Get AI-powered search results within the interface. Click on the sidebar icon to open the AI search engine.</p>
-
+            
             <p>• Chatter can make mistakes.</p>
             <a href="chatbot.html" class="btn">Try Chatter</a>
+            <p style="margin-top: 5px;">Beta version</p>     
         </header>
         <section class="section" id="features">
             <h2>Features</h2>
@@ -182,7 +217,7 @@
         <section class="section" id="about">
             <h2>About the Developer</h2>
             <div class="content">
-                <p id="developer-name">Aditya Sharma</p>
+                <p id="developer-name" style="text-align: center;">Aditya Sharma</p>
                 <p id="developer-bio">A passionate software developer with a strong interest in artificial intelligence and web development. With extensive experience in creating responsive and user-friendly web applications, I aim to enhance digital interactions through innovative solutions.</p>
             </div>
         </section>
@@ -197,16 +232,23 @@
             </ul>
         </section>
     </div>
+
+    <div class="popup" id="cookiePopup">
+        <h2>Cookie Notice</h2>
+        <p>This website uses cookies to enhance your browsing experience. By continuing to use this website, you consent to our use of cookies.</p>
+        <button onclick="closePopup()">Got it</button>
+    </div>
+
     <footer>
         &copy; 2024 Chatter. All rights reserved.
     </footer>
-    <button id="scrollTopBtn" onclick="scrollToTop()">∆</button>
+    <button id="scrollTopBtn" onclick="scrollToTop()" class="fas fa-chevron-up"></button>
 
     <script>
         // Show the button when the user scrolls down 20px from the top
         window.onscroll = function() {
             const scrollTopBtn = document.getElementById("scrollTopBtn");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                 scrollTopBtn.style.display = "block";
             } else {
                 scrollTopBtn.style.display = "none";
@@ -218,6 +260,17 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+
+        // Show the cookie pop-up on page load
+        window.onload = function() {
+            document.getElementById("cookiePopup").style.display = "block";
+        };
+
+        // Function to close the pop-up
+        function closePopup() {
+            document.getElementById("cookiePopup").style.display = "none";
+        }
+
     </script>
 </body>
 </html>
