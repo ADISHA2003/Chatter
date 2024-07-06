@@ -25,7 +25,7 @@ body {
 }
 
 .sidebar-icon {
-    position: relative;
+    position: absolute;
     left: 10px; /* Adjust as needed */
     top: 10px;
     width: 25px; /* Adjust as needed */
