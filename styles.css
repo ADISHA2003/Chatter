@@ -469,10 +469,11 @@ footer{
   }
   
   .loading-bar {
+    display: none;
     width: 15px;
     margin: 0 5px;
-    background-color: none;
-    border: 0px solid #fff;
+    background-color: #fff;
+    border: 2px solid #fff;
     border-radius: 50px;
     animation: loading-wave-animation 1s ease-in-out infinite;
   }
