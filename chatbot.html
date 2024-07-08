@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <div class="back-button">
-            <a href="index.html" id="back-btn"><i class="fas fa-arrow-left"></i></a> 
+            <a href="index.html" id="back-btn" title="Back"><i class="fas fa-arrow-left"></i></a> 
         </div>
         <div class="loading-wave-container">
             <div class="loading-wave">
@@ -24,7 +24,7 @@
               <div class="loading-bar"></div>
             </div>
           </div>                    
-        <a href="#" class="sidebar-toggle"></a><img src="sidebar.svg" alt="Sidebar Icon" class="sidebar-icon"></a>
+        <a href="#" class="sidebar-toggle"></a><img src="sidebar.svg" alt="Sidebar Icon" class="sidebar-icon" title="AI Powered Search"></a>
     </header>
     <div class="sidebar" id="sidebar">
         <div class="sidebar-content">
@@ -56,13 +56,13 @@
         </div>
         <div class="input-container">
             <input type="text" id="user-input" placeholder="Send your query">
-            <button id="send-btn" onclick="sendMessage()">
+            <button id="send-btn" onclick="sendMessage()" title="SEND MESSAGE">
                 <img src="send.png" alt="Send Icon">
             </button>
             <button id="msg-btn" onclick="sendMsg()" title="GEMINI">
                 <img src="gemini.png" alt="gemini Icon">
             </button>
-            <button id="search-btn" onclick="search()">
+            <button id="search-btn" onclick="search()" title="SEARCH">
                 <img src="search.png" alt="Search Icon">
             </button>
         </div>
