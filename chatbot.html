@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot</title>
     <link rel="icon" type="image/png" href="chatter(1).png">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" id="theme-style" href="light.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
@@ -14,28 +14,26 @@
             <a href="index.html" id="back-btn" title="Back"><i class="fas fa-arrow-left"></i></a> 
         </div>
         <div class="loading-wave-container">
-            <div class="loading-wave">
-              <div class="loading-bar"></div>
-              <div class="loading-bar"></div>
-              <div class="loading-bar"></div>
-              <div class="loading-bar"></div>
-              <div class="loading-bar"></div>
-              <div class="loading-bar"></div>
-              <div class="loading-bar"></div>
-            </div>
+            <div class="dropdown">
+                <button class="toggle-theme">Theme</button>
+                <div class="dropdown-content">
+                    <a href="#" id="light-theme">Light Theme</a>
+                    <a href="#" id="dark-theme">Dark Theme</a>
+                </div>
+            </div>            
           </div>                    
-        <a href="#" class="sidebar-toggle"></a><img src="sidebar.svg" alt="Sidebar Icon" class="sidebar-icon" title="AI Powered Search"></a>
+        <a href="#" class="sidebar-toggle"><i class="fas fa-bars" id="sidebar-icon" title="AI Powered Search"></i></a>
     </header>
     <div class="sidebar" id="sidebar">
         <div class="sidebar-content">
             <div class="container">
                 <div class="query-container">
                 <input type="query" id="searchQuery" placeholder="AI powered search">
-                <button id="searchButton">Search</button>
+                <button id="searchButton"><i class="fas fa-search"></i></button>
                 </div>
                 <div id="search-box"></div>
                 <div id="searchResults"></div>
-                <div id="loading" class="hidden">Loading...</div>
+                <div id="loading" class="hidden" style="display: none;">Loading...</div>
             </div>
         </div>
     </div>    
@@ -57,13 +55,13 @@
         <div class="input-container">
             <input type="text" id="user-input" placeholder="Send your query">
             <button id="send-btn" onclick="sendMessage()" title="SEND MESSAGE">
-                <img src="send.png" alt="Send Icon">
+                <i class="fa-solid fa-arrow-up"></i>
             </button>
             <button id="msg-btn" onclick="sendMsg()" title="GEMINI">
-                <img src="gemini.png" alt="gemini Icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
             </button>
             <button id="search-btn" onclick="search()" title="SEARCH">
-                <img src="search.png" alt="Search Icon">
+                <i class="fas fa-search"></i>
             </button>
         </div>
         <footer>
