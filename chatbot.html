@@ -29,7 +29,7 @@
             <div class="container">
                 <div class="query-container">
                 <input type="query" id="searchQuery" placeholder="AI powered search">
-                <button id="searchButton"><i class="fas fa-search"></i></button>
+                <button id="searchButton" title="SEARCH"><i class="fas fa-search"></i></button>
                 </div>
                 <div id="search-box"></div>
                 <div id="searchResults"></div>
@@ -54,7 +54,7 @@
         </div>
         <div class="input-container">
             <input type="text" id="user-input" placeholder="Send your query">
-            <button id="send-btn" onclick="sendMessage()" title="SEND MESSAGE">
+            <button id="send-btn" onclick="sendMessage()" title="SEND MESSAGE" style="display: none;">
                 <i class="fa-solid fa-arrow-up"></i>
             </button>
             <button id="msg-btn" onclick="sendMsg()" title="GEMINI">
