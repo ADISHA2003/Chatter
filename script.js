@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         sidebar.classList.toggle("active");
         body.classList.toggle("sidebar-open");
+
+    // Toggle the Font Awesome icon class
+        sidebarIcon.classList.toggle('fa-bars');
+        sidebarIcon.classList.toggle('fa-times');
     });
 
 });
