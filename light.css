@@ -87,7 +87,7 @@ body.sidebar-open {
     color: #000;
     display: block; 
     border-radius: 10px;
-    padding: 5px;
+    padding: 3px 4px;
     margin-bottom: 15px;
     border: 2px solid #ccc;
 }
@@ -252,7 +252,7 @@ body.sidebar-open {
     border: 0px solid #fff;
     padding: 10px;
     font-size: 16px;
-    font-weight: none;
+    font-weight: bold;
     float: right;
     clear: both;
     margin-top: 15px;
