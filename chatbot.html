@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="icon" type="image/png" href="assets/images/chatter.png">
+    <link rel="stylesheet" id="theme-style" href="css/light.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="back-button">
+            <a href="index.html" id="back-btn" title="Back"><i class="fas fa-arrow-left"></i></a> 
+        </div>
+        <div class="loading-wave-container">
+            <div class="dropdown">
+                <button class="toggle-theme">Theme</button>
+                <div class="dropdown-content">
+                    <a id="light-theme">Light</a>
+                    <a id="dark-theme">Dark</a>
+                </div>
+            </div>            
+          </div>                    
+        <a class="sidebar-toggle"><i class="fas fa-bars" id="sidebar-icon" title="AI Powered Search"></i></a>
+    </header>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <div class="container">
+                <div class="query-container">
+                <input type="query" id="searchQuery" placeholder="AI powered search">
+                <button id="searchButton" title="AI SEARCH"><i class="fas fa-search"></i></button>
+                </div>
+                <div id="search-box"></div>
+                <div id="searchResults"></div>
+                <div id="loading" class="hidden" style="display: none;">Loading...</div>
+            </div>
+        </div>
+    </div>    
+    <div class="chat-container" id="chat-container">
+        <div id="floating-window">
+            <div id="close-button">&times;</div>
+            <div id="content">
+      <h2>How to Use Chatter</h2>
+      <p>• Interacting with chatter is as simple as typing your queries or messages in the chat input field and clicking 'Send icon' to submit. For real-time information access, utilize the 'Search icon' button.</p>
+      <h2>Interesting Update</h2>
+      <p>• Now chat with <strong>Gemini AI</strong> by Google</p>
+      <p>• Get AI-powered search results with in the interface. Click on sidebar icon to open AI search engine.</p>
+    </div>
+    </div>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="keyword-box-container">
+            <div class="keyword-box" id="keyword-box"></div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Send your query">
+            <button id="send-btn" onclick="sendMessage()" title="SEND MESSAGE" style="display: none;">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+            <button id="msg-btn" onclick="sendMsg()" title="GEMINI">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </button>
+            <button id="search-btn" onclick="search()" title="SEARCH">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <footer>
+  <p>Chatter can make mistakes. Check important info.</p>
+</footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

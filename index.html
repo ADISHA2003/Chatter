@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatter | Home</title>
+    <link rel="icon" type="image/png" href="assets/images/chatter.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font */
+            background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjN5ZGZjNWs4cGdqamZocG0wOGVhZGN5eG10NmswdDVxdjJkOGliZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lnfzT3k8g7wpG/giphy.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            overflow-x: hidden;
+            background-blend-mode: multiply;
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5em; /* Increased font size */
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em; /* Increased font size */
+            margin: 20px 0;
+            line-height: 1.6; /* Added line height for better readability */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px; /* Increased padding */
+            font-family: arial, sans-serif;
+            font-size: 1.2em; /* Increased font size */
+            font-weight: none;
+            color: #000;
+            background-color: #fff;
+            text-decoration: none;
+            border-radius: 50px; /* Rounded corners */
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #ccc;
+        }
+
+        .section {
+            background-color: none;
+            padding: 30px; /* Increased padding */
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em; /* Increased font size */
+        }
+
+        .section p {
+            font-size: 1.1em; /* Increased font size */
+            margin-bottom: 20px;
+            line-height: 1.6; /* Added line height for better readability */
+        }
+
+        .contact ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            display: flex; /* Use flexbox for better icon alignment */
+            justify-content: center; /* Center icons horizontally */
+            gap: 20px; /* Add spacing between icons */
+        }
+
+        .contact li {
+            margin: 15px 0;
+        }
+
+        .contact a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em; /* Increased font size */
+        }
+
+        .contact a:hover {
+            color: deepskyblue;
+        }
+
+        .contact a i { /* Style the icons */
+            font-size: 2em; /* Adjust icon size as needed */
+            color: #ffffff; /* Set icon color */
+            transition: color 0.3s ease; /* Add a smooth transition for hover effect */
+        }
+
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 10px; /* Increased padding */
+            font-size: 1.5em; /* Increased font size */
+            font-weight: bold;
+            color: #000;
+            background-color: #fff;
+            border: none;
+            border-radius: 50px; /* Rounded corners */
+            cursor: pointer;
+            display: none;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: none;
+            font-size: 1em; /* Increased font size */
+        }
+
+        footer a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em; /* Adjusted font size for mobile */
+            }
+
+            header p {
+                font-size: 1em; /* Adjusted font size for mobile */
+            }
+
+            .btn {
+                padding: 10px 18px; /* Adjusted padding for mobile */
+                font-size: 1em; /* Adjusted font size for mobile */
+            }
+            
+            .section h2 {
+                font-size: 1.5em; /* Adjusted font size for mobile */
+            }
+            
+            .section p {
+                font-size: 1em; /* Adjusted font size for mobile */
+            }
+            
+            footer {
+                font-size: 0.9em; /* Adjusted font size for mobile */
+            }
+        }
+        
+        .popup {
+            display: none;
+            position: fixed;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #363636;
+            padding: 20px;
+            border-radius: 10px;
+            border: 0px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            max-width: 500px;
+            width: 80%; /* Adjust width for responsiveness */
+        }
+
+        .popup h2 {
+            margin-bottom: 10px;
+        }
+
+        .popup p {
+            margin-bottom: 15px;
+        }
+
+        .popup button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .popup button:hover {
+            background-color: #0056b3;
+        }
+
+        .faq-section {
+            background-color: none;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .faq-item {
+            background-color: #363636;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .faq-question {
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            font-size: 1em;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .faq-container {
+                flex-direction: column;
+            }
+
+            .faq-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header id="home">
+            <h1>Chatter</h1>
+            <p>Your professional virtual assistant, designed to assist with various communication tasks. It's equipped with internet connectivity to access up-to-date information. Whether you need help finding information online, or streamlining your communication, Chatter is there to help.</p>
+            
+            <p>• Experience the power of Gemini AI.</p>
+            
+            <p>• Utilize our integrated AI search engine for enhanced results. Click the sidebar icon to access it.</p>
+            
+            <p>• Chatbot responses should be verified.</p>
+            <a href="chatbot.html" class="btn">Try Chatter</a>
+            <p style="margin-top: 5px;">Beta version</p>     
+        </header>
+        <section class="section" id="features">
+            <h2>Features</h2>
+            <p>Chatter offers a wide range of features including real-time responses, integration with various APIs, and support for multiple languages.</p>
+            <p>Our AI is constantly learning and improving to provide you with the best possible experience.</p>
+        </section>
+        <section class="section" id="about">
+            <h2>About the Developer</h2>
+            <div class="content">
+                <p id="developer-name" style="text-align: center;">Aditya Sharma</p>
+                <p id="developer-bio">A passionate Front-end Web developer with a strong interest in artificial intelligence and web development. With extensive experience in creating responsive and user-friendly web applications, I aim to enhance digital interactions through innovative solutions.</p>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is Chatter?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Chatter is a professional virtual assistant designed to help with various communication tasks. It's equipped with <strong>Gemini</strong> and has internet connectivity to access up-to-date information.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What can Chatter do?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Chatter can help you find information online, streamline your communication, and more. It's constantly learning and improving to provide you with the best possible experience.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is Chatter free to use?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, Chatter is currently free to use.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I contact the developer?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        You can contact the developer through the links provided in the "Contact" section.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/aditya-sharma-334528296" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/adisha2003" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="mailto: adityasharma56697@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://x.com/AdityaS47782205" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://wa.me/919289665096" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="popup" id="cookiePopup">
+        <h2>Cookie Notice</h2>
+        <p>This website uses cookies to enhance your browsing experience. By continuing to use this website, you consent to our use of cookies.</p>
+        <button onclick="closePopup()">Got it</button>
+    </div>
+
+    <footer>
+        <a href="privacy.html" style="color: #ffffff;">Privacy Policy</a>
+        <a href="terms.html" style="color: #ffffff;">Terms of Service</a>
+        <p id="copyright">&copy; <span id="currentYear"></span> Chatter. All rights reserved.</p>
+    </footer>
+    <button id="scrollTopBtn" onclick="scrollToTop()" class="fas fa-chevron-up"></button>
+
+    <script>
+        // Show the button when the user scrolls down 20px from the top
+        window.onscroll = function() {
+            const scrollTopBtn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to the top of the document
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Check if cookie consent is already given
+        if (localStorage.getItem("cookieConsent") !== "true") {
+            // Show the cookie pop-up if consent is not given
+            document.getElementById("cookiePopup").style.display = "block";
+        }
+
+        // Function to close the pop-up
+        function closePopup() {
+            document.getElementById("cookiePopup").style.display = "none";
+
+            // Store the cookie consent in local storage
+            localStorage.setItem("cookieConsent", "true");
+        }
+
+        // FAQ Interaction
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                answer.classList.toggle('active');
+            });
+        });
+       
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentYear").textContent = currentYear;
+    </script>
+</body>
+</html>
