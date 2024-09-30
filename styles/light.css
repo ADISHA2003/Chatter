@@ -24,15 +24,11 @@ body {
 
 .sidebar-toggle {
     color: #000;
-    font-size: 22px;
+    font-size: 25px;
     position: absolute;
     right: 10px; /* Adjust as needed */
     top: 10px;
-    width: 25px; /* Adjust as needed */
-    height: auto;
     cursor: pointer;
-    margin-top: 0px;
-    z-index: 1;
 }
 
 .sidebar {
@@ -49,6 +45,12 @@ body {
     padding: 20px; /* Padding for inner content */
     box-sizing: border-box;
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transition: left 1s ease;
+    }
 }
 
 .sidebar.active {
@@ -132,8 +134,7 @@ body.sidebar-open {
 .back-button {
     position: absolute;
     top: 10px;
-    left: 10px;
-    height: none;
+    left: 15px;
 }
 
 .back-button a {
