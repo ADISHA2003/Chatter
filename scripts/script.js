@@ -292,9 +292,9 @@ async function fetchCustomSearchResults(query) {
 
     function setTheme(theme) {
         if (theme === 'light') {
-            document.getElementById('theme-style').setAttribute('href', 'css/light.css');
+            document.getElementById('theme-style').setAttribute('href', 'styles/light.css');
         } else if (theme === 'dark') {
-            document.getElementById('theme-style').setAttribute('href', 'css/dark.css');
+            document.getElementById('theme-style').setAttribute('href', 'styles/dark.css');
         }
         localStorage.setItem('theme', theme);
     }
